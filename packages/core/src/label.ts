@@ -14,6 +14,7 @@ import {
 	listIssues,
 	listItemConversation,
 	listRepoLabels,
+	listReviewThreads,
 	parseGitHubPayload,
 	parseRepo,
 	removeIssueLabels,
@@ -300,10 +301,21 @@ async function toPayloadWithConversation(
 	if (parsed.isErr()) return err(parsed.error);
 	const conversation = await listItemConversation(repo, parsed.value, github);
 	if (conversation.isErr()) return err(conversation.error);
+	const threads =
+		parsed.value.type === 'pull_request'
+			? await listReviewThreads(repo, parsed.value.number, github)
+			: ok(undefined);
+	if (threads.isErr()) return err(threads.error);
 	return ok({
 		issue,
 		repository: { full_name: repoName },
 		conversation: conversation.value,
+		...(threads.value
+			? {
+					review_threads: threads.value.threads,
+					review_threads_omitted: threads.value.omitted,
+				}
+			: {}),
 	});
 }
 

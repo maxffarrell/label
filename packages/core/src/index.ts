@@ -33,6 +33,7 @@ export type {
 	ItemKind,
 	LabelItem,
 	RepoLabel,
+	ReviewThread,
 	SimilarItem,
 } from './github';
 export {
@@ -45,6 +46,7 @@ export {
 	listIssues,
 	listItemConversation,
 	listRepoLabels,
+	listReviewThreads,
 	matchesItemKind,
 	parseAuthorRole,
 	parseGitHubPayload,

@@ -48,6 +48,12 @@ export function itemState(item: LabelItem) {
 		author: item.author ?? null,
 		authorRole: item.authorRole ?? null,
 		comments: item.comments ?? [],
+		...(item.reviewThreads
+			? {
+					reviewThreads: item.reviewThreads,
+					reviewThreadsOmitted: item.reviewThreadsOmitted ?? false,
+				}
+			: {}),
 	};
 }
 
@@ -81,7 +87,7 @@ export function buildRequest(
 			questions[questionId(itemIndex, labelIndex)] = noul(
 				{
 					question: `Should the GitHub label at \`${labelPath}\` be applied to \`${itemPath}\`?`,
-					judge_from: `\`${itemPath}.title\`, \`${itemPath}.body\`, \`${itemPath}.authorRole\`, and \`${itemPath}.comments\` (discussion; each comment's \`role\` is the author's GitHub author_association: OWNER, MEMBER, COLLABORATOR, CONTRIBUTOR, FIRST_TIME_CONTRIBUTOR, FIRST_TIMER, MANNEQUIN, or NONE). \`${itemPath}.type\` is issue or pull_request. Honor \`prompt\` when present.`,
+					judge_from: `\`${itemPath}.title\`, \`${itemPath}.body\`, \`${itemPath}.authorRole\`, and \`${itemPath}.comments\` (discussion; each comment's \`role\` is the author's GitHub author_association: OWNER, MEMBER, COLLABORATOR, CONTRIBUTOR, FIRST_TIME_CONTRIBUTOR, FIRST_TIMER, MANNEQUIN, or NONE). \`${itemPath}.type\` is issue or pull_request. Use review states, bot identity, timestamps, replies, and reviewThreads (resolution/outdated state and omission counts) when present as evidence under the configured policy. Missing or omitted context is unknown. Honor \`prompt\` when present.`,
 					label: `Use \`${labelPath}.name\` and \`${labelPath}.description\` as the meaning of the label. If \`${labelPath}.apply_when\` is present, require a match. If \`${labelPath}.remove_when\` is present, do not apply when it matches; remove the label if it is already on the item. If \`${labelPath}.examples\` is present, treat them as typical matches.`,
 				},
 				{
@@ -131,7 +137,7 @@ export function buildContextRequest(
 			questions[questionId(itemIndex, labelIndex)] = noul(
 				{
 					question: `Should the GitHub label at \`${labelPath}\` be applied to \`${itemPath}\`?`,
-					judge_from: `\`${itemPath}.title\`, \`${itemPath}.body\`, \`${itemPath}.authorRole\`, \`${itemPath}.comments\` (each comment's \`role\` is the author's GitHub author_association: OWNER, MEMBER, COLLABORATOR, CONTRIBUTOR, FIRST_TIME_CONTRIBUTOR, FIRST_TIMER, MANNEQUIN, or NONE), and \`${itemPath}.candidates\` (other issues or pull requests that may already cover this report). \`${itemPath}.type\` is issue or pull_request. Honor \`prompt\` when present.`,
+					judge_from: `\`${itemPath}.title\`, \`${itemPath}.body\`, \`${itemPath}.authorRole\`, \`${itemPath}.comments\` (each comment's \`role\` is the author's GitHub author_association: OWNER, MEMBER, COLLABORATOR, CONTRIBUTOR, FIRST_TIME_CONTRIBUTOR, FIRST_TIMER, MANNEQUIN, or NONE), and \`${itemPath}.candidates\` (other issues or pull requests that may already cover this report). \`${itemPath}.type\` is issue or pull_request. Use review states, bot identity, timestamps, replies, and reviewThreads (resolution/outdated state and omission counts) when present as evidence under the configured policy. Missing or omitted context is unknown. Honor \`prompt\` when present.`,
 					label: `Use \`${labelPath}.name\` and \`${labelPath}.description\` as the meaning of the label. If \`${labelPath}.apply_when\` is present, require a match. If \`${labelPath}.remove_when\` is present, do not apply when it matches; remove the label if it is already on the item. If \`${labelPath}.examples\` is present, treat them as typical matches. Apply when comments already identify a matching existing item, or when a candidate is the same report (or otherwise matches the label). If \`${itemPath}.candidates\` is empty, rely on the item and its comments only.`,
 				},
 				{

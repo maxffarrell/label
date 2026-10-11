@@ -58,6 +58,23 @@ labels:
 only_configured: true # only apply labels that are configured in this file
 ```
 
+### Review context
+
+PR judgments include review state (including empty-body approvals and dismissals),
+submission timestamps, bot identity, and reply links. The CLI also reads GitHub
+GraphQL review threads: the latest 20 threads, each root comment and latest three
+comments, with resolution/outdated state, resolver, and explicit omission counts.
+Thread comment bodies are capped at 500 characters; the existing conversation cap
+remains 25 comments of 1000 characters. Pending draft reviews are excluded.
+
+These fields are evidence, not automatic label triggers. Repository policy decides
+what an outstanding request or any other label means. Low-level `label()` callers
+can supply `review_threads` and `review_threads_omitted` alongside `conversation`.
+GraphQL permissions must allow reading PR reviews. Failed thread reads stop the
+CLI before inference or label writes; omitted context is not proof of resolution.
+Review activity only triggers reevaluation when the repository workflow handles
+those events. This change does not modify workflow triggers or removal defaults.
+
 ### Workflow integration
 
 Check out our examples in the [`examples/github-workflows`](./examples/github-workflows) directory.

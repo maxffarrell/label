@@ -176,6 +176,19 @@ describe('labelIssues', () => {
 			token: 'test-token',
 			fetch: async (input, init) => {
 				const url = String(input);
+				if (url.endsWith('/graphql'))
+					return Response.json({
+						data: {
+							repository: {
+								pullRequest: {
+									reviewThreads: {
+										pageInfo: { hasPreviousPage: false },
+										nodes: [],
+									},
+								},
+							},
+						},
+					});
 				requests.push(`${init?.method ?? 'GET'} ${url}`);
 				const conversation = emptyConversation(url);
 				if (conversation) return conversation;
@@ -690,6 +703,19 @@ describe('labelIssues', () => {
 			token: 'test-token',
 			fetch: async (input) => {
 				const url = String(input);
+				if (url.endsWith('/graphql'))
+					return Response.json({
+						data: {
+							repository: {
+								pullRequest: {
+									reviewThreads: {
+										pageInfo: { hasPreviousPage: false },
+										nodes: [],
+									},
+								},
+							},
+						},
+					});
 				if (url.includes('/labels')) {
 					return Response.json(labels);
 				}
