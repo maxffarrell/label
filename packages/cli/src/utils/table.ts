@@ -104,8 +104,8 @@ function formatLabels(decision: LabelDecision, remove: boolean): string {
 }
 
 function formatLabelName(label: LabelJudgment, removed: boolean): string {
-	if (label.canApply === false) return `${label.name} (suggest)`;
 	if (removed) return `${label.name} (remove)`;
+	if (label.canApply === false) return `${label.name} (suggest)`;
 	return label.name;
 }
 

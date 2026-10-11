@@ -18,7 +18,7 @@ export const schema = defaultCommandOptionsSchema.extend({
 	dryRun: z.boolean(),
 	remove: z.boolean(),
 	repo: z.string().optional(),
-	threshold: z.coerce.number(),
+	threshold: z.coerce.number().min(0).max(1),
 	all: z.boolean(),
 	top: z.union([z.boolean(), z.coerce.number()]).optional(),
 	includeClosed: z.boolean(),

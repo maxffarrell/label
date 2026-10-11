@@ -1,0 +1,1936 @@
+{
+	"schemaVersion": 1,
+	"baseline": "47f83c37073c98275f6d859cbed928180ee88766",
+	"threshold": 0.6,
+	"cases": [
+		{
+			"id": "official-demo-dropdown",
+			"source": "https://github.com/huntabyte/shadcn-svelte/issues/2903",
+			"cutoff": "2026-09-27T14:49:22Z",
+			"limitations": "Current title/body and file metadata; historical comments and label events filtered at cutoff. Candidate set fixed, not a live retrieval evaluation. ",
+			"payload": {
+				"issue": {
+					"number": 2903,
+					"title": "<DropdownMenu.SubTrigger> is not rendering the content on hover next to the menu",
+					"body": "### Describe the bug\n\nShadcn DropdownMenu.Subtrigger \n\n<img width=\"504\" height=\"550\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/6ccabd6c-e65d-4a7e-b623-5597a92a1aa4\" />\n\n\nBits- UI\n\n<img width=\"569\" height=\"435\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/90f6cce4-4bc8-4fe5-a907-17024d78e28b\" />\n\n### Reproduction\n\nIt's live broken on the url.\n\nhttps://www.shadcn-svelte.com/docs/components/dropdown-menu\n\n### Logs\n\n```bash\n\n```\n\n### System Info\n\n```bash\nSystem:\n    OS: macOS 26.2\n    CPU: (8) arm64 Apple M3\n    Memory: 253.11 MB / 16.00 GB\n    Shell: 5.9 - /bin/zsh\n  Binaries:\n    Node: 22.22.3 - /Users/agrittiwari/.nvm/versions/node/v22.22.3/bin/node\n    npm: 10.9.8 - /Users/agrittiwari/.nvm/versions/node/v22.22.3/bin/npm\n    pnpm: 10.32.1 - /Users/agrittiwari/.nvm/versions/node/v22.22.3/bin/pnpm\n    bun: 1.3.0 - /opt/homebrew/bin/bun\n    Deno: 2.9.4 - /opt/homebrew/bin/deno\n  Browsers:\n    Chrome: 153.0.8010.54\n    Safari: 26.2\n```\n\n### Severity\n\nannoyance",
+					"user": {
+						"login": "agrittiwari"
+					},
+					"author_association": "NONE",
+					"created_at": "2026-09-27T14:49:18Z",
+					"labels": ["triage"]
+				},
+				"repository": {
+					"full_name": "huntabyte/shadcn-svelte"
+				},
+				"conversation": [],
+				"label_overrides": [
+					{
+						"name": "triage",
+						"action": "labeled",
+						"author": "agrittiwari",
+						"createdAt": "2026-09-27T14:49:20Z"
+					}
+				]
+			},
+			"candidates": [],
+			"expectations": [
+				{
+					"label": "needs reproduction",
+					"action": "selected",
+					"expected": false
+				},
+				{
+					"label": "bug",
+					"action": "selected",
+					"expected": false
+				}
+			]
+		},
+		{
+			"id": "official-demo-firefox",
+			"source": "https://github.com/huntabyte/shadcn-svelte/issues/2910",
+			"cutoff": "2026-09-30T22:39:20Z",
+			"limitations": "Current title/body and file metadata; historical comments and label events filtered at cutoff. Candidate set fixed, not a live retrieval evaluation. ",
+			"payload": {
+				"issue": {
+					"number": 2910,
+					"title": "`scroll-fade` doesn't disappear when there's no more to scroll on Firefox",
+					"body": "### Describe the bug\n\nHi there! It seems that the `scroll-fade` class doesn't work properly on Firefox, since the fade is always shown regardless of whether the first/last element are visible.\n\nThis was tested on Firefox on Linux:\n\nhttps://github.com/user-attachments/assets/b9942a0d-e137-40d8-acf1-c2d9c447daa6\n\n### Reproduction\n\nScroll the demo in shadcn-svelte.com docs.\n\n### Logs\n\n```bash\n\n```\n\n### System Info\n\n```bash\nSystem:\n    OS: Linux 7.2 Fedora Linux 44 (Workstation Edition)\n    CPU: (8) x64 11th Gen Intel(R) Core(TM) i5-1135G7 @ 2.40GHz\n    Memory: 8.77 GB / 30.59 GB\n    Container: Yes\n    Shell: 5.9 - /usr/bin/zsh\n  Binaries:\n    Node: 25.9.0 - /home/skaldebane/.local/share/mise/installs/node/25.9.0/bin/node\n    Yarn: 1.22.22 - /usr/bin/yarn\n    npm: 11.12.1 - /home/skaldebane/.local/share/mise/installs/node/25.9.0/bin/npm\n    pnpm: 12.8.1 - /home/skaldebane/.local/share/pnpm/bin/pnpm\n    bun: 1.4.2 - /home/skaldebane/.local/share/mise/installs/bun/1.4.2/bin/bun\n  Browsers:\n    Firefox: 156.0.1\n    Firefox Developer Edition: 156.0.1\n```\n\n### Severity\n\nannoyance",
+					"user": {
+						"login": "skaldebane"
+					},
+					"author_association": "CONTRIBUTOR",
+					"created_at": "2026-09-30T22:39:16Z",
+					"labels": ["triage"]
+				},
+				"repository": {
+					"full_name": "huntabyte/shadcn-svelte"
+				},
+				"conversation": [],
+				"label_overrides": [
+					{
+						"name": "triage",
+						"action": "labeled",
+						"author": "skaldebane",
+						"createdAt": "2026-09-30T22:39:18Z"
+					}
+				]
+			},
+			"candidates": [],
+			"expectations": [
+				{
+					"label": "needs reproduction",
+					"action": "selected",
+					"expected": false
+				},
+				{
+					"label": "bug",
+					"action": "selected",
+					"expected": false
+				}
+			]
+		},
+		{
+			"id": "upstream-cause-firefox",
+			"source": "https://github.com/huntabyte/shadcn-svelte/issues/2910",
+			"cutoff": "2026-09-30T23:15:46Z",
+			"limitations": "Current title/body and file metadata; historical comments and label events filtered at cutoff. Candidate set fixed, not a live retrieval evaluation. ",
+			"payload": {
+				"issue": {
+					"number": 2910,
+					"title": "`scroll-fade` doesn't disappear when there's no more to scroll on Firefox",
+					"body": "### Describe the bug\n\nHi there! It seems that the `scroll-fade` class doesn't work properly on Firefox, since the fade is always shown regardless of whether the first/last element are visible.\n\nThis was tested on Firefox on Linux:\n\nhttps://github.com/user-attachments/assets/b9942a0d-e137-40d8-acf1-c2d9c447daa6\n\n### Reproduction\n\nScroll the demo in shadcn-svelte.com docs.\n\n### Logs\n\n```bash\n\n```\n\n### System Info\n\n```bash\nSystem:\n    OS: Linux 7.2 Fedora Linux 44 (Workstation Edition)\n    CPU: (8) x64 11th Gen Intel(R) Core(TM) i5-1135G7 @ 2.40GHz\n    Memory: 8.77 GB / 30.59 GB\n    Container: Yes\n    Shell: 5.9 - /usr/bin/zsh\n  Binaries:\n    Node: 25.9.0 - /home/skaldebane/.local/share/mise/installs/node/25.9.0/bin/node\n    Yarn: 1.22.22 - /usr/bin/yarn\n    npm: 11.12.1 - /home/skaldebane/.local/share/mise/installs/node/25.9.0/bin/npm\n    pnpm: 12.8.1 - /home/skaldebane/.local/share/pnpm/bin/pnpm\n    bun: 1.4.2 - /home/skaldebane/.local/share/mise/installs/bun/1.4.2/bin/bun\n  Browsers:\n    Firefox: 156.0.1\n    Firefox Developer Edition: 156.0.1\n```\n\n### Severity\n\nannoyance",
+					"user": {
+						"login": "skaldebane"
+					},
+					"author_association": "CONTRIBUTOR",
+					"created_at": "2026-09-30T22:39:16Z",
+					"labels": ["needs reproduction", "triage"]
+				},
+				"repository": {
+					"full_name": "huntabyte/shadcn-svelte"
+				},
+				"conversation": [
+					{
+						"author": "skaldebane",
+						"role": "CONTRIBUTOR",
+						"body": "Apparently shadcn/ui also suffers from the same issue. Similar issue there with fix: https://github.com/shadcn-ui/ui/issues/11291",
+						"createdAt": "2026-09-30T23:13:06Z",
+						"kind": "comment",
+						"isBot": false
+					}
+				],
+				"label_overrides": [
+					{
+						"name": "triage",
+						"action": "labeled",
+						"author": "skaldebane",
+						"createdAt": "2026-09-30T22:39:18Z"
+					}
+				]
+			},
+			"candidates": [],
+			"expectations": [
+				{
+					"label": "duplicate",
+					"action": "selected",
+					"expected": false
+				},
+				{
+					"label": "bug",
+					"action": "selected",
+					"expected": false
+				}
+			]
+		},
+		{
+			"id": "unconfirmed-dependency-bug",
+			"source": "https://github.com/huntabyte/shadcn-svelte/issues/2915",
+			"cutoff": "2026-10-06T07:08:40Z",
+			"limitations": "Current title/body and file metadata; historical comments and label events filtered at cutoff. Candidate set fixed, not a live retrieval evaluation. ",
+			"payload": {
+				"issue": {
+					"number": 2915,
+					"title": "CLI fails to add form component on SvelteKit 3 due to @sveltejs/kit 3.x peer mismatch in sv",
+					"body": "Running `npx shadcn-svelte@latest add form` inside a fresh SvelteKit 3 project (`@sveltejs/kit@3.0.1`) crashes during the automatic dependency installation phase with an `npm ERESOLVE` error.\n\nThe error occurs because `sveltekit-superforms@2.31.0` defines `peer @sveltejs/kit@\"1.x || 2.x\"`, which rejects `@sveltejs/kit@3.0.1`. Consequently, `formsnap@2.0.1` (which depends on superforms) cannot be resolved by npm during the CLI execution.\n\n\n### Reproduction\n\n1. Create a SvelteKit 3 project with @sveltejs/kit@3.0.1.\n2. Run npx shadcn-svelte@latest add form.\n3. Confirm installation prompt.\n4. See CLI crash with ERESOLVE unable to resolve dependency tree.\n\n### Logs\n\n```bash\nnpx shadcn-svelte@latest add form\n\u250c   shadcn-svelte  v1.7.0\n\u2502\n\u25c7  Components to install:\n\u2502  form\n\u2502\n\u25c7  Ready to install components and dependencies?\n\u2502  Yes\n\u2502\n\u25c7  form installed at src/lib/components/ui/form\n\u2502\n\u25c7  button installed at src/lib/components/ui/button\n\u2502\n\u25c7  label installed at src/lib/components/ui/label\n\u2502\n\u25a0  Failed to install dependencies\n\u2502  npm error code ERESOLVE\n\u2502  npm error ERESOLVE unable to resolve dependency tree\n\u2502  npm error\n\u2502  npm error While resolving: sveltekit3-test@0.0.1\n\u2502  npm error Found: @sveltejs/kit@3.0.1\n\u2502  npm error node_modules/@sveltejs/kit\n\u2502  npm error   dev @sveltejs/kit@\"^3.0.0\" from the root project\n\u2502  npm error\n\u2502  npm error Could not resolve dependency:\n\u2502  npm error peer @sveltejs/kit@\"1.x || 2.x\" from sveltekit-superforms@2.31.0\n\u2502  npm error node_modules/sveltekit-superforms\n\u2502  npm error   dev sveltekit-superforms@\"^2.30.0\" from the root project\n\u2502  npm error   peer sveltekit-superforms@\"^2.19.0\" from formsnap@2.0.1\n\u2502  npm error   node_modules/formsnap\n\u2502  npm error     dev formsnap@\"^2.0.1\" from the root project\n\u2502  npm error\n\u2502  npm error Fix the upstream dependency conflict, or retry this command with --force or --legacy-peer-deps to accept an incorrect (and potentially broken) dependency resolution.\n\u2502  npm error\n\u2502  npm error\n\u2502  npm error For a full report see:\n\u2502  npm error /home/ahmad/.npm/_logs/2026-10-06T06_58_32_234Z-eresolve-report.txt\n\u2502  npm error A complete log of this run can be found in: /home/ahmad/.npm/_logs/2026-10-06T06_58_32_234Z-debug-0.log\n\u2502\n\u2502\n\u2514  CLI Error: Operation failed.\n    at i (file:///home/ahmad/.npm/_npx/a9116f6e444a1e9e/node_modules/shadcn-svelte/dist/transform-icons-Dcl0yvKG.mjs:1:194)\n    at Vs (file:///home/ahmad/.npm/_npx/a9116f6e444a1e9e/node_modules/shadcn-svelte/dist/index.mjs:126:35555)\n    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)\n    at async tc (file:///home/ahmad/.npm/_npx/a9116f6e444a1e9e/node_modules/shadcn-svelte/dist/index.mjs:130:2979)\n    at async Command.<anonymous> (file:///home/ahmad/.npm/_npx/a9116f6e444a1e9e/node_modules/shadcn-svelte/dist/index.mjs:130:1910)\n```\n\n### System Info\n\n```bash\nSystem:\n    OS: Linux 6.6 Fedora Linux 43 (WSL)\n    CPU: (12) x64 13th Gen Intel(R) Core(TM) i5-1345U\n    Memory: 6.93 GB / 7.59 GB\n    Container: Yes\n    Shell: 5.9 - /bin/zsh\n  Binaries:\n    Node: 24.20.0 - /home/ahmad/.nvm/versions/node/v24.20.0/bin/node\n    npm: 11.19.0 - /home/ahmad/.nvm/versions/node/v24.20.0/bin/npm\n    bun: 1.4.2 - /home/ahmad/.bun/bin/bun\n  npmPackages:\n    @lucide/svelte: ^1.52.0 => 1.52.0\n    @sveltejs/kit: ^3.0.0 => 3.0.1\n    shadcn-svelte: ^1.7.0 => 1.7.0\n    svelte: ^5.57.1 => 5.57.1\n    tailwindcss: ^4.3.0 => 4.3.3\n```\n\n### Severity\n\nannoyance",
+					"user": {
+						"login": "ahmdsb"
+					},
+					"author_association": "NONE",
+					"created_at": "2026-10-06T07:08:37Z",
+					"labels": ["triage"]
+				},
+				"repository": {
+					"full_name": "huntabyte/shadcn-svelte"
+				},
+				"conversation": [],
+				"label_overrides": [
+					{
+						"name": "triage",
+						"action": "labeled",
+						"author": "ahmdsb",
+						"createdAt": "2026-10-06T07:08:38Z"
+					}
+				]
+			},
+			"candidates": [],
+			"expectations": [
+				{
+					"label": "bug",
+					"action": "selected",
+					"expected": false
+				},
+				{
+					"label": "cli",
+					"action": "selected",
+					"expected": true
+				},
+				{
+					"label": "feature",
+					"action": "selected",
+					"expected": false
+				}
+			]
+		},
+		{
+			"id": "human-removal-dependency-tracker",
+			"source": "https://github.com/huntabyte/shadcn-svelte/issues/2915",
+			"cutoff": "2026-10-06T20:19:06Z",
+			"limitations": "Current title/body and file metadata; historical comments and label events filtered at cutoff. Candidate set fixed, not a live retrieval evaluation. ",
+			"payload": {
+				"issue": {
+					"number": 2915,
+					"title": "CLI fails to add form component on SvelteKit 3 due to @sveltejs/kit 3.x peer mismatch in sv",
+					"body": "Running `npx shadcn-svelte@latest add form` inside a fresh SvelteKit 3 project (`@sveltejs/kit@3.0.1`) crashes during the automatic dependency installation phase with an `npm ERESOLVE` error.\n\nThe error occurs because `sveltekit-superforms@2.31.0` defines `peer @sveltejs/kit@\"1.x || 2.x\"`, which rejects `@sveltejs/kit@3.0.1`. Consequently, `formsnap@2.0.1` (which depends on superforms) cannot be resolved by npm during the CLI execution.\n\n\n### Reproduction\n\n1. Create a SvelteKit 3 project with @sveltejs/kit@3.0.1.\n2. Run npx shadcn-svelte@latest add form.\n3. Confirm installation prompt.\n4. See CLI crash with ERESOLVE unable to resolve dependency tree.\n\n### Logs\n\n```bash\nnpx shadcn-svelte@latest add form\n\u250c   shadcn-svelte  v1.7.0\n\u2502\n\u25c7  Components to install:\n\u2502  form\n\u2502\n\u25c7  Ready to install components and dependencies?\n\u2502  Yes\n\u2502\n\u25c7  form installed at src/lib/components/ui/form\n\u2502\n\u25c7  button installed at src/lib/components/ui/button\n\u2502\n\u25c7  label installed at src/lib/components/ui/label\n\u2502\n\u25a0  Failed to install dependencies\n\u2502  npm error code ERESOLVE\n\u2502  npm error ERESOLVE unable to resolve dependency tree\n\u2502  npm error\n\u2502  npm error While resolving: sveltekit3-test@0.0.1\n\u2502  npm error Found: @sveltejs/kit@3.0.1\n\u2502  npm error node_modules/@sveltejs/kit\n\u2502  npm error   dev @sveltejs/kit@\"^3.0.0\" from the root project\n\u2502  npm error\n\u2502  npm error Could not resolve dependency:\n\u2502  npm error peer @sveltejs/kit@\"1.x || 2.x\" from sveltekit-superforms@2.31.0\n\u2502  npm error node_modules/sveltekit-superforms\n\u2502  npm error   dev sveltekit-superforms@\"^2.30.0\" from the root project\n\u2502  npm error   peer sveltekit-superforms@\"^2.19.0\" from formsnap@2.0.1\n\u2502  npm error   node_modules/formsnap\n\u2502  npm error     dev formsnap@\"^2.0.1\" from the root project\n\u2502  npm error\n\u2502  npm error Fix the upstream dependency conflict, or retry this command with --force or --legacy-peer-deps to accept an incorrect (and potentially broken) dependency resolution.\n\u2502  npm error\n\u2502  npm error\n\u2502  npm error For a full report see:\n\u2502  npm error /home/ahmad/.npm/_logs/2026-10-06T06_58_32_234Z-eresolve-report.txt\n\u2502  npm error A complete log of this run can be found in: /home/ahmad/.npm/_logs/2026-10-06T06_58_32_234Z-debug-0.log\n\u2502\n\u2502\n\u2514  CLI Error: Operation failed.\n    at i (file:///home/ahmad/.npm/_npx/a9116f6e444a1e9e/node_modules/shadcn-svelte/dist/transform-icons-Dcl0yvKG.mjs:1:194)\n    at Vs (file:///home/ahmad/.npm/_npx/a9116f6e444a1e9e/node_modules/shadcn-svelte/dist/index.mjs:126:35555)\n    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)\n    at async tc (file:///home/ahmad/.npm/_npx/a9116f6e444a1e9e/node_modules/shadcn-svelte/dist/index.mjs:130:2979)\n    at async Command.<anonymous> (file:///home/ahmad/.npm/_npx/a9116f6e444a1e9e/node_modules/shadcn-svelte/dist/index.mjs:130:1910)\n```\n\n### System Info\n\n```bash\nSystem:\n    OS: Linux 6.6 Fedora Linux 43 (WSL)\n    CPU: (12) x64 13th Gen Intel(R) Core(TM) i5-1345U\n    Memory: 6.93 GB / 7.59 GB\n    Container: Yes\n    Shell: 5.9 - /bin/zsh\n  Binaries:\n    Node: 24.20.0 - /home/ahmad/.nvm/versions/node/v24.20.0/bin/node\n    npm: 11.19.0 - /home/ahmad/.nvm/versions/node/v24.20.0/bin/npm\n    bun: 1.4.2 - /home/ahmad/.bun/bin/bun\n  npmPackages:\n    @lucide/svelte: ^1.52.0 => 1.52.0\n    @sveltejs/kit: ^3.0.0 => 3.0.1\n    shadcn-svelte: ^1.7.0 => 1.7.0\n    svelte: ^5.57.1 => 5.57.1\n    tailwindcss: ^4.3.0 => 4.3.3\n```\n\n### Severity\n\nannoyance",
+					"user": {
+						"login": "ahmdsb"
+					},
+					"author_association": "NONE",
+					"created_at": "2026-10-06T07:08:37Z",
+					"labels": ["blocked-by-dep", "has workaround"]
+				},
+				"repository": {
+					"full_name": "huntabyte/shadcn-svelte"
+				},
+				"conversation": [
+					{
+						"author": "ieedan",
+						"role": "COLLABORATOR",
+						"body": "> The error occurs because sveltekit-superforms@2.31.0 defines peer @sveltejs/kit@\"1.x || 2.x\", which rejects @sveltejs/kit@3.0.1. Consequently, formsnap@2.0.1 (which depends on superforms) cannot be resolved by npm during the CLI execution.\n\nThis issue should probably be opened with sveltekit-superforms then :) \n\nAnd in fact it already has been https://github.com/ciscoheat/sveltekit-superforms/issues/695",
+						"createdAt": "2026-10-06T20:16:55Z",
+						"kind": "comment",
+						"isBot": false
+					},
+					{
+						"author": "ieedan",
+						"role": "COLLABORATOR",
+						"body": "We can use this to track our upgrade to sveltekit-superforms@v3 whenever that is out of `@next` though.",
+						"createdAt": "2026-10-06T20:18:01Z",
+						"kind": "comment",
+						"isBot": false
+					}
+				],
+				"label_overrides": [
+					{
+						"name": "triage",
+						"action": "unlabeled",
+						"author": "ieedan",
+						"createdAt": "2026-10-06T20:18:39Z"
+					},
+					{
+						"name": "bug",
+						"action": "unlabeled",
+						"author": "ieedan",
+						"createdAt": "2026-10-06T20:18:39Z"
+					},
+					{
+						"name": "duplicate",
+						"action": "unlabeled",
+						"author": "ieedan",
+						"createdAt": "2026-10-06T20:18:39Z"
+					},
+					{
+						"name": "needs reproduction",
+						"action": "unlabeled",
+						"author": "ieedan",
+						"createdAt": "2026-10-06T20:18:39Z"
+					},
+					{
+						"name": "cli",
+						"action": "unlabeled",
+						"author": "ieedan",
+						"createdAt": "2026-10-06T20:18:39Z"
+					},
+					{
+						"name": "blocked-by-dep",
+						"action": "labeled",
+						"author": "ieedan",
+						"createdAt": "2026-10-06T20:18:39Z"
+					},
+					{
+						"name": "feature",
+						"action": "unlabeled",
+						"author": "ieedan",
+						"createdAt": "2026-10-06T20:18:45Z"
+					},
+					{
+						"name": "dependencies",
+						"action": "unlabeled",
+						"author": "ieedan",
+						"createdAt": "2026-10-06T20:18:45Z"
+					}
+				]
+			},
+			"candidates": [],
+			"expectations": [
+				{
+					"label": "duplicate",
+					"action": "add",
+					"expected": false
+				},
+				{
+					"label": "cli",
+					"action": "add",
+					"expected": false
+				},
+				{
+					"label": "dependencies",
+					"action": "add",
+					"expected": false
+				},
+				{
+					"label": "feature",
+					"action": "add",
+					"expected": false
+				}
+			]
+		},
+		{
+			"id": "human-rejection-radix-parity",
+			"source": "https://github.com/huntabyte/shadcn-svelte/issues/2921",
+			"cutoff": "2026-10-09T19:32:59Z",
+			"limitations": "Current title/body and file metadata; historical comments and label events filtered at cutoff. Candidate set fixed, not a live retrieval evaluation. ",
+			"payload": {
+				"issue": {
+					"number": 2921,
+					"title": "Navigation Menu not aligning items",
+					"body": "### Describe the bug\n\nThe NavigationMenu in react Shadcn has the popout menu left align with the menu item, shadcn-svelte has it always left align.\n\n### Reproduction\n\nOriginal shadcn:\n\n<img width=\"1259\" height=\"882\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/e984586d-802f-42cc-98ed-e672f39c608d\" />\n\nShadcn svelte:\n\n<img width=\"1035\" height=\"931\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/91384152-4b93-4339-a651-9cf950bafeb5\" />\n\nhttps://stackblitz.com/edit/github-gr5tmkqe?file=src%2Froutes%2F%2Bpage.svelte\n\n### Logs\n\n```bash\n\n```\n\n### System Info\n\n```bash\nSystem:\n    OS: Windows 11 10.0.26200\n    CPU: (24) x64 13th Gen Intel(R) Core(TM) i7-13700\n    Memory: 28.00 GB / 63.73 GB\n  Binaries:\n    Node: 24.18.0 - C:\\Program Files\\nodejs\\node.EXE\n    npm: 12.2.0 - C:\\Program Files\\nodejs\\npm.CMD\n  Browsers:\n    Chrome: 155.0.8059.40\n    Edge: Chromium (154.0.4258.48)\n  npmPackages:\n    @lucide/svelte: ^1.54.0 => 1.54.0 \n    @sveltejs/kit: ^3.0.1 => 3.0.1 \n    bits-ui: ^2.19.5 => 2.19.5 \n    svelte: ^5.57.2 => 5.57.2\n```\n\n### Severity\n\nannoyance",
+					"user": {
+						"login": "rogerfar"
+					},
+					"author_association": "NONE",
+					"created_at": "2026-10-09T18:06:51Z",
+					"labels": ["has workaround", "triage", "under review"]
+				},
+				"repository": {
+					"full_name": "huntabyte/shadcn-svelte"
+				},
+				"conversation": [
+					{
+						"author": "ieedan",
+						"role": "COLLABORATOR",
+						"body": "So the issue here is a difference in behavior between the radix version of shadcn and the base ui version.\n\nOur implementation has historically mirrored the radix implementation, and in this case we have parity with the radix version.\n\nI am not completely sure what the right way to proceed is honestly. Neither behavior is really wrong, or better, just different.\n\nWould like to know how others feel about each behavior and which one they prefer. I do believe that changing the way that the positioning works will require some work in bits-ui.",
+						"createdAt": "2026-10-09T19:00:50Z",
+						"kind": "comment",
+						"isBot": false
+					},
+					{
+						"author": "rogerfar",
+						"role": "NONE",
+						"body": "I'm running in the issue because my menu's are pretty small, 1 column. If you hover over a menu item that is way on the far right of the screen, it opens this tiny drop down all the way on the left, which looks really funny.",
+						"createdAt": "2026-10-09T19:32:56Z",
+						"kind": "comment",
+						"isBot": false
+					}
+				],
+				"label_overrides": [
+					{
+						"name": "triage",
+						"action": "labeled",
+						"author": "rogerfar",
+						"createdAt": "2026-10-09T18:06:52Z"
+					},
+					{
+						"name": "parity",
+						"action": "unlabeled",
+						"author": "ieedan",
+						"createdAt": "2026-10-09T19:01:30Z"
+					},
+					{
+						"name": "under review",
+						"action": "labeled",
+						"author": "ieedan",
+						"createdAt": "2026-10-09T19:01:30Z"
+					},
+					{
+						"name": "has workaround",
+						"action": "labeled",
+						"author": "ieedan",
+						"createdAt": "2026-10-09T19:01:30Z"
+					}
+				]
+			},
+			"candidates": [],
+			"expectations": [
+				{
+					"label": "parity",
+					"action": "add",
+					"expected": false
+				}
+			]
+		},
+		{
+			"id": "human-removal-contribution-invitation",
+			"source": "https://github.com/huntabyte/shadcn-svelte/issues/2917",
+			"cutoff": "2026-10-09T01:50:50Z",
+			"limitations": "Current title/body and file metadata; historical comments and label events filtered at cutoff. Candidate set fixed, not a live retrieval evaluation. ",
+			"payload": {
+				"issue": {
+					"number": 2917,
+					"title": "Update import examples for SvelteKit 3",
+					"body": "### Change Type\n\nCorrection\n\n### Proposed Changes\n\nSome examples still use `$lib/...` imports. SvelteKit 3 projects can use package import aliases such as `#lib/...`. The docs examples and skills should be updated to use the project\u2019s configured alias.",
+					"user": {
+						"login": "Qainguin"
+					},
+					"author_association": "NONE",
+					"created_at": "2026-10-07T00:30:36Z",
+					"labels": ["docs"]
+				},
+				"repository": {
+					"full_name": "huntabyte/shadcn-svelte"
+				},
+				"conversation": [
+					{
+						"author": "maxffarrell",
+						"role": "CONTRIBUTOR",
+						"body": "#2864 ",
+						"createdAt": "2026-10-09T01:50:41Z",
+						"kind": "comment",
+						"isBot": false
+					}
+				],
+				"label_overrides": [
+					{
+						"name": "triage",
+						"action": "unlabeled",
+						"author": "ieedan",
+						"createdAt": "2026-10-07T10:34:05Z"
+					},
+					{
+						"name": "contributions welcome",
+						"action": "unlabeled",
+						"author": "ieedan",
+						"createdAt": "2026-10-07T10:33:57Z"
+					}
+				]
+			},
+			"candidates": [],
+			"expectations": [
+				{
+					"label": "contributions welcome",
+					"action": "add",
+					"expected": false
+				},
+				{
+					"label": "docs",
+					"action": "selected",
+					"expected": true
+				}
+			]
+		},
+		{
+			"id": "requested-replacement-pr",
+			"source": "https://github.com/huntabyte/shadcn-svelte/pull/2905",
+			"cutoff": "2026-09-27T17:28:02Z",
+			"limitations": "Current title/body and file metadata; historical comments and label events filtered at cutoff. Candidate set fixed, not a live retrieval evaluation. Earlier replacement request is in #2904 conversation, outside the production candidate-body context; same title/body is insufficient duplicate evidence.",
+			"payload": {
+				"issue": {
+					"number": 2905,
+					"title": "fix: center breadcrumb and vertical separator alignment",
+					"body": "fixes #2902 \r\n\r\n### Issues\r\n\r\n1. The breadcrumb `>` chevron icon was not vertically centered inside its `<li>` element.\r\n2. The vertical `|` separator (used between the sidebar trigger and breadcrumb) appeared slightly too high when given an explicit height like `h-4`.\r\n\r\n### Fix\r\n\r\n**Breadcrumb separator** \u2014 added `flex items-center` to `.cn-breadcrumb-separator` across all themes so the SVG icon centers within its list item.\r\n\r\n**Vertical separator** \u2014 replaced `data-vertical:self-stretch` with `data-vertical:self-center` in `separator.svelte`. When `align-self: stretch` is combined with an explicit cross-size (e.g. `h-4`), CSS positions the item at the start edge (top) instead of centering it. Using `self-center` fixes this\r\n\r\nbefore:\r\n<img width=\"388\" height=\"56\" alt=\"image\" src=\"https://github.com/user-attachments/assets/db7a7087-9e3b-4161-8e91-161acd687880\" />\r\nafter:\r\n<img width=\"384\" height=\"64\" alt=\"image\" src=\"https://github.com/user-attachments/assets/9a1103a5-6ac3-4c61-9468-c1eb8438cd6e\" />\r\n",
+					"user": {
+						"login": "biisal"
+					},
+					"author_association": "NONE",
+					"created_at": "2026-09-27T17:27:53Z",
+					"labels": [],
+					"pull_request": {}
+				},
+				"repository": {
+					"full_name": "huntabyte/shadcn-svelte"
+				},
+				"conversation": [
+					{
+						"author": "changeset-bot[bot]",
+						"role": "NONE",
+						"body": "### \u26a0\ufe0f No Changeset found\n\nLatest commit: f5f2e186bbc21fac104b936425070c26816fc49f\n\nMerging this PR will not cause a version bump for any packages. If these changes should not result in a new version, you're good to go. **If these changes should result in a version bump, you need to add a changeset.**\n\n<details><summary>This PR includes no changesets</summary>\n\n  When changesets are added to this PR, you'll see the packages that this PR includes changesets for and the associated semver types\n\n</details>\n\n[Click here to learn what changesets are, and how to add one](https://changesets.dev/faq).\n\n[Click here if you're a maintainer who wants to add a changeset to this PR](https://github.com/biisal/shadcn-svelte/new/fix/inset-layout?filename=.changeset/tidy-cougars-obey.md&value=---%0A%22docs%22%3A%20patch%0A---%0A%0Afix%3A%20center%20breadcrumb%20and%20vertical%20separator%20alignment%0A)\n\n",
+						"createdAt": "2026-09-27T17:27:59Z",
+						"kind": "comment",
+						"isBot": true
+					},
+					{
+						"author": "copilot-pull-request-reviewer[bot]",
+						"role": "CONTRIBUTOR",
+						"body": "Copilot was unable to review this pull request because the user who requested the review has reached their quota limit.",
+						"createdAt": "2026-09-27T17:27:59Z",
+						"kind": "review",
+						"isBot": true,
+						"reviewState": "COMMENTED"
+					}
+				],
+				"label_overrides": [],
+				"files": [
+					{
+						"filename": "docs/src/lib/registry/styles/style-luma.css",
+						"status": "modified",
+						"additions": 1,
+						"deletions": 1
+					},
+					{
+						"filename": "docs/src/lib/registry/styles/style-lyra.css",
+						"status": "modified",
+						"additions": 1,
+						"deletions": 1
+					},
+					{
+						"filename": "docs/src/lib/registry/styles/style-maia.css",
+						"status": "modified",
+						"additions": 1,
+						"deletions": 1
+					},
+					{
+						"filename": "docs/src/lib/registry/styles/style-mira.css",
+						"status": "modified",
+						"additions": 1,
+						"deletions": 1
+					},
+					{
+						"filename": "docs/src/lib/registry/styles/style-nova.css",
+						"status": "modified",
+						"additions": 1,
+						"deletions": 1
+					},
+					{
+						"filename": "docs/src/lib/registry/styles/style-rhea.css",
+						"status": "modified",
+						"additions": 1,
+						"deletions": 1
+					},
+					{
+						"filename": "docs/src/lib/registry/styles/style-sera.css",
+						"status": "modified",
+						"additions": 1,
+						"deletions": 1
+					},
+					{
+						"filename": "docs/src/lib/registry/styles/style-vega.css",
+						"status": "modified",
+						"additions": 1,
+						"deletions": 1
+					},
+					{
+						"filename": "docs/src/lib/registry/ui/separator/separator.svelte",
+						"status": "modified",
+						"additions": 1,
+						"deletions": 1
+					},
+					{
+						"filename": "docs/static/registry/styles/luma/breadcrumb.json",
+						"status": "modified",
+						"additions": 1,
+						"deletions": 1
+					},
+					{
+						"filename": "docs/static/registry/styles/luma/navigation-menu.json",
+						"status": "modified",
+						"additions": 1,
+						"deletions": 1
+					},
+					{
+						"filename": "docs/static/registry/styles/luma/separator.json",
+						"status": "modified",
+						"additions": 1,
+						"deletions": 1
+					},
+					{
+						"filename": "docs/static/registry/styles/lyra/breadcrumb.json",
+						"status": "modified",
+						"additions": 1,
+						"deletions": 1
+					},
+					{
+						"filename": "docs/static/registry/styles/lyra/navigation-menu.json",
+						"status": "modified",
+						"additions": 1,
+						"deletions": 1
+					},
+					{
+						"filename": "docs/static/registry/styles/lyra/separator.json",
+						"status": "modified",
+						"additions": 1,
+						"deletions": 1
+					},
+					{
+						"filename": "docs/static/registry/styles/maia/breadcrumb.json",
+						"status": "modified",
+						"additions": 1,
+						"deletions": 1
+					},
+					{
+						"filename": "docs/static/registry/styles/maia/navigation-menu.json",
+						"status": "modified",
+						"additions": 1,
+						"deletions": 1
+					},
+					{
+						"filename": "docs/static/registry/styles/maia/separator.json",
+						"status": "modified",
+						"additions": 1,
+						"deletions": 1
+					},
+					{
+						"filename": "docs/static/registry/styles/mira/breadcrumb.json",
+						"status": "modified",
+						"additions": 1,
+						"deletions": 1
+					},
+					{
+						"filename": "docs/static/registry/styles/mira/navigation-menu.json",
+						"status": "modified",
+						"additions": 1,
+						"deletions": 1
+					},
+					{
+						"filename": "docs/static/registry/styles/mira/separator.json",
+						"status": "modified",
+						"additions": 1,
+						"deletions": 1
+					},
+					{
+						"filename": "docs/static/registry/styles/nova/breadcrumb.json",
+						"status": "modified",
+						"additions": 1,
+						"deletions": 1
+					},
+					{
+						"filename": "docs/static/registry/styles/nova/navigation-menu.json",
+						"status": "modified",
+						"additions": 1,
+						"deletions": 1
+					},
+					{
+						"filename": "docs/static/registry/styles/nova/separator.json",
+						"status": "modified",
+						"additions": 1,
+						"deletions": 1
+					},
+					{
+						"filename": "docs/static/registry/styles/rhea/breadcrumb.json",
+						"status": "modified",
+						"additions": 1,
+						"deletions": 1
+					},
+					{
+						"filename": "docs/static/registry/styles/rhea/navigation-menu.json",
+						"status": "modified",
+						"additions": 1,
+						"deletions": 1
+					},
+					{
+						"filename": "docs/static/registry/styles/rhea/separator.json",
+						"status": "modified",
+						"additions": 1,
+						"deletions": 1
+					},
+					{
+						"filename": "docs/static/registry/styles/sera/breadcrumb.json",
+						"status": "modified",
+						"additions": 1,
+						"deletions": 1
+					},
+					{
+						"filename": "docs/static/registry/styles/sera/navigation-menu.json",
+						"status": "modified",
+						"additions": 1,
+						"deletions": 1
+					},
+					{
+						"filename": "docs/static/registry/styles/sera/separator.json",
+						"status": "modified",
+						"additions": 1,
+						"deletions": 1
+					},
+					{
+						"filename": "docs/static/registry/styles/vega/breadcrumb.json",
+						"status": "modified",
+						"additions": 1,
+						"deletions": 1
+					},
+					{
+						"filename": "docs/static/registry/styles/vega/navigation-menu.json",
+						"status": "modified",
+						"additions": 1,
+						"deletions": 1
+					},
+					{
+						"filename": "docs/static/registry/styles/vega/separator.json",
+						"status": "modified",
+						"additions": 1,
+						"deletions": 1
+					}
+				],
+				"files_omitted": 0
+			},
+			"candidates": [
+				{
+					"number": 2904,
+					"title": "fix: center breadcrumb and vertical separator alignment",
+					"body": "fixes #2902 \r\n\r\n// ai polished\r\n### Issues\r\n\r\n1. The breadcrumb `>` chevron icon was not vertically centered inside its `<li>` element.\r\n2. The vertical `|` separator (used between the sidebar trigger and breadcrumb) appeared slightly too high when given an explicit height like `h-4`.\r\n\r\n### Fix\r\n\r\n**Breadcrumb separator** \u2014 added `flex items-center` to `.cn-breadcrumb-separator` across all themes so the SVG icon centers within its list item.\r\n\r\n**Vertical separator** \u2014 replaced `data-vertical:self-stretch` with `data-vertical:self-center` in `separator.svelte`. When `align-self: stretch` is combined with an explicit cross-size (e.g. `h-4`), CSS positions the item at the start edge (top) instead of centering it. Using `self-center` fixes this\r\n\r\n<!--\r\n### Before submitting the PR, please m",
+					"type": "pull_request",
+					"createdAt": "2026-09-27T17:20:29Z",
+					"state": "closed"
+				}
+			],
+			"expectations": [
+				{
+					"label": "duplicate",
+					"action": "selected",
+					"expected": false
+				}
+			]
+		},
+		{
+			"id": "fix-for-existing-issue",
+			"source": "https://github.com/huntabyte/shadcn-svelte/pull/2908",
+			"cutoff": "2026-09-29T11:24:14Z",
+			"limitations": "Current title/body and file metadata; historical comments and label events filtered at cutoff. Candidate set fixed, not a live retrieval evaluation. ",
+			"payload": {
+				"issue": {
+					"number": 2908,
+					"title": "fix: `data-slot` on `Field.Title`",
+					"body": "Fixes #2635",
+					"user": {
+						"login": "ieedan"
+					},
+					"author_association": "COLLABORATOR",
+					"created_at": "2026-09-29T11:23:28Z",
+					"labels": ["bug", "duplicate"],
+					"pull_request": {}
+				},
+				"repository": {
+					"full_name": "huntabyte/shadcn-svelte"
+				},
+				"conversation": [
+					{
+						"author": "changeset-bot[bot]",
+						"role": "NONE",
+						"body": "### \u26a0\ufe0f No Changeset found\n\nLatest commit: f4d7acd206b63b950837331a33ef5bc4d44e88ca\n\nMerging this PR will not cause a version bump for any packages. If these changes should not result in a new version, you're good to go. **If these changes should result in a version bump, you need to add a changeset.**\n\n<details><summary>This PR includes no changesets</summary>\n\n  When changesets are added to this PR, you'll see the packages that this PR includes changesets for and the associated semver types\n\n</details>\n\n[Click here to learn what changesets are, and how to add one](https://changesets.dev/faq).\n\n[Click here if you're a maintainer who wants to add a changeset to this PR](https://github.com/huntabyte/shadcn-svelte/new/field-title?filename=.changeset/true-canyons-sink.md&value=---%0A%22docs%22%3A%20patch%0A---%0A%0Afix%3A%20%60data-slot%60%20on%20%60Field.Title%60%0A)\n\n",
+						"createdAt": "2026-09-29T11:23:33Z",
+						"kind": "comment",
+						"isBot": true
+					},
+					{
+						"author": "ieedan",
+						"role": "COLLABORATOR",
+						"body": "Just gonna merge this cause we can't rely on shadcn to fix this upstream and it's not a complicated enough revert to matter.",
+						"createdAt": "2026-09-29T11:24:10Z",
+						"kind": "comment",
+						"isBot": false
+					}
+				],
+				"label_overrides": [],
+				"files": [
+					{
+						"filename": "docs/src/lib/registry/ui/field/field-title.svelte",
+						"status": "modified",
+						"additions": 1,
+						"deletions": 1
+					},
+					{
+						"filename": "docs/static/registry/styles/luma/field.json",
+						"status": "modified",
+						"additions": 1,
+						"deletions": 1
+					},
+					{
+						"filename": "docs/static/registry/styles/lyra/field.json",
+						"status": "modified",
+						"additions": 1,
+						"deletions": 1
+					},
+					{
+						"filename": "docs/static/registry/styles/maia/field.json",
+						"status": "modified",
+						"additions": 1,
+						"deletions": 1
+					},
+					{
+						"filename": "docs/static/registry/styles/mira/field.json",
+						"status": "modified",
+						"additions": 1,
+						"deletions": 1
+					},
+					{
+						"filename": "docs/static/registry/styles/nova/field.json",
+						"status": "modified",
+						"additions": 1,
+						"deletions": 1
+					},
+					{
+						"filename": "docs/static/registry/styles/rhea/field.json",
+						"status": "modified",
+						"additions": 1,
+						"deletions": 1
+					},
+					{
+						"filename": "docs/static/registry/styles/sera/field.json",
+						"status": "modified",
+						"additions": 1,
+						"deletions": 1
+					},
+					{
+						"filename": "docs/static/registry/styles/vega/field.json",
+						"status": "modified",
+						"additions": 1,
+						"deletions": 1
+					}
+				],
+				"files_omitted": 0
+			},
+			"candidates": [],
+			"expectations": [
+				{
+					"label": "duplicate",
+					"action": "selected",
+					"expected": false
+				},
+				{
+					"label": "bug",
+					"action": "selected",
+					"expected": true
+				}
+			]
+		},
+		{
+			"id": "outstanding-reproduction-request",
+			"source": "https://github.com/huntabyte/shadcn-svelte/pull/2922",
+			"cutoff": "2026-10-10T12:49:41Z",
+			"limitations": "Current title/body and file metadata; historical comments and label events filtered at cutoff. Candidate set fixed, not a live retrieval evaluation. ",
+			"payload": {
+				"issue": {
+					"number": 2922,
+					"title": "fix: prevent pagination labels from causing scroll overflow",
+					"body": "Fixes a bug that leads to \"overscroll\".\r\n\r\nI had this bug for a long time, used generative ai to fix it (one shot). Tested that it works, but that's about it. Have a small repro zip",
+					"user": {
+						"login": "joleeee"
+					},
+					"author_association": "CONTRIBUTOR",
+					"created_at": "2026-10-10T12:47:38Z",
+					"labels": ["slop"],
+					"pull_request": {}
+				},
+				"repository": {
+					"full_name": "huntabyte/shadcn-svelte"
+				},
+				"conversation": [
+					{
+						"author": "changeset-bot[bot]",
+						"role": "NONE",
+						"body": "### \u26a0\ufe0f No Changeset found\n\nLatest commit: ed056e97a592d0d392dd6f3904b31bd4b3c0dec4\n\nMerging this PR will not cause a version bump for any packages. If these changes should not result in a new version, you're good to go. **If these changes should result in a version bump, you need to add a changeset.**\n\n<details><summary>This PR includes no changesets</summary>\n\n  When changesets are added to this PR, you'll see the packages that this PR includes changesets for and the associated semver types\n\n</details>\n\n[Click here to learn what changesets are, and how to add one](https://changesets.dev/faq).\n\n[Click here if you're a maintainer who wants to add a changeset to this PR](https://github.com/joleeee/shadcn-svelte/new/fix/pagination-sr-only-scroll-overflow?filename=.changeset/bright-shoes-yawn.md&value=---%0A%22docs%22%3A%20patch%0A---%0A%0Afix%3A%20prevent%20pagination%20labels%20from%20causing%20scroll%20overflow%0A)\n\n",
+						"createdAt": "2026-10-10T12:47:42Z",
+						"kind": "comment",
+						"isBot": true
+					},
+					{
+						"author": "copilot-pull-request-reviewer[bot]",
+						"role": "CONTRIBUTOR",
+						"body": "Copilot was unable to review this pull request because the user who requested the review has reached their quota limit.",
+						"createdAt": "2026-10-10T12:47:43Z",
+						"kind": "review",
+						"isBot": true,
+						"reviewState": "COMMENTED"
+					},
+					{
+						"author": "ieedan",
+						"role": "COLLABORATOR",
+						"body": "Do you mind providing a repo link instead please?",
+						"createdAt": "2026-10-10T12:49:38Z",
+						"kind": "comment",
+						"isBot": false
+					}
+				],
+				"label_overrides": [],
+				"files": [
+					{
+						"filename": "docs/src/lib/registry/blocks/dashboard-01/components/data-table.svelte",
+						"status": "modified",
+						"additions": 1,
+						"deletions": 1
+					},
+					{
+						"filename": "docs/src/routes/(app)/(layout)/examples/dashboard/components/data-table.svelte",
+						"status": "modified",
+						"additions": 1,
+						"deletions": 1
+					},
+					{
+						"filename": "docs/src/routes/(app)/(layout)/examples/tasks/components/data-table.svelte",
+						"status": "modified",
+						"additions": 1,
+						"deletions": 1
+					}
+				],
+				"files_omitted": 0
+			},
+			"candidates": [],
+			"expectations": [
+				{
+					"label": "awaiting submitter",
+					"action": "selected",
+					"expected": true
+				},
+				{
+					"label": "needs reproduction",
+					"action": "selected",
+					"expected": true
+				}
+			]
+		},
+		{
+			"id": "resolved-reproduction-request",
+			"source": "https://github.com/huntabyte/shadcn-svelte/pull/2922",
+			"cutoff": "2026-10-10T13:12:55Z",
+			"limitations": "Current title/body and file metadata; historical comments and label events filtered at cutoff. Candidate set fixed, not a live retrieval evaluation. ",
+			"payload": {
+				"issue": {
+					"number": 2922,
+					"title": "fix: prevent pagination labels from causing scroll overflow",
+					"body": "Fixes a bug that leads to \"overscroll\".\r\n\r\nI had this bug for a long time, used generative ai to fix it (one shot). Tested that it works, but that's about it. Have a small repro zip",
+					"user": {
+						"login": "joleeee"
+					},
+					"author_association": "CONTRIBUTOR",
+					"created_at": "2026-10-10T12:47:38Z",
+					"labels": ["awaiting submitter", "needs reproduction", "slop"],
+					"pull_request": {}
+				},
+				"repository": {
+					"full_name": "huntabyte/shadcn-svelte"
+				},
+				"conversation": [
+					{
+						"author": "changeset-bot[bot]",
+						"role": "NONE",
+						"body": "### \u26a0\ufe0f No Changeset found\n\nLatest commit: ed056e97a592d0d392dd6f3904b31bd4b3c0dec4\n\nMerging this PR will not cause a version bump for any packages. If these changes should not result in a new version, you're good to go. **If these changes should result in a version bump, you need to add a changeset.**\n\n<details><summary>This PR includes no changesets</summary>\n\n  When changesets are added to this PR, you'll see the packages that this PR includes changesets for and the associated semver types\n\n</details>\n\n[Click here to learn what changesets are, and how to add one](https://changesets.dev/faq).\n\n[Click here if you're a maintainer who wants to add a changeset to this PR](https://github.com/joleeee/shadcn-svelte/new/fix/pagination-sr-only-scroll-overflow?filename=.changeset/bright-shoes-yawn.md&value=---%0A%22docs%22%3A%20patch%0A---%0A%0Afix%3A%20prevent%20pagination%20labels%20from%20causing%20scroll%20overflow%0A)\n\n",
+						"createdAt": "2026-10-10T12:47:42Z",
+						"kind": "comment",
+						"isBot": true
+					},
+					{
+						"author": "copilot-pull-request-reviewer[bot]",
+						"role": "CONTRIBUTOR",
+						"body": "Copilot was unable to review this pull request because the user who requested the review has reached their quota limit.",
+						"createdAt": "2026-10-10T12:47:43Z",
+						"kind": "review",
+						"isBot": true,
+						"reviewState": "COMMENTED"
+					},
+					{
+						"author": "ieedan",
+						"role": "COLLABORATOR",
+						"body": "Do you mind providing a repo link instead please?",
+						"createdAt": "2026-10-10T12:49:38Z",
+						"kind": "comment",
+						"isBot": false
+					},
+					{
+						"author": "joleeee",
+						"role": "CONTRIBUTOR",
+						"body": "https://stackblitz.com/fork/github/joleeee/shadcn-svelte-pagination-repro?file=App.svelte",
+						"createdAt": "2026-10-10T13:08:24Z",
+						"kind": "comment",
+						"isBot": false
+					},
+					{
+						"author": "ieedan",
+						"role": "COLLABORATOR",
+						"body": "Thank you! Do you have a video or something of the bug you are trying to fix? This seems to work as expected to me just playing with it for a minute now...",
+						"createdAt": "2026-10-10T13:11:04Z",
+						"kind": "comment",
+						"isBot": false
+					},
+					{
+						"author": "joleeee",
+						"role": "CONTRIBUTOR",
+						"body": "If you open it, without changing the toggles, try scrolling all the way down",
+						"createdAt": "2026-10-10T13:12:00Z",
+						"kind": "comment",
+						"isBot": false
+					},
+					{
+						"author": "joleeee",
+						"role": "CONTRIBUTOR",
+						"body": "\r\nhttps://github.com/user-attachments/assets/7bdaf2fc-36cd-4440-852b-646ed7d8f21e\r\n\r\n",
+						"createdAt": "2026-10-10T13:12:53Z",
+						"kind": "comment",
+						"isBot": false
+					}
+				],
+				"label_overrides": [],
+				"files": [
+					{
+						"filename": "docs/src/lib/registry/blocks/dashboard-01/components/data-table.svelte",
+						"status": "modified",
+						"additions": 1,
+						"deletions": 1
+					},
+					{
+						"filename": "docs/src/routes/(app)/(layout)/examples/dashboard/components/data-table.svelte",
+						"status": "modified",
+						"additions": 1,
+						"deletions": 1
+					},
+					{
+						"filename": "docs/src/routes/(app)/(layout)/examples/tasks/components/data-table.svelte",
+						"status": "modified",
+						"additions": 1,
+						"deletions": 1
+					}
+				],
+				"files_omitted": 0
+			},
+			"candidates": [],
+			"expectations": [
+				{
+					"label": "awaiting submitter",
+					"action": "remove",
+					"expected": true
+				},
+				{
+					"label": "needs reproduction",
+					"action": "remove",
+					"expected": true
+				}
+			]
+		},
+		{
+			"id": "changelog-scope-clarification",
+			"source": "https://github.com/huntabyte/shadcn-svelte/pull/2914",
+			"cutoff": "2026-10-11T13:36:16Z",
+			"limitations": "Current title/body and file metadata; historical comments and label events filtered at cutoff. Candidate set fixed, not a live retrieval evaluation. ",
+			"payload": {
+				"issue": {
+					"number": 2914,
+					"title": "chore(docs): changelogs for new components and cn migration",
+					"body": "Port the Questionnaire, cn migration, and Components for Chat Interfaces changelogs from shadcn/ui, and update the homepage eyebrow.\n",
+					"user": {
+						"login": "maxffarrell"
+					},
+					"author_association": "CONTRIBUTOR",
+					"created_at": "2026-10-06T04:56:55Z",
+					"labels": ["awaiting submitter", "chore", "docs", "duplicate", "parity"],
+					"pull_request": {}
+				},
+				"repository": {
+					"full_name": "huntabyte/shadcn-svelte"
+				},
+				"conversation": [
+					{
+						"author": "changeset-bot[bot]",
+						"role": "NONE",
+						"body": "### \u26a0\ufe0f No Changeset found\n\nLatest commit: 7a684bb38d2da1b30ea3a0eb759207a6eeb68b19\n\nMerging this PR will not cause a version bump for any packages. If these changes should not result in a new version, you're good to go. **If these changes should result in a version bump, you need to add a changeset.**\n\n<details><summary>This PR includes no changesets</summary>\n\n  When changesets are added to this PR, you'll see the packages that this PR includes changesets for and the associated semver types\n\n</details>\n\n[Click here to learn what changesets are, and how to add one](https://changesets.dev/faq).\n\n[Click here if you're a maintainer who wants to add a changeset to this PR](https://github.com/maxffarrell/shadcn-svelte/new/codex/questionnaire-announcement?filename=.changeset/huge-ravens-divide.md&value=---%0A%22docs%22%3A%20patch%0A---%0A%0Achore(docs)%3A%20Questionnaire%20and%20cn%20migration%20changelogs%0A)\n\n",
+						"createdAt": "2026-10-06T04:57:00Z",
+						"kind": "comment",
+						"isBot": true
+					},
+					{
+						"author": "copilot-pull-request-reviewer[bot]",
+						"role": "CONTRIBUTOR",
+						"body": "<!-- ccr-overview-v2 -->\n\n## Copilot review overview\n\n### \ud83d\udfe2 Approval recommended\n\nThe focused documentation changes match the stated requirements, with no unresolved findings.\n\n**Review effort:** Balanced  \n**Findings:** None\n\n<details>\n<summary><strong>What changed in this PR</strong></summary>\n\nAnnounces the existing Questionnaire component in the documentation and shared announcement badge.\n\n**Changes:**\n- Adds a changelog entry with a live demo, features, Svelte installation commands, and primitive documentation link.\n- Replaces the Rhea badge text with \u201cNew Questionnaire component,\u201d retaining the changelog link.\n\n| File | Description |\r\n| ---- | ----------- |\r\n| docs/\u200bsrc/\u200blib/\u200bcomponents/\u200bannouncement.svelte | Updates the shared announcement text. |\r\n| docs/\u200bcontent/\u200bchangelog/\u200b2026-10-questionnaire.md | Adds the Questionnaire release announcement. |\n</details>\n\n---\n\n\ud83d\udca1 <a href=\"/huntabyte/shadcn-svelte/new/main?filename=.github/skills/code-review/SKILL.md\" class=\"Link--inTextBloc",
+						"createdAt": "2026-10-06T04:59:56Z",
+						"kind": "review",
+						"isBot": true,
+						"reviewState": "COMMENTED"
+					},
+					{
+						"author": "github-actions[bot]",
+						"role": "CONTRIBUTOR",
+						"body": "<!-- refined-cf-pages-action:deployment-summary:shadcn-svelte -->\n\n###### built with [Refined Cloudflare Pages Action](https://github.com/AdrianGonz97/refined-cf-pages-action)\n## \u26a1 Cloudflare Pages Deployment\n| Name | Status | Preview | Last Commit |\n| :--- | :----- | :------ | :---------- |\n| **shadcn-svelte** | \u2705 Ready ([View Log](https://github.com/huntabyte/shadcn-svelte/actions/runs/37626614529)) | [Visit Preview](https://maxffarrell-codex-questionna.shadcn-svelte.pages.dev) | 7a684bb38d2da1b30ea3a0eb759207a6eeb68b19 |\n",
+						"createdAt": "2026-10-06T05:17:39Z",
+						"kind": "comment",
+						"isBot": true
+					},
+					{
+						"author": "bnn1",
+						"role": "NONE",
+						"body": "@maxffarrell everything this PR implements is already in shadcn-svelte. i think this can be closed? ",
+						"createdAt": "2026-10-11T05:54:39Z",
+						"kind": "comment",
+						"isBot": false
+					},
+					{
+						"author": "maxffarrell",
+						"role": "CONTRIBUTOR",
+						"body": "@bnn1 These are just changelogs which have not been ported yet ",
+						"createdAt": "2026-10-11T13:36:13Z",
+						"kind": "comment",
+						"isBot": false
+					}
+				],
+				"label_overrides": [],
+				"files": [
+					{
+						"filename": "docs/content/changelog/2026-09-cn.md",
+						"status": "added",
+						"additions": 63,
+						"deletions": 0
+					},
+					{
+						"filename": "docs/content/changelog/2026-10-chat-components.md",
+						"status": "added",
+						"additions": 123,
+						"deletions": 0
+					},
+					{
+						"filename": "docs/content/changelog/2026-10-questionnaire.md",
+						"status": "added",
+						"additions": 47,
+						"deletions": 0
+					},
+					{
+						"filename": "docs/src/lib/components/announcement.svelte",
+						"status": "modified",
+						"additions": 1,
+						"deletions": 1
+					}
+				],
+				"files_omitted": 0
+			},
+			"candidates": [],
+			"expectations": [
+				{
+					"label": "duplicate",
+					"action": "remove",
+					"expected": true
+				},
+				{
+					"label": "docs",
+					"action": "selected",
+					"expected": true
+				},
+				{
+					"label": "awaiting submitter",
+					"action": "selected",
+					"expected": false
+				}
+			]
+		},
+		{
+			"id": "internal-docs-build-not-public-cli",
+			"source": "https://github.com/huntabyte/shadcn-svelte/pull/2802",
+			"cutoff": "2026-09-23T02:46:00Z",
+			"limitations": "Current title/body and file metadata; historical comments and label events filtered at cutoff. Candidate set fixed, not a live retrieval evaluation. ",
+			"payload": {
+				"issue": {
+					"number": 2802,
+					"title": "perf(docs): parse LLM build HTML once",
+					"body": "## Summary\n\nParse each rendered docs page once when generating LLM Markdown. The previous JSDOM pass and rehype pass parsed the same HTML twice. Remove the now-unused direct `jsdom` and `@types/jsdom` dependencies from docs. This PR stays in draft for review.\n\n## Local measurement\n\nFour alternating runs on the same machine and checkout, with `CI=true` and the repo-pinned pnpm 10.32.1:\n\n| Command | Before mean | After mean | Relative change |\n| --- | ---: | ---: | ---: |\n| Full docs build (`pnpm build`) | 40.95 s | 37.05 s | 9.5% faster |\n| LLM generator (`pnpm -F docs build:llms`) | 7.59 s | 2.83 s | 62.7% faster |\n\nRun order was before / after / after / before. These are local wall-clock measurements, not CI timing claims. The generator produced identical SHA-256 hashes for all 105 generated Markdown and `llms.txt` outputs in every run. After removing `jsdom`, a fresh full build still generated those same 105 hashes.\n\n## Validation\n\n- Full docs build, `pnpm lint`, and `pnpm check` passed after dependency removal.\n- A frozen pnpm install passed; the docs package no longer links `jsdom` or `@types/jsdom`.\n- The build script also passes a direct TypeScript check (the docs `svelte-check` configuration does not include scripts).\n- The branch includes current upstream `main` (`9ebdb0bbc`).\n",
+					"user": {
+						"login": "maxffarrell"
+					},
+					"author_association": "CONTRIBUTOR",
+					"created_at": "2026-07-11T05:10:14Z",
+					"labels": ["chore"],
+					"pull_request": {}
+				},
+				"repository": {
+					"full_name": "huntabyte/shadcn-svelte"
+				},
+				"conversation": [
+					{
+						"author": "changeset-bot[bot]",
+						"role": "NONE",
+						"body": "### \u26a0\ufe0f No Changeset found\n\nLatest commit: 931acc4e180b10822f18a7f8b1166deb8a0741b0\n\nMerging this PR will not cause a version bump for any packages. If these changes should not result in a new version, you're good to go. **If these changes should result in a version bump, you need to add a changeset.**\n\n<details><summary>This PR includes no changesets</summary>\n\n  When changesets are added to this PR, you'll see the packages that this PR includes changesets for and the associated semver types\n\n</details>\n\n[Click here to learn what changesets are, and how to add one](https://changesets.dev/faq).\n\n[Click here if you're a maintainer who wants to add a changeset to this PR](https://github.com/maxffarrell/shadcn-svelte/new/codex/build-time-optimizations?filename=.changeset/nine-readers-ring.md&value=---%0A%22docs%22%3A%20patch%0A---%0A%0Aperf(docs)%3A%20parse%20LLM%20build%20HTML%20once%0A)\n\n",
+						"createdAt": "2026-07-11T05:10:18Z",
+						"kind": "comment",
+						"isBot": true
+					},
+					{
+						"author": "github-actions[bot]",
+						"role": "CONTRIBUTOR",
+						"body": "<!-- refined-cf-pages-action:deployment-summary:shadcn-svelte -->\n\n###### built with [Refined Cloudflare Pages Action](https://github.com/AdrianGonz97/refined-cf-pages-action)\n## \u26a1 Cloudflare Pages Deployment\n| Name | Status | Preview | Last Commit |\n| :--- | :----- | :------ | :---------- |\n| **shadcn-svelte** | \u2705 Ready ([View Log](https://github.com/huntabyte/shadcn-svelte/actions/runs/35817501295)) | [Visit Preview](https://maxffarrell-codex-build-time.shadcn-svelte.pages.dev) | 931acc4e180b10822f18a7f8b1166deb8a0741b0 |\n",
+						"createdAt": "2026-07-11T05:38:28Z",
+						"kind": "comment",
+						"isBot": true
+					}
+				],
+				"label_overrides": [],
+				"files": [
+					{
+						"filename": "docs/package.json",
+						"status": "modified",
+						"additions": 0,
+						"deletions": 2
+					},
+					{
+						"filename": "docs/scripts/build-llms.ts",
+						"status": "modified",
+						"additions": 45,
+						"deletions": 27
+					},
+					{
+						"filename": "pnpm-lock.yaml",
+						"status": "modified",
+						"additions": 0,
+						"deletions": 6
+					}
+				],
+				"files_omitted": 0
+			},
+			"candidates": [],
+			"expectations": [
+				{
+					"label": "cli",
+					"action": "selected",
+					"expected": false
+				},
+				{
+					"label": "dependencies",
+					"action": "selected",
+					"expected": true
+				}
+			]
+		},
+		{
+			"id": "implemented-docs-not-contribution-invitation",
+			"source": "https://github.com/huntabyte/shadcn-svelte/pull/2768",
+			"cutoff": "2026-09-29T22:21:07Z",
+			"limitations": "Current title/body and file metadata; historical comments and label events filtered at cutoff. Candidate set fixed, not a live retrieval evaluation. ",
+			"payload": {
+				"issue": {
+					"number": 2768,
+					"title": "docs: update theming guide",
+					"body": "## Summary\n- align the theming guide with the current shadcn/ui token documentation\n- add the cssVariables components.json note adapted for shadcn-svelte\n- replace the long base-color appendix with the current default theme scaffold guidance\n\n## Test plan\n- pnpm lint",
+					"user": {
+						"login": "maxffarrell"
+					},
+					"author_association": "CONTRIBUTOR",
+					"created_at": "2026-06-20T05:12:04Z",
+					"labels": [],
+					"pull_request": {}
+				},
+				"repository": {
+					"full_name": "huntabyte/shadcn-svelte"
+				},
+				"conversation": [
+					{
+						"author": "changeset-bot[bot]",
+						"role": "NONE",
+						"body": "### \u26a0\ufe0f No Changeset found\n\nLatest commit: aa6def32c9b1bd1c3949fc0a6e710862fd3e2097\n\nMerging this PR will not cause a version bump for any packages. If these changes should not result in a new version, you're good to go. **If these changes should result in a version bump, you need to add a changeset.**\n\n<details><summary>This PR includes no changesets</summary>\n\n  When changesets are added to this PR, you'll see the packages that this PR includes changesets for and the associated semver types\n\n</details>\n\n[Click here to learn what changesets are, and how to add one](https://changesets.dev/faq).\n\n[Click here if you're a maintainer who wants to add a changeset to this PR](https://github.com/maxffarrell/shadcn-svelte/new/codex/update-theming-docs?filename=.changeset/fruity-news-buy.md&value=---%0A%22docs%22%3A%20patch%0A---%0A%0Adocs%3A%20update%20theming%20guide%0A)\n\n",
+						"createdAt": "2026-06-20T05:12:08Z",
+						"kind": "comment",
+						"isBot": true
+					},
+					{
+						"author": "copilot-pull-request-reviewer[bot]",
+						"role": "CONTRIBUTOR",
+						"body": "## Pull request overview\n\nUpdates the theming guide to match the current token-based theming approach, including a refreshed explanation of semantic theme tokens and a modern \u201cdefault theme scaffold\u201d example intended to mirror current shadcn/ui guidance.\n\n**Changes:**\n- Reworked the introduction to focus on semantic theme tokens and Tailwind utility mapping.\n- Added guidance on radius scaling and adding new tokens via `@theme inline`.\n- Replaced the large base-color appendix with a single default `neutral` theme scaffold snippet.\n\n\n\n\n\n\n---\n\n\ud83d\udca1 <a href=\"/huntabyte/shadcn-svelte/new/main?filename=.github/instructions/*.instructions.md\" class=\"Link--inTextBlock\" target=\"_blank\" rel=\"noopener noreferrer\">Add Copilot custom instructions</a> for smarter, more guided reviews. <a href=\"https://docs.github.com/en/copilot/customizing-copilot/adding-repository-custom-instructions-for-github-copilot\" class=\"Link--inTextBlock\" target=\"_blank\" rel=\"noopener noreferrer\">Learn how to get started</a>.",
+						"createdAt": "2026-06-20T05:15:30Z",
+						"kind": "review",
+						"isBot": true,
+						"reviewState": "COMMENTED"
+					},
+					{
+						"author": "Copilot",
+						"role": "CONTRIBUTOR",
+						"body": "The guide instructs users to set `tailwind.cssVariables`, but the current `componentsJsonSchema` no longer supports this key (it\u2019s commented out in `packages/cli/src/utils/registry/schema.ts`). As written, this will cause schema validation/CLI config parsing to reject the example.",
+						"createdAt": "2026-06-20T05:15:30Z",
+						"kind": "review_comment",
+						"isBot": true
+					},
+					{
+						"author": "Copilot",
+						"role": "CONTRIBUTOR",
+						"body": "The `components.json` snippet still includes `\"cssVariables\": true`, but that key is not part of the current schema (see `componentsJsonSchema.tailwind`), so the example would be invalid JSON for this project\u2019s CLI/schema.",
+						"createdAt": "2026-06-20T05:15:30Z",
+						"kind": "review_comment",
+						"isBot": true
+					},
+					{
+						"author": "github-actions[bot]",
+						"role": "CONTRIBUTOR",
+						"body": "<!-- refined-cf-pages-action:deployment-summary:shadcn-svelte -->\n\n###### built with [Refined Cloudflare Pages Action](https://github.com/AdrianGonz97/refined-cf-pages-action)\n## \u26a1 Cloudflare Pages Deployment\n| Name | Status | Preview | Last Commit |\n| :--- | :----- | :------ | :---------- |\n| **shadcn-svelte** | \u2705 Ready ([View Log](https://github.com/huntabyte/shadcn-svelte/actions/runs/36639042520)) | [Visit Preview](https://maxffarrell-codex-update-the.shadcn-svelte.pages.dev) | aa6def32c9b1bd1c3949fc0a6e710862fd3e2097 |\n",
+						"createdAt": "2026-06-20T05:15:31Z",
+						"kind": "comment",
+						"isBot": true
+					}
+				],
+				"label_overrides": [],
+				"files": [
+					{
+						"filename": "docs/content/theming.md",
+						"status": "modified",
+						"additions": 130,
+						"deletions": 389
+					}
+				],
+				"files_omitted": 0
+			},
+			"candidates": [],
+			"expectations": [
+				{
+					"label": "contributions welcome",
+					"action": "selected",
+					"expected": false
+				},
+				{
+					"label": "awaiting submitter",
+					"action": "selected",
+					"expected": false
+				},
+				{
+					"label": "docs",
+					"action": "selected",
+					"expected": true
+				}
+			]
+		},
+		{
+			"id": "confirmed-animation-defect",
+			"source": "https://github.com/huntabyte/shadcn-svelte/issues/2918",
+			"cutoff": "2026-10-08T16:19:20Z",
+			"limitations": "Current title/body and file metadata; historical comments and label events filtered at cutoff. Candidate set fixed, not a live retrieval evaluation. ",
+			"payload": {
+				"issue": {
+					"number": 2918,
+					"title": "[BUG] Dialog and Sheet briefly reappear after their exit animation (Vega)",
+					"body": "### Describe the bug\n\nClosing Dialog or Sheet with the generated Vega styles produces a visible stutter at the end of the exit animation. The element fades out, then briefly returns to full opacity before it unmounts. It should stay invisible until removal.\n\nIn a frame-by-frame measurement of Sheet, opacity was 0.00389 at 177 ms, approximately 0 at 194 ms, then 1 at 211 ms while the element was still connected. It was removed by 227 ms.\n\nAdding `data-closed:fill-mode-forwards` alongside `data-closed:animate-out` in dialog-content.svelte, dialog-overlay.svelte, sheet-content.svelte, and sheet-overlay.svelte fixes this locally. After the change, both components and both overlays reached opacity 0 without rebounding, then unmounted.\n\nThis appeared after updating dependencies/components, but I have not isolated a particular dependency release as the cause.\n\n### Reproduction\n\nReproduced locally with the exact versions in System Info; no hosted reproduction is included.\n\n1. In a SvelteKit project configured with shadcn-svelte's Vega style, add the Dialog and Sheet components. Keep the generated animation classes unchanged.\n2. Render the standard Sheet example with a trigger, content, header, title, and description.\n3. Open it, let the opening animation finish, then click the X close button. The exit briefly jumps back to the visible state before unmounting.\n4. Repeat with Dialog.\n5. Add `data-closed:fill-mode-forwards` alongside `data-closed:animate-out` in both components' content and overlay files. The opacity rebound disappears.\n\nThe measured Sheet frames and the verified workaround are in the description above.\n\n### Logs\n\n```bash\n\n```\n\n### System Info\n\n```bash\nSystem: macOS 15.7.9, Apple M1 (arm64)\nBrowser used for verification: Helium (Chromium-based)\nNode: 24.11.0; npm: 11.6.1; Bun: 1.4.3\nshadcn-svelte: 1.7.0; style: vega\nbits-ui: 2.19.5\nsvelte: 5.57.2\n@sveltejs/kit: 3.0.0-next.32\ntailwindcss: 4.3.3\ntw-animate-css: 1.4.0\nvite: 8.3.3\n@lucide/svelte: 1.52.0\n```\n\n### Severity\n\nannoyance",
+					"user": {
+						"login": "DimeloTony"
+					},
+					"author_association": "NONE",
+					"created_at": "2026-10-07T19:29:01Z",
+					"labels": ["feature", "has workaround", "needs reproduction", "triage"]
+				},
+				"repository": {
+					"full_name": "huntabyte/shadcn-svelte"
+				},
+				"conversation": [
+					{
+						"author": "github-actions[bot]",
+						"role": "CONTRIBUTOR",
+						"body": "Please provide a [reproduction](https://shadcn-svelte.com/repro).\n\n<details>\n<summary>More info</summary>\n\n### Why do I need to provide a reproduction?\n\nThis project is maintained by a very small team, and we simply don't have the bandwidth to investigate issues that we can't easily replicate. Reproductions enable us to fix issues faster and more efficiently. If you care about getting your issue resolved, providing a reproduction is the best way to do that.\n\n### I've provided a reproduction - what happens now?\n\nOnce a reproduction is provided, we'll remove the `needs reproduction` label and review the issue to determine how to resolve it. If we can confirm it's a bug, we'll label it as such and prioritize it based on its severity.\n\nIf `needs reproduction` labeled issues don't receive any activity (e.g., a comment with a reproduction link), they'll be closed. Feel free to comment with a reproduction at any time and the issue will be reopened.\n\n### How can I create a reproduction?\n\nYou c",
+						"createdAt": "2026-10-07T19:33:09Z",
+						"kind": "comment",
+						"isBot": true
+					},
+					{
+						"author": "DimeloTony",
+						"role": "NONE",
+						"body": "https://github.com/user-attachments/assets/588677e7-2168-4137-a45d-6f7f2036b5f9",
+						"createdAt": "2026-10-07T19:41:34Z",
+						"kind": "comment",
+						"isBot": false
+					},
+					{
+						"author": "DimeloTony",
+						"role": "NONE",
+						"body": "Quick fix: In VS Code, search for `data-open:animate-in` and replace it with `data-open:animate-in data-closed:fill-mode-forwards`.",
+						"createdAt": "2026-10-07T21:31:34Z",
+						"kind": "comment",
+						"isBot": false
+					},
+					{
+						"author": "olegpolin",
+						"role": "CONTRIBUTOR",
+						"body": "Same issue with popover",
+						"createdAt": "2026-10-08T15:49:40Z",
+						"kind": "comment",
+						"isBot": false
+					},
+					{
+						"author": "ieedan",
+						"role": "COLLABORATOR",
+						"body": "So I had Claude do a bit of digging and it looks like an issue with the way that Experimental async is interacting with bits-ui.\n\nFixable in bits-ui but not completely sure if it would be something better raised to Svelte itself. Either way probably good to just fix it.\n\nLooks like the fix is to watch `.current` instead of `afterTick` here.\n```diff\n--- a/packages/bits-ui/src/lib/internal/animations-complete.ts\n+++ b/packages/bits-ui/src/lib/internal/animations-complete.ts\n@@ -114,11 +114,11 @@\n \t#executeCallback(fn: () => void | Promise<void>): void {\n \t\tconst execute = () => {\n \t\t\tfn();\n \t\t};\n \n-\t\tif (this.#opts.afterTick) {\n+\t\tif (this.#opts.afterTick.current) {\n \t\t\tafterTick(execute);\n \t\t} else {\n \t\t\texecute();\n \t\t}\n \t}\n }\n```\n\nYou can patch this in bits-ui as a workaround until a fix is merged.",
+						"createdAt": "2026-10-08T16:19:13Z",
+						"kind": "comment",
+						"isBot": false
+					}
+				],
+				"label_overrides": [
+					{
+						"name": "triage",
+						"action": "labeled",
+						"author": "DimeloTony",
+						"createdAt": "2026-10-07T19:29:03Z"
+					},
+					{
+						"name": "needs reproduction",
+						"action": "labeled",
+						"author": "ieedan",
+						"createdAt": "2026-10-07T19:32:49Z"
+					}
+				]
+			},
+			"candidates": [],
+			"expectations": [
+				{
+					"label": "bug",
+					"action": "selected",
+					"expected": true
+				},
+				{
+					"label": "has workaround",
+					"action": "selected",
+					"expected": true
+				},
+				{
+					"label": "feature",
+					"action": "selected",
+					"expected": false
+				}
+			]
+		},
+		{
+			"id": "new-toast-feature",
+			"source": "https://github.com/huntabyte/shadcn-svelte/pull/2916",
+			"cutoff": "2026-10-07T05:34:55Z",
+			"limitations": "Current title/body and file metadata; historical comments and label events filtered at cutoff. Candidate set fixed, not a live retrieval evaluation. Latest toast-port description and files; this is a current-scope control, not a reconstruction of the earlier exploration.",
+			"payload": {
+				"issue": {
+					"number": 2916,
+					"title": "feat: port Base UI toast primitives",
+					"body": "Port shadcn/ui\u2019s [Base UI toast (#11266)](https://github.com/shadcn-ui/ui/pull/11266) to Svelte, including composition, actions, statuses, promises, stacking, swipe dismissal, focus, and transitions.\n\nValidated with lint, Svelte checks, production build, 33 toast tests, TS/JS installation, and desktop/mobile browser comparisons.\n",
+					"user": {
+						"login": "maxffarrell"
+					},
+					"author_association": "CONTRIBUTOR",
+					"created_at": "2026-10-06T14:06:45Z",
+					"labels": ["cli", "feature", "parity"],
+					"pull_request": {}
+				},
+				"repository": {
+					"full_name": "huntabyte/shadcn-svelte"
+				},
+				"conversation": [
+					{
+						"author": "changeset-bot[bot]",
+						"role": "NONE",
+						"body": "### \u26a0\ufe0f No Changeset found\n\nLatest commit: 7aa97ffff81fcad42767c21ec48e65e878700987\n\nMerging this PR will not cause a version bump for any packages. If these changes should not result in a new version, you're good to go. **If these changes should result in a version bump, you need to add a changeset.**\n\n<details><summary>This PR includes no changesets</summary>\n\n  When changesets are added to this PR, you'll see the packages that this PR includes changesets for and the associated semver types\n\n</details>\n\n[Click here to learn what changesets are, and how to add one](https://changesets.dev/faq).\n\n[Click here if you're a maintainer who wants to add a changeset to this PR](https://github.com/maxffarrell/shadcn-svelte/new/codex/toast-base-ui-exploration?filename=.changeset/fresh-bars-melt.md&value=---%0A%22docs%22%3A%20patch%0A---%0A%0Afeat%3A%20port%20Base%20UI%20toast%20primitives%0A)\n\n",
+						"createdAt": "2026-10-06T14:08:05Z",
+						"kind": "comment",
+						"isBot": true
+					},
+					{
+						"author": "github-actions[bot]",
+						"role": "CONTRIBUTOR",
+						"body": "<!-- refined-cf-pages-action:deployment-summary:shadcn-svelte -->\n\n###### built with [Refined Cloudflare Pages Action](https://github.com/AdrianGonz97/refined-cf-pages-action)\n## \u26a1 Cloudflare Pages Deployment\n| Name | Status | Preview | Last Commit |\n| :--- | :----- | :------ | :---------- |\n| **shadcn-svelte** | \u2705 Ready ([View Log](https://github.com/huntabyte/shadcn-svelte/actions/runs/37577001928)) | [Visit Preview](https://maxffarrell-codex-toast-base.shadcn-svelte.pages.dev) | 7aa97ffff81fcad42767c21ec48e65e878700987 |\n",
+						"createdAt": "2026-10-06T14:14:42Z",
+						"kind": "comment",
+						"isBot": true
+					}
+				],
+				"label_overrides": [],
+				"files": [
+					{
+						"filename": ".github/workflows/ci.yml",
+						"status": "modified",
+						"additions": 3,
+						"deletions": 0
+					},
+					{
+						"filename": "docs/content/components/toast.md",
+						"status": "added",
+						"additions": 157,
+						"deletions": 0
+					},
+					{
+						"filename": "docs/package.json",
+						"status": "modified",
+						"additions": 3,
+						"deletions": 1
+					},
+					{
+						"filename": "docs/scripts/registry.ts",
+						"status": "modified",
+						"additions": 1,
+						"deletions": 0
+					},
+					{
+						"filename": "docs/src/lib/registry/examples/index.ts",
+						"status": "modified",
+						"additions": 7,
+						"deletions": 0
+					},
+					{
+						"filename": "docs/src/lib/registry/examples/toast-demo.svelte",
+						"status": "added",
+						"additions": 14,
+						"deletions": 0
+					},
+					{
+						"filename": "docs/src/lib/registry/examples/toast-exploration.svelte",
+						"status": "added",
+						"additions": 51,
+						"deletions": 0
+					},
+					{
+						"filename": "docs/src/lib/registry/examples/toast-promise.svelte",
+						"status": "added",
+						"additions": 21,
+						"deletions": 0
+					},
+					{
+						"filename": "docs/src/lib/registry/examples/toast-rich-content.svelte",
+						"status": "added",
+						"additions": 14,
+						"deletions": 0
+					},
+					{
+						"filename": "docs/src/lib/registry/examples/toast-types.svelte",
+						"status": "added",
+						"additions": 35,
+						"deletions": 0
+					},
+					{
+						"filename": "docs/src/lib/registry/ui/toast/index.ts",
+						"status": "added",
+						"additions": 23,
+						"deletions": 0
+					},
+					{
+						"filename": "docs/src/lib/registry/ui/toast/meta.json",
+						"status": "added",
+						"additions": 1,
+						"deletions": 0
+					},
+					{
+						"filename": "docs/src/lib/registry/ui/toast/toast-action.svelte",
+						"status": "added",
+						"additions": 50,
+						"deletions": 0
+					},
+					{
+						"filename": "docs/src/lib/registry/ui/toast/toast-close.svelte",
+						"status": "added",
+						"additions": 71,
+						"deletions": 0
+					},
+					{
+						"filename": "docs/src/lib/registry/ui/toast/toast-content.svelte",
+						"status": "added",
+						"additions": 42,
+						"deletions": 0
+					},
+					{
+						"filename": "docs/src/lib/registry/ui/toast/toast-context.ts",
+						"status": "added",
+						"additions": 38,
+						"deletions": 0
+					},
+					{
+						"filename": "docs/src/lib/registry/ui/toast/toast-description.svelte",
+						"status": "added",
+						"additions": 52,
+						"deletions": 0
+					},
+					{
+						"filename": "docs/src/lib/registry/ui/toast/toast-gesture.ts",
+						"status": "added",
+						"additions": 198,
+						"deletions": 0
+					},
+					{
+						"filename": "docs/src/lib/registry/ui/toast/toast-icon.svelte",
+						"status": "added",
+						"additions": 61,
+						"deletions": 0
+					},
+					{
+						"filename": "docs/src/lib/registry/ui/toast/toast-list.svelte",
+						"status": "added",
+						"additions": 21,
+						"deletions": 0
+					},
+					{
+						"filename": "docs/src/lib/registry/ui/toast/toast-manager.ts",
+						"status": "added",
+						"additions": 93,
+						"deletions": 0
+					},
+					{
+						"filename": "docs/src/lib/registry/ui/toast/toast-portal.svelte",
+						"status": "added",
+						"additions": 48,
+						"deletions": 0
+					},
+					{
+						"filename": "docs/src/lib/registry/ui/toast/toast-provider.svelte",
+						"status": "added",
+						"additions": 38,
+						"deletions": 0
+					},
+					{
+						"filename": "docs/src/lib/registry/ui/toast/toast-store.ts",
+						"status": "added",
+						"additions": 308,
+						"deletions": 0
+					},
+					{
+						"filename": "docs/src/lib/registry/ui/toast/toast-title.svelte",
+						"status": "added",
+						"additions": 52,
+						"deletions": 0
+					},
+					{
+						"filename": "docs/src/lib/registry/ui/toast/toast-viewport.svelte",
+						"status": "added",
+						"additions": 195,
+						"deletions": 0
+					},
+					{
+						"filename": "docs/src/lib/registry/ui/toast/toast.svelte",
+						"status": "added",
+						"additions": 252,
+						"deletions": 0
+					},
+					{
+						"filename": "docs/src/lib/registry/ui/toast/toaster.css",
+						"status": "added",
+						"additions": 71,
+						"deletions": 0
+					},
+					{
+						"filename": "docs/src/lib/registry/ui/toast/toaster.svelte",
+						"status": "added",
+						"additions": 25,
+						"deletions": 0
+					},
+					{
+						"filename": "docs/src/routes/(app)/+layout.svelte",
+						"status": "modified",
+						"additions": 2,
+						"deletions": 0
+					},
+					{
+						"filename": "docs/static/registry/styles/luma/index.json",
+						"status": "modified",
+						"additions": 8,
+						"deletions": 0
+					},
+					{
+						"filename": "docs/static/registry/styles/luma/toast.json",
+						"status": "added",
+						"additions": 100,
+						"deletions": 0
+					},
+					{
+						"filename": "docs/static/registry/styles/lyra/index.json",
+						"status": "modified",
+						"additions": 8,
+						"deletions": 0
+					},
+					{
+						"filename": "docs/static/registry/styles/lyra/toast.json",
+						"status": "added",
+						"additions": 100,
+						"deletions": 0
+					},
+					{
+						"filename": "docs/static/registry/styles/maia/index.json",
+						"status": "modified",
+						"additions": 8,
+						"deletions": 0
+					},
+					{
+						"filename": "docs/static/registry/styles/maia/toast.json",
+						"status": "added",
+						"additions": 100,
+						"deletions": 0
+					},
+					{
+						"filename": "docs/static/registry/styles/mira/index.json",
+						"status": "modified",
+						"additions": 8,
+						"deletions": 0
+					},
+					{
+						"filename": "docs/static/registry/styles/mira/toast.json",
+						"status": "added",
+						"additions": 100,
+						"deletions": 0
+					},
+					{
+						"filename": "docs/static/registry/styles/nova/index.json",
+						"status": "modified",
+						"additions": 8,
+						"deletions": 0
+					},
+					{
+						"filename": "docs/static/registry/styles/nova/toast.json",
+						"status": "added",
+						"additions": 100,
+						"deletions": 0
+					},
+					{
+						"filename": "docs/static/registry/styles/rhea/index.json",
+						"status": "modified",
+						"additions": 8,
+						"deletions": 0
+					},
+					{
+						"filename": "docs/static/registry/styles/rhea/toast.json",
+						"status": "added",
+						"additions": 100,
+						"deletions": 0
+					},
+					{
+						"filename": "docs/static/registry/styles/sera/index.json",
+						"status": "modified",
+						"additions": 8,
+						"deletions": 0
+					},
+					{
+						"filename": "docs/static/registry/styles/sera/toast.json",
+						"status": "added",
+						"additions": 100,
+						"deletions": 0
+					},
+					{
+						"filename": "docs/static/registry/styles/vega/index.json",
+						"status": "modified",
+						"additions": 8,
+						"deletions": 0
+					},
+					{
+						"filename": "docs/static/registry/styles/vega/toast.json",
+						"status": "added",
+						"additions": 100,
+						"deletions": 0
+					},
+					{
+						"filename": "docs/tests/fixtures/toast-composition.svelte",
+						"status": "added",
+						"additions": 15,
+						"deletions": 0
+					},
+					{
+						"filename": "docs/tests/fixtures/toast-custom-list.svelte",
+						"status": "added",
+						"additions": 22,
+						"deletions": 0
+					},
+					{
+						"filename": "docs/tests/fixtures/toast-icon.svelte",
+						"status": "added",
+						"additions": 1,
+						"deletions": 0
+					},
+					{
+						"filename": "docs/tests/toast-dom.test.ts",
+						"status": "added",
+						"additions": 297,
+						"deletions": 0
+					},
+					{
+						"filename": "docs/tests/toast-gesture.test.ts",
+						"status": "added",
+						"additions": 120,
+						"deletions": 0
+					},
+					{
+						"filename": "docs/tests/toast-manager.test.ts",
+						"status": "added",
+						"additions": 210,
+						"deletions": 0
+					},
+					{
+						"filename": "docs/vite.config.ts",
+						"status": "modified",
+						"additions": 3,
+						"deletions": 0
+					},
+					{
+						"filename": "docs/vitest.config.ts",
+						"status": "added",
+						"additions": 12,
+						"deletions": 0
+					},
+					{
+						"filename": "packages/cli/src/utils/transformers/transform-strip-types.ts",
+						"status": "modified",
+						"additions": 1,
+						"deletions": 0
+					},
+					{
+						"filename": "packages/cli/test/utils/transformers.test.ts",
+						"status": "modified",
+						"additions": 10,
+						"deletions": 0
+					},
+					{
+						"filename": "pnpm-lock.yaml",
+						"status": "modified",
+						"additions": 32,
+						"deletions": 0
+					}
+				],
+				"files_omitted": 0
+			},
+			"candidates": [],
+			"expectations": [
+				{
+					"label": "feature",
+					"action": "selected",
+					"expected": true
+				},
+				{
+					"label": "parity",
+					"action": "selected",
+					"expected": true
+				},
+				{
+					"label": "cli",
+					"action": "selected",
+					"expected": false
+				}
+			]
+		},
+		{
+			"id": "synthetic-explicit-duplicate",
+			"source": null,
+			"cutoff": null,
+			"limitations": "Synthetic positive control, not a historical shadcn-svelte item.",
+			"payload": {
+				"issue": {
+					"number": 90001,
+					"title": "Dropdown menu submenu clipped",
+					"body": "Same overflow clipping defect as #2903 in the official dropdown demo.",
+					"created_at": "2026-10-10T00:00:00Z",
+					"labels": []
+				},
+				"repository": {
+					"full_name": "huntabyte/shadcn-svelte"
+				},
+				"conversation": [
+					{
+						"author": "ieedan",
+						"role": "COLLABORATOR",
+						"body": "Confirmed duplicate of #2903. Please track the fix there.",
+						"createdAt": "2026-10-10T01:00:00Z",
+						"kind": "comment",
+						"isBot": false
+					}
+				]
+			},
+			"candidates": [
+				{
+					"number": 2903,
+					"title": "<DropdownMenu.SubTrigger> is not rendering the content on hover next to the menu",
+					"body": "### Describe the bug\n\nShadcn DropdownMenu.Subtrigger \n\n<img width=\"504\" height=\"550\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/6ccabd6c-e65d-4a7e-b623-5597a92a1aa4\" />\n\n\nBits- UI\n\n<img width=\"569\" height=\"435\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/90f6cce4-4bc8-4fe5-a907-17024d78e28b\" />\n\n### Reproduction\n\nIt's live broken on the url.\n\nhttps://www.shadcn-svelte.com/docs/components/dropdown-menu\n\n### Logs\n\n```bash\n\n```\n\n### System Info\n\n```bash\nSystem:\n    OS: macOS 26.2\n    CPU: (8) arm64 Apple M3\n    Memory: 253.11 MB / 16.00 GB\n    Shell: 5.9 - /bin/zsh\n  Binaries:\n    Node: 22.22.3 - /Users/agrittiwari/.nvm/versions/node/v22.22.3/bin/node\n    npm: 10.9.8 - /Users/agrittiwari/.nvm/versions/node/v22.22.3/bin/npm\n    pnpm: 10.32.1 - /Users/agrittiwar",
+					"type": "issue",
+					"createdAt": "2026-09-27T14:49:18Z",
+					"state": "closed"
+				}
+			],
+			"expectations": [
+				{
+					"label": "duplicate",
+					"action": "selected",
+					"expected": true
+				}
+			]
+		}
+	],
+	"labels": [
+		{
+			"name": "awaiting submitter",
+			"description": "The issue or PR requires additional information or action from the submitter.",
+			"color": "ededed",
+			"applyWhen": "The issue or PR requires additional information or action from the submitter."
+		},
+		{
+			"name": "bug",
+			"description": "A confirmed report of unexpected behavior in the application",
+			"color": "B60205",
+			"applyWhen": "A confirmed report of unexpected behavior in the application, only applied once the issue has been confirmed as valid"
+		},
+		{
+			"name": "chore",
+			"description": "Changes to the application which do not directly impact the end user",
+			"color": "0E4751",
+			"applyWhen": "Changes to the application which do not directly impact the end user"
+		},
+		{
+			"name": "cli",
+			"description": "The issue relates to the CLI",
+			"color": "CB08FE",
+			"applyWhen": "The issue relates/requires changes to the shadcn-svelte CLI"
+		},
+		{
+			"name": "contributions welcome",
+			"description": "Applied when the scope of the solution is clearly defined.",
+			"color": "5319E7",
+			"applyWhen": "The issue is an easy fix that cannot be misinterpreted. Never apply this for big logic changes, or for issues that may take up someones time to work on and could even up with their work going unused.",
+			"examples": ["The docs say `x`, but they should say `y`", "There is a typo in the docs"]
+		},
+		{
+			"name": "dependencies",
+			"description": "Pull requests that update a dependency file",
+			"color": "0366d6",
+			"applyWhen": "A pull request updates a dependency or an issue is opened to update a dependency"
+		},
+		{
+			"name": "docs",
+			"description": "A change or addition to the documentation",
+			"color": "C2E0C6",
+			"applyWhen": "A change or addition to the documentation"
+		},
+		{
+			"name": "duplicate",
+			"description": "This issue has already been raised",
+			"color": "ededed",
+			"applyWhen": "This issue has already been raised/resolved",
+			"context": "similar_issues"
+		},
+		{
+			"name": "feature",
+			"description": "Introduction of new functionality to the application",
+			"color": "1d76db",
+			"applyWhen": "Adds new functionality/components"
+		},
+		{
+			"name": "has workaround",
+			"description": "",
+			"color": "0E8A16",
+			"applyWhen": "The issue has a workaround available to end users provided in the description or in the comments. Never apply this label to enhancements, only to bugs."
+		},
+		{
+			"name": "needs reproduction",
+			"description": "A reproduction is required to support the issue.",
+			"color": "ededed",
+			"applyWhen": "A reproduction is required to support the issue, or the provided reproduction is just steps and not a repository/stackblitz that maintainers can open. (Links to the official docs (shadcn-svelte.com) are fine)"
+		},
+		{
+			"name": "parity",
+			"description": "Request for parity to upstream shadcn/ui",
+			"color": "0dba39",
+			"applyWhen": "The request is for parity with upstream shadcn/ui"
+		},
+		{
+			"name": "slop",
+			"description": "Generated by AI use caution.",
+			"color": "0052cc",
+			"applyWhen": "The issue/pull request description is clearly generated by AI. Signs can be, usage of em-dashes, overly verbose descriptions that distract from the actual issue/changes, etc.",
+			"removeWhen": "The issue/pull request description is no longer clearly generated by AI. Short no excessive use of em-dashes, no overly verbose descriptions that distract from the actual issue/changes."
+		},
+		{
+			"name": "triage",
+			"description": "The issue is pending triage by a maintainer.",
+			"color": "ededed",
+			"removeWhen": "The issue has been confirmed as a bug by the maintainer",
+			"canApply": false
+		}
+	]
+}

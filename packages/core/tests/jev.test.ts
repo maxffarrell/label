@@ -251,7 +251,7 @@ describe('buildContextRequest', () => {
 		]);
 		expect(questions[questionId(0, 0)]?.instructions).toMatchObject({
 			judge_from: expect.stringContaining('candidates'),
-			label: expect.stringContaining('comments already identify'),
+			label: expect.stringContaining('canonical item'),
 		});
 	});
 });

@@ -36,6 +36,23 @@ export type ItemComment = {
 	body: string;
 	createdAt: string | null;
 	kind: 'comment' | 'review' | 'review_comment';
+	isBot?: boolean;
+	reviewState?: string;
+};
+
+/** Human label changes remain authoritative even if a later bot event contradicts them. */
+export type LabelOverride = {
+	name: string;
+	action: 'labeled' | 'unlabeled';
+	author: string;
+	createdAt: string;
+};
+
+export type ChangedFile = {
+	filename: string;
+	status: string;
+	additions: number;
+	deletions: number;
 };
 
 export type LabelItem = {
@@ -49,6 +66,10 @@ export type LabelItem = {
 	currentLabels: string[];
 	repository?: string;
 	comments: ItemComment[];
+	createdAt?: string | null;
+	labelOverrides?: LabelOverride[];
+	files?: ChangedFile[];
+	filesOmitted?: number;
 };
 
 export const MAX_CONVERSATION_COMMENTS = 25;
@@ -119,6 +140,7 @@ const gitHubItemSchema = z
 		author_association: z.string().nullable().optional(),
 		labels: z.array(labelRefSchema).optional(),
 		pull_request: z.unknown().optional(),
+		created_at: z.string().nullable().optional(),
 	})
 	.passthrough();
 
@@ -138,6 +160,8 @@ const conversationCommentSchema = z
 		body: z.string(),
 		createdAt: z.string().nullable().optional(),
 		kind: z.enum(['comment', 'review', 'review_comment']).optional(),
+		isBot: z.boolean().optional(),
+		reviewState: z.string().optional(),
 	})
 	.passthrough();
 
@@ -148,6 +172,27 @@ const gitHubWebhookSchema = z
 		pull_request: gitHubItemSchema.optional(),
 		repository: gitHubRepositorySchema.optional(),
 		conversation: z.array(conversationCommentSchema).optional(),
+		label_overrides: z
+			.array(
+				z.object({
+					name: z.string(),
+					action: z.enum(['labeled', 'unlabeled']),
+					author: z.string(),
+					createdAt: z.string(),
+				})
+			)
+			.optional(),
+		files: z
+			.array(
+				z.object({
+					filename: z.string(),
+					status: z.string(),
+					additions: z.number(),
+					deletions: z.number(),
+				})
+			)
+			.optional(),
+		files_omitted: z.number().optional(),
 	})
 	.passthrough();
 
@@ -317,14 +362,21 @@ export function parseGitHubPayload(
 			: rawItem.pull_request !== undefined
 				? 'pull_request'
 				: 'issue';
-		return ok(
-			toLabelItem(
+		return ok({
+			...toLabelItem(
 				rawItem,
 				type,
 				repositoryName(webhook.data.repository) ?? fallbackRepo,
 				(webhook.data.conversation ?? []).map(toStoredComment)
-			)
-		);
+			),
+			...(webhook.data.label_overrides
+				? { labelOverrides: webhook.data.label_overrides }
+				: {}),
+			...(webhook.data.files ? { files: webhook.data.files } : {}),
+			...(webhook.data.files_omitted !== undefined
+				? { filesOmitted: webhook.data.files_omitted }
+				: {}),
+		});
 	}
 
 	const item = gitHubItemSchema.safeParse(input);
@@ -353,6 +405,8 @@ function toStoredComment(comment: z.infer<typeof conversationCommentSchema>): It
 		body: comment.body,
 		createdAt: comment.createdAt ?? null,
 		kind: comment.kind ?? 'comment',
+		...(comment.isBot !== undefined ? { isBot: comment.isBot } : {}),
+		...(comment.reviewState ? { reviewState: comment.reviewState } : {}),
 	};
 }
 
@@ -375,6 +429,7 @@ function toLabelItem(
 		),
 		repository,
 		comments,
+		...(raw.created_at !== undefined ? { createdAt: raw.created_at } : {}),
 	};
 }
 
@@ -476,6 +531,8 @@ export type SimilarItem = {
 	title: string;
 	body: string;
 	type: 'issue' | 'pull_request';
+	createdAt?: string;
+	state?: string;
 };
 
 export function similarSearchQuery(
@@ -518,6 +575,8 @@ export async function searchSimilarItems(
 			title: string;
 			body?: string | null;
 			pull_request?: unknown;
+			created_at?: string;
+			state?: string;
 		}>;
 	}>(`/search/issues?${params}`, {
 		token: tokenResult.value,
@@ -533,6 +592,8 @@ export async function searchSimilarItems(
 			title: match.title,
 			body: truncateText(match.body ?? '', MAX_CANDIDATE_BODY_CHARS),
 			type: match.pull_request !== undefined ? 'pull_request' : 'issue',
+			...(match.created_at ? { createdAt: match.created_at } : {}),
+			...(match.state ? { state: match.state } : {}),
 		});
 		if (candidates.length >= limit) break;
 	}
@@ -585,10 +646,11 @@ export async function listItemConversation(
 }
 
 type GitHubComment = {
-	user?: { login?: string } | null;
+	user?: { login?: string; type?: string } | null;
 	author_association?: string | null;
 	body?: string | null;
 	created_at?: string;
+	submitted_at?: string;
 };
 
 export function parseAuthorRole(value: unknown): AuthorRole | null {
@@ -605,14 +667,83 @@ type GitHubReview = GitHubComment & {
 
 function toFetchedComment(raw: GitHubComment, kind: ItemComment['kind']): ItemComment | null {
 	const body = truncateCommentBody(raw.body ?? '');
-	if (body.length === 0) return null;
+	const reviewState = kind === 'review' ? (raw as GitHubReview).state : undefined;
+	if (body.length === 0 && !reviewState) return null;
 	return {
 		author: raw.user?.login ?? null,
 		role: parseAuthorRole(raw.author_association),
 		body,
-		createdAt: raw.created_at ?? null,
+		createdAt: raw.created_at ?? raw.submitted_at ?? null,
 		kind,
+		isBot: raw.user?.type === 'Bot' || (raw.user?.login?.endsWith('[bot]') ?? false),
+		...(reviewState ? { reviewState } : {}),
 	};
+}
+
+type LabelEvent = {
+	event?: string;
+	label?: { name?: string };
+	actor?: { login?: string; type?: string } | null;
+	created_at?: string;
+};
+
+export function humanLabelOverrides(events: LabelEvent[]): LabelOverride[] {
+	const latest = new Map<string, LabelOverride>();
+	for (const event of events) {
+		if (event.event !== 'labeled' && event.event !== 'unlabeled') continue;
+		const name = event.label?.name;
+		const author = event.actor?.login;
+		const createdAt = event.created_at;
+		if (
+			!name ||
+			!author ||
+			!createdAt ||
+			event.actor?.type !== 'User' ||
+			author.endsWith('[bot]')
+		)
+			continue;
+		const previous = latest.get(name.toLowerCase());
+		if (!previous || previous.createdAt <= createdAt) {
+			latest.set(name.toLowerCase(), { name, action: event.event, author, createdAt });
+		}
+	}
+	return [...latest.values()];
+}
+
+export async function listLabelOverrides(
+	repo: GitHubRepo,
+	number: number,
+	options: GitHubClientOptions = {}
+): Promise<Result<LabelOverride[], GitHubApiError | MissingGitHubTokenError>> {
+	const events = await listPaginated<LabelEvent>(
+		`/repos/${repo.owner}/${repo.name}/issues/${number}/events`,
+		options
+	);
+	return events.isErr() ? err(events.error) : ok(humanLabelOverrides(events.value));
+}
+
+/** Only file metadata enters model context; no fork code is executed. */
+export async function listChangedFiles(
+	repo: GitHubRepo,
+	number: number,
+	options: GitHubClientOptions = {}
+): Promise<
+	Result<{ files: ChangedFile[]; omitted: number }, GitHubApiError | MissingGitHubTokenError>
+> {
+	const files = await listPaginated<ChangedFile>(
+		`/repos/${repo.owner}/${repo.name}/pulls/${number}/files`,
+		options
+	);
+	if (files.isErr()) return err(files.error);
+	return ok({
+		files: files.value.slice(0, 100).map(({ filename, status, additions, deletions }) => ({
+			filename,
+			status,
+			additions,
+			deletions,
+		})),
+		omitted: Math.max(0, files.value.length - 100),
+	});
 }
 
 function truncateCommentBody(body: string): string {

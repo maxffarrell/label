@@ -11,8 +11,10 @@ import {
 	type IssueSelection,
 	type ItemKind,
 	type LabelItem,
+	listChangedFiles,
 	listIssues,
 	listItemConversation,
+	listLabelOverrides,
 	listRepoLabels,
 	parseGitHubPayload,
 	parseRepo,
@@ -300,10 +302,21 @@ async function toPayloadWithConversation(
 	if (parsed.isErr()) return err(parsed.error);
 	const conversation = await listItemConversation(repo, parsed.value, github);
 	if (conversation.isErr()) return err(conversation.error);
+	const overrides = await listLabelOverrides(repo, parsed.value.number, github);
+	if (overrides.isErr()) return err(overrides.error);
+	const changed =
+		parsed.value.type === 'pull_request'
+			? await listChangedFiles(repo, parsed.value.number, github)
+			: ok({ files: [], omitted: 0 });
+	if (changed.isErr()) return err(changed.error);
 	return ok({
 		issue,
 		repository: { full_name: repoName },
 		conversation: conversation.value,
+		label_overrides: overrides.value,
+		...(parsed.value.type === 'pull_request'
+			? { files: changed.value.files, files_omitted: changed.value.omitted }
+			: {}),
 	});
 }
 

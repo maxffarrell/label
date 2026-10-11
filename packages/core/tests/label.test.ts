@@ -16,7 +16,12 @@ const labels = [
 ];
 
 function emptyConversation(url: string): Response | undefined {
-	if (url.includes('/comments') || url.includes('/reviews')) {
+	if (
+		url.includes('/comments') ||
+		url.includes('/reviews') ||
+		url.includes('/events') ||
+		url.includes('/files')
+	) {
 		return Response.json([]);
 	}
 }
@@ -193,6 +198,7 @@ describe('labelIssues', () => {
 						pull_request: {},
 					});
 				}
+				if (url.includes('/events') || url.includes('/files')) return Response.json([]);
 				throw new Error(`unexpected ${url}`);
 			},
 			ask: async () => ({
@@ -239,6 +245,7 @@ describe('labelIssues', () => {
 				if (url.endsWith('/issues/1')) {
 					return Response.json({ number: 1, title: 'Crash', body: 'It crashes' });
 				}
+				if (url.includes('/events') || url.includes('/files')) return Response.json([]);
 				throw new Error(`unexpected ${url}`);
 			},
 			ask: async ({ state }) => {
@@ -283,6 +290,7 @@ describe('labelIssues', () => {
 				if (url.endsWith('/issues/1')) {
 					return Response.json({ number: 1, title: 'Crash', body: 'It crashes' });
 				}
+				if (url.includes('/events') || url.includes('/files')) return Response.json([]);
 				throw new Error(`unexpected ${url}`);
 			},
 			ask: async ({ state, questions }) => {
@@ -330,6 +338,7 @@ describe('labelIssues', () => {
 				if (url.includes('/labels') && init?.method === 'POST') {
 					return Response.json([]);
 				}
+				if (url.includes('/events') || url.includes('/files')) return Response.json([]);
 				throw new Error(`unexpected ${url}`);
 			},
 			ask: async () => ({
@@ -373,6 +382,7 @@ describe('labelIssues', () => {
 					posts.push(String(init.body));
 					return Response.json([]);
 				}
+				if (url.includes('/events') || url.includes('/files')) return Response.json([]);
 				throw new Error(`unexpected ${url}`);
 			},
 			ask: async () => ({
@@ -551,6 +561,7 @@ describe('labelIssues', () => {
 						{ number: 6, title: 'Should be sliced', body: 'Three' },
 					]);
 				}
+				if (url.includes('/events') || url.includes('/files')) return Response.json([]);
 				throw new Error(`unexpected ${url}`);
 			},
 			ask: async ({ state }) => {
@@ -593,6 +604,7 @@ describe('labelIssues', () => {
 					expect(url).toContain('state=all');
 					return Response.json([{ number: 3, title: 'Closed one', body: 'Done' }]);
 				}
+				if (url.includes('/events') || url.includes('/files')) return Response.json([]);
 				throw new Error(`unexpected ${url}`);
 			},
 			ask: async () => ({
@@ -626,6 +638,7 @@ describe('labelIssues', () => {
 						{ number: 3, title: 'An issue', body: 'issue' },
 					]);
 				}
+				if (url.includes('/events') || url.includes('/files')) return Response.json([]);
 				throw new Error(`unexpected ${url}`);
 			},
 			ask: async ({ state }) => {
@@ -669,6 +682,7 @@ describe('labelIssues', () => {
 						pull_request: {},
 					});
 				}
+				if (url.includes('/events') || url.includes('/files')) return Response.json([]);
 				throw new Error(`unexpected ${url}`);
 			},
 			ask: async () => {
@@ -753,6 +767,7 @@ describe('labelIssues', () => {
 						},
 					]);
 				}
+				if (url.includes('/events') || url.includes('/files')) return Response.json([]);
 				throw new Error(`unexpected ${url}`);
 			},
 			ask: async ({ state }) => {
@@ -855,6 +870,7 @@ describe('labelIssues', () => {
 						body: 'It crashes',
 					});
 				}
+				if (url.includes('/events') || url.includes('/files')) return Response.json([]);
 				throw new Error(`unexpected ${url}`);
 			},
 			ask: async ({ state, questions }) => {
