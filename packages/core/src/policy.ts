@@ -47,7 +47,7 @@ export type LabelDefinition = {
 	context?: LabelContext;
 };
 
-const labelPolicyEntrySchema = z.strictObject({
+const labelPolicyEntrySchema = z.object({
 	description: z.string().optional(),
 	apply_when: z.string().optional(),
 	remove_when: z.string().optional(),
@@ -58,7 +58,7 @@ const labelPolicyEntrySchema = z.strictObject({
 	context: z.enum(LABEL_CONTEXTS).optional(),
 });
 
-const labelPolicySchema = z.strictObject({
+const labelPolicySchema = z.object({
 	prompt: z.string().optional(),
 	only_configured: z.boolean().optional(),
 	labels: z.record(z.string(), labelPolicyEntrySchema).optional(),
@@ -80,12 +80,9 @@ export function parseLabelPolicy(content: string): Result<LabelPolicy, InvalidLa
 
 	const parsed = labelPolicySchema.safeParse(raw);
 	if (!parsed.success) {
-		const issue = parsed.error.issues[0];
-		const detail =
-			issue?.code === 'unrecognized_keys'
-				? `Unknown policy key(s) at ${issue.path.join('.') || 'root'}: ${issue.keys.join(', ')}.${issue.keys.includes('removed_when') ? ' Use remove_when, not removed_when.' : ''}`
-				: (issue?.message ?? 'Invalid policy.');
-		return err(new InvalidLabelPolicyError(detail));
+		return err(
+			new InvalidLabelPolicyError(parsed.error.issues[0]?.message ?? 'Invalid policy.')
+		);
 	}
 
 	const labels: Record<string, LabelPolicyEntry> = {};

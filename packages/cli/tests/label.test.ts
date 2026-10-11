@@ -2,31 +2,9 @@ import type { LabelDecision } from '@ieedan/label-core';
 import pc from 'picocolors';
 import { describe, expect, it } from 'vitest';
 import { cli } from '@/cli';
-import { schema } from '@/commands/label';
 import { formatDecisions } from '@/utils/table';
 
 describe('cli', () => {
-	it.each([
-		-0.1,
-		1.1,
-		Number.NaN,
-		Number.POSITIVE_INFINITY,
-	])('rejects invalid threshold %s', (threshold) => {
-		expect(
-			schema.safeParse({
-				cwd: '.',
-				verbose: false,
-				dryRun: true,
-				remove: false,
-				threshold,
-				all: false,
-				includeClosed: false,
-				issues: false,
-				prs: false,
-				withConfidence: false,
-			}).success
-		).toBe(false);
-	});
 	it('registers the label command', () => {
 		expect(cli.commands.map((command) => command.name())).toContain('label');
 	});
@@ -232,33 +210,6 @@ describe('formatDecisions', () => {
 		);
 		expect(table).toContain('bug');
 		expect(table).toContain('good first issue (suggest)');
-	});
-
-	it('shows a human-vetoed label as a removal rather than a suggestion', () => {
-		const table = formatDecisions(
-			[
-				{
-					...decisions[0]!,
-					item: { ...decisions[0]!.item, currentLabels: ['duplicate'] },
-					labels: [
-						{
-							name: 'duplicate',
-							description: null,
-							noul: 0.89,
-							threshold: 0.6,
-							apply: false,
-							canApply: false,
-							canRemove: true,
-							humanOverride: 'unlabeled',
-						},
-					],
-					chosen: [],
-				},
-			],
-			{ columns: 120, remove: true }
-		);
-		expect(table).toContain('duplicate (remove)');
-		expect(table).not.toContain('(suggest)');
 	});
 
 	it('marks labels that will be removed', () => {

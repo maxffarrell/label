@@ -58,43 +58,19 @@ labels:
 only_configured: true # only apply labels that are configured in this file
 ```
 
-Policy keys are validated strictly. For example, use `remove_when`, not
-`removed_when`; unknown keys now fail instead of being silently ignored. Thresholds
-must be finite numbers between 0 and 1.
+### Human-removed labels
 
-### Evidence and human label decisions
+The GitHub CLI reads label-event history and does not reapply a label whose latest
+human action was removal, even if Jev gives it a high score or a bot later adds it.
+A later human addition lifts that veto. GitHub actors of type `User` count as human,
+including automation using a personal token. App/bot actors do not lift the veto.
 
-The GitHub CLI flow reads label events as well as the conversation. The latest
-human (`User`) action on each label remains authoritative even if a bot subsequently
-contradicts it: a human removal blocks reapplication, and a human addition protects
-the label from automatic removal. A later human action supersedes the earlier one.
-This applies to all human label actors, without inferring repository permissions
-from comment associations. Automation using a personal GitHub token also appears
-as a human actor and is therefore protected.
-
-`--remove` is still opt-in and `can_remove: false` is respected. It can reconcile a
-bot label against an explicit human removal, or remove an unprotected label scoring
-below `1 - threshold`. Missing, non-finite, or out-of-range provider answers never
-cause automatic label removal. Human-added labels must be removed by a human;
-they are not silently handed back to automation.
-
-PR context includes up to 100 changed-file metadata entries, an omitted-file count,
-bot identity, review state, and empty-body approvals with their submitted time.
-Label meaning, actor requirements, scope, and relationships to similar items come
-from repository policy; the core does not prescribe bug confirmation, duplicate
-semantics, or component/CLI boundaries. See the
-[opt-in policy example](./examples/policies/shadcn-svelte.yml) for repository-specific
-rules. Model interpretation can still produce mistakes. No fork code is executed.
-Consumers of the low-level
-`label()` API can provide `label_overrides` and `files` in the payload; without
-those fields it cannot infer historical human actions or changed-file scope.
-
-The default workflow examples do not enable removal. A repository must explicitly
-enable `--remove` to reconcile stale labels, and a review only causes reevaluation
-if the repository's integration invokes the CLI for that event.
-
-See the [shadcn-svelte replay results](./eval/README.md) for the live before/after
-comparison, remaining failures, and reproduction instructions.
+History is loaded for dry runs and refreshed immediately before additions after
+inference. A failed history read prevents that item's additions. GitHub does not
+provide an atomic history-check/add operation, so a small concurrent-edit window
+remains. Removal behavior and model prompts are unchanged. Existing stale labels
+are not removed by this fix. Low-level `label()` callers can supply
+`human_removed_labels` in their payload; it does not fetch that history for them.
 
 ### Workflow integration
 

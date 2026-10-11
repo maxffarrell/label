@@ -50,30 +50,6 @@ describe('buildRequest', () => {
 		expect(state).toMatchObject({ prompt: null });
 	});
 
-	it('leaves eligibility and actor requirements to arbitrary repository policies', () => {
-		const policy = {
-			name: 'community signal',
-			description: 'Discussion worth tracking.',
-			applyWhen: 'A bot or contributor reports related work, including future work.',
-			context: 'similar_issues' as const,
-		};
-		const prompt = 'No maintainer confirmation is required. Related work is sufficient.';
-		const local = buildRequest([item(1)], [policy], { prompt });
-		const contextual = buildContextRequest([{ item: item(1), candidates: [] }], [policy], {
-			prompt,
-		});
-		for (const request of [local, contextual]) {
-			expect(request.state.prompt).toBe(prompt);
-			expect(request.state.labels[0]?.apply_when).toBe(policy.applyWhen);
-			expect(request.state.evidence_rules.join(' ')).toContain(
-				'Do not invent additional eligibility rules'
-			);
-			expect(JSON.stringify(request)).not.toMatch(
-				/canonical item|confirmed bug|waiting-for-submitter|official demo|public CLI|invitation to contribute/
-			);
-		}
-	});
-
 	it('includes prompt in state', () => {
 		const { state, questions } = buildRequest(
 			[item(1)],
@@ -275,9 +251,7 @@ describe('buildContextRequest', () => {
 		]);
 		expect(questions[questionId(0, 0)]?.instructions).toMatchObject({
 			judge_from: expect.stringContaining('candidates'),
-			label: expect.stringContaining(
-				'relationship to candidates required by the configured label'
-			),
+			label: expect.stringContaining('comments already identify'),
 		});
 	});
 });

@@ -11,10 +11,9 @@ import {
 	type IssueSelection,
 	type ItemKind,
 	type LabelItem,
-	listChangedFiles,
+	listHumanRemovedLabels,
 	listIssues,
 	listItemConversation,
-	listLabelOverrides,
 	listRepoLabels,
 	parseGitHubPayload,
 	parseRepo,
@@ -189,9 +188,21 @@ export async function labelIssues(
 	const remove = options.remove ?? false;
 	if (!dryRun) {
 		const applied = await Promise.all(
-			labeled.value.decisions.map((decision) =>
-				addIssueLabels(repo, decision.item.number, labelsToApply(decision), github)
-			)
+			labeled.value.decisions.map(async (decision) => {
+				if (labelsToApply(decision).length === 0) return ok(undefined);
+				// Refresh after inference so a removal made during the request also vetoes additions.
+				const removed = await listHumanRemovedLabels(repo, decision.item.number, github);
+				if (removed.isErr()) return err(removed.error);
+				decision.item.humanRemovedLabels = removed.value;
+				const vetoed = new Set(removed.value.map((name) => name.toLowerCase()));
+				for (const label of decision.labels) {
+					if (vetoed.has(label.name.toLowerCase())) label.apply = false;
+				}
+				decision.chosen = decision.labels
+					.filter((label) => label.apply)
+					.map((label) => label.name);
+				return addIssueLabels(repo, decision.item.number, labelsToApply(decision), github);
+			})
 		);
 		for (const result of applied) {
 			if (result.isErr()) return err(result.error);
@@ -302,21 +313,13 @@ async function toPayloadWithConversation(
 	if (parsed.isErr()) return err(parsed.error);
 	const conversation = await listItemConversation(repo, parsed.value, github);
 	if (conversation.isErr()) return err(conversation.error);
-	const overrides = await listLabelOverrides(repo, parsed.value.number, github);
-	if (overrides.isErr()) return err(overrides.error);
-	const changed =
-		parsed.value.type === 'pull_request'
-			? await listChangedFiles(repo, parsed.value.number, github)
-			: ok({ files: [], omitted: 0 });
-	if (changed.isErr()) return err(changed.error);
+	const removed = await listHumanRemovedLabels(repo, parsed.value.number, github);
+	if (removed.isErr()) return err(removed.error);
 	return ok({
 		issue,
 		repository: { full_name: repoName },
 		conversation: conversation.value,
-		label_overrides: overrides.value,
-		...(parsed.value.type === 'pull_request'
-			? { files: changed.value.files, files_omitted: changed.value.omitted }
-			: {}),
+		human_removed_labels: removed.value,
 	});
 }
 
