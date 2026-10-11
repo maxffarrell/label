@@ -15,12 +15,12 @@ unit/integration tests.
 
 | Acceptance checks | Baseline | Updated |
 | --- | ---: | ---: |
-| All targeted checks, three repeats | 73/114 (64.0%) | 105/114 (92.1%) |
+| All targeted checks, three repeats | 73/114 (64.0%) | 97/114 (85.1%) |
 | Human-removed labels not reapplied | 3/18 | 18/18 |
-| Official-demo reproduction handling | 9/12 | 12/12 |
+| Official-demo reproduction handling | 9/12 | 8/12 |
 | Unconfirmed dependency report: no bug, CLI retained, no feature | 6/9 | 9/9 |
 | Changelog scope clarification, including duplicate removal | 6/9 | 9/9 |
-| Existing docs PR: docs retained, no contribution invitation/waiting | 3/9 | 9/9 |
+| Existing docs PR: docs retained, no contribution invitation/waiting | 3/9 | 5/9 |
 | Confirmed animation defect: bug/workaround retained, no feature | 6/9 | 9/9 |
 | Explicit duplicate positive control | 3/3 | 3/3 |
 
@@ -39,24 +39,38 @@ to expose lost labels rather than merely rewarding abstention.
 
 ## Remaining failures and regressions
 
-The updated version still fails nine of 114 checks:
+The generalized version still fails 17 of 114 checks:
 
-- #2905: the requested replacement PR is still classified as a duplicate in one
-  of three runs (score 0.60), down from three failures on baseline. The earlier
-  guard request is in #2904's comments, which candidate-body retrieval does not load.
-- #2908: a maintainer-authored defect fix misses `bug` once (0.54). Baseline retained
-  `bug` in all three runs. The issue confirmation rule needs a clearer PR distinction.
-- #2922: `awaiting submitter` remains in the removal hysteresis band in all three
-  runs (0.45–0.55); merely ceasing to select it is not enough for automatic removal.
+- Official-demo reproductions: `needs reproduction` is incorrectly selected in
+  all three dropdown runs (0.62–0.70) and one Firefox run (0.61). The dropdown
+  case regresses from one baseline failure to three.
+- #2905: the requested replacement PR is classified as a duplicate in all three
+  runs (0.81–0.84), as on baseline. The earlier guard request is in #2904's
+  comments, which candidate-body retrieval does not load.
+- #2922: `awaiting submitter` is not removed in all three runs (0.60–0.62).
   Baseline also fails this removal in all three runs. A separate, evidenced
   resolution decision remains necessary. `needs reproduction` removal succeeds.
-- #2916: toast component work still gets `cli` in all three runs (0.64–0.67), whereas
-  baseline avoids that label. The new `feature` is also missed once, as on baseline.
-  File metadata alone does not reliably establish public CLI scope.
+- #2909: an existing docs PR gets `contributions welcome` twice and `awaiting
+  submitter` twice, despite no outstanding request in the available context.
+- #2916: toast component work gets `cli` in all three runs (0.84–0.87), whereas
+  baseline avoids it. File metadata alone does not establish public CLI scope.
+
+Core guidance now concerns evidence provenance, chronology, missing context, and
+following configured label meanings. It contains no special definitions for bugs,
+duplicates, reproductions, contribution invitations, or waiting labels. Context
+labels can represent any relationship described by repository policy, including
+related work rather than duplicates.
+
+The [optional shadcn-svelte policy fragment](../examples/policies/shadcn-svelte.yml)
+illustrates where those specific rules belong. It was **not used in this replay**,
+has not been evaluated live, and needs maintainer review before use. The original
+fixture definitions are unchanged. These results measure generic core changes,
+not gains from a repository policy rewrite. Cross-repository holdout evaluation
+remains necessary to establish generalization.
 
 The draft should not be promoted as fully solving duplicate retrieval, dynamic
-label resolution, or public CLI classification. In particular, GitHub workflows
-must still explicitly pass `--remove`; no removal default or live labels changed.
+label resolution, or public CLI classification. GitHub workflows must still
+explicitly pass `--remove`; no removal default or live labels changed.
 
 ## Fixture limitations
 

@@ -1,131 +1,131 @@
 {
-	"evaluatedAt": "2026-10-11T21:30:24.201Z",
-	"implementationHash": "9dea8cbb1e1a792707a0355e69f1bd06debd0213c897f5d3cbbad677d4bc68c2",
+	"evaluatedAt": "2026-10-11T21:43:49.219Z",
+	"implementationHash": "08d0746a031d00e0ebe35f9f11610a1f9e1075a40e3c629a5226027fd862f0a8",
 	"fixtureHash": "8f978b1a560b198b45a1dfc7bda01f44789a9e29078c245869b2c5a772591dc4",
 	"baseline": "47f83c37073c98275f6d859cbed928180ee88766",
 	"threshold": 0.6,
 	"repeats": 3,
 	"complete": true,
 	"requestHashes": [
-		"8b77b9f6d35d600dcb190fcb2531539dc14e688083b3002ebca3f0c02c4ebbec",
-		"d9a454d924aafd5827cf6f0a482c0bfa2eb8f0928cfb3ee04eeed67f08bffd2a",
-		"28cd7938b5dea363aec9f33899fe54a562e2bcd90e50e78108ab3cf319ba66f9",
-		"31b272bfb5c1d36360c64dc134b3081b25ea543685f548bb41249b1a74dab96a",
-		"9f61532b3d4feef8ac3eec8e5fef0c3e824336d46f8cd45fa36b53b6ab230f2a",
-		"8d6b3d3f3989493a34d394c797eecec26bc2ea121f9459568cf8e6306c9c14f4",
-		"4ca4a2096049c8be81de7bc322173afffe80e80b6567c006832cfa21379aff65",
-		"5c309b44c5a3c7885c251b9c718d70ce28ebcd3a9831d36971e535f498cc520c",
-		"e742762cccf620a4e753a28b36daeba1bd62e56fa38ef2fdebaa323361c48a40",
-		"627a9f3d49ef2c5c1b02ee20cc66543a1b0c90d9a57d7ae58b30ecc1a7fbc086",
-		"39758d9d259a2c1fd9136371213c8bd36191561ac2772ebe0123e7e16ca7abba",
-		"35482b55d7db47bbc8769b1f37771dd8a54f743108c4058a01d916c9b184b3d1",
-		"893dc043be05e80b31f9ce5ccb900b8246eb1ac89939f8ea9d4fc5618e3d1a76",
-		"9631ab0a12c0aa0fd3a865a047ab260dc7e60639d38a4fb5ac23b0d57bca136a",
-		"c1f4cedf145198362434f0aad61cca366d1c05f46dfe2529a0dec7455f6c01d1",
-		"33b3119143679f365a94e809fdf60662c867b6de1b9486b3630d52f4ae2eafc5",
-		"29f12fd694904a064634289c301484f6983d2badac666bed5c4da24a11dfc621",
-		"9822fd3cebf39019e6712a54c58e181ae3bddc444c2eb70bbd48af8c19219b31",
-		"429802ce6b913b8cbd386254692e6ebcdac083ba293e67af0b5b09ce9bef0438",
-		"7c06995fb775dcb9cdf85d58e2c406d784189afb348f1cad9cf3a5221ad93b2c",
-		"f7acef56d17173d4551fbcb465e8852db4d9c17cd7856d0781d4ad02039e3b85",
-		"bd7836ff96452ae1dd95e79e073d89fc554a80986c6cb5ef06d685a488c4f60c",
-		"c73f497d9eb6f810c13c3d38b1ea0e56d042c95f307e6b2427d972d58825b4dd",
-		"44898ab2d5d32a51b21190131598f953f25174056875c48032ba74b6646e7cfc",
-		"d1827e2b1d13e4601c95a85a52b10d1944436980326f8704e070cf6e26271277",
-		"bada64318bda0e044366a0eb9e90626dfb532efad9367296168e8a9f6a2310ee",
-		"d0106e520d55954dc2e4cdf32204218c208fce7223e33bec2e1e4d5cdb95beaf",
-		"9aa76cc825619df36c85af3005712a467d9340c713219c964c9f01c2c82dc946",
-		"fd80514e5614967b4cca7558149bccdf61bddb5704b6811c8a213a7bcd0b7f84",
-		"5cdf320a86a9471abd33d9df78cc221a85f2f5b2b5100d16e59b15af942dba4b",
-		"f971ae87a6f2af6f522e71514a95114b237a579c7bde80acea57e2d761b2bf3f",
-		"c5fa357d72e48a8fcda20c2776a6ffbc5897c10b46ae784b9117c5d3c135a1ca",
-		"674d7b3ae0b446ccaeff19e638b0b6cd5bbfcb2e842389cff695c00c92fefa7c",
-		"a464fdbb6df9135eb30041b08366db80c4f1e357964f3fa481eaa3db8ce7b28b",
-		"8b77b9f6d35d600dcb190fcb2531539dc14e688083b3002ebca3f0c02c4ebbec",
-		"d9a454d924aafd5827cf6f0a482c0bfa2eb8f0928cfb3ee04eeed67f08bffd2a",
-		"28cd7938b5dea363aec9f33899fe54a562e2bcd90e50e78108ab3cf319ba66f9",
-		"31b272bfb5c1d36360c64dc134b3081b25ea543685f548bb41249b1a74dab96a",
-		"4ca4a2096049c8be81de7bc322173afffe80e80b6567c006832cfa21379aff65",
-		"9f61532b3d4feef8ac3eec8e5fef0c3e824336d46f8cd45fa36b53b6ab230f2a",
-		"5c309b44c5a3c7885c251b9c718d70ce28ebcd3a9831d36971e535f498cc520c",
-		"8d6b3d3f3989493a34d394c797eecec26bc2ea121f9459568cf8e6306c9c14f4",
-		"e742762cccf620a4e753a28b36daeba1bd62e56fa38ef2fdebaa323361c48a40",
-		"627a9f3d49ef2c5c1b02ee20cc66543a1b0c90d9a57d7ae58b30ecc1a7fbc086",
-		"39758d9d259a2c1fd9136371213c8bd36191561ac2772ebe0123e7e16ca7abba",
-		"35482b55d7db47bbc8769b1f37771dd8a54f743108c4058a01d916c9b184b3d1",
-		"c1f4cedf145198362434f0aad61cca366d1c05f46dfe2529a0dec7455f6c01d1",
-		"9631ab0a12c0aa0fd3a865a047ab260dc7e60639d38a4fb5ac23b0d57bca136a",
-		"893dc043be05e80b31f9ce5ccb900b8246eb1ac89939f8ea9d4fc5618e3d1a76",
-		"33b3119143679f365a94e809fdf60662c867b6de1b9486b3630d52f4ae2eafc5",
-		"29f12fd694904a064634289c301484f6983d2badac666bed5c4da24a11dfc621",
-		"9822fd3cebf39019e6712a54c58e181ae3bddc444c2eb70bbd48af8c19219b31",
-		"429802ce6b913b8cbd386254692e6ebcdac083ba293e67af0b5b09ce9bef0438",
-		"7c06995fb775dcb9cdf85d58e2c406d784189afb348f1cad9cf3a5221ad93b2c",
-		"f7acef56d17173d4551fbcb465e8852db4d9c17cd7856d0781d4ad02039e3b85",
-		"bd7836ff96452ae1dd95e79e073d89fc554a80986c6cb5ef06d685a488c4f60c",
-		"44898ab2d5d32a51b21190131598f953f25174056875c48032ba74b6646e7cfc",
-		"c73f497d9eb6f810c13c3d38b1ea0e56d042c95f307e6b2427d972d58825b4dd",
-		"d1827e2b1d13e4601c95a85a52b10d1944436980326f8704e070cf6e26271277",
-		"bada64318bda0e044366a0eb9e90626dfb532efad9367296168e8a9f6a2310ee",
-		"d0106e520d55954dc2e4cdf32204218c208fce7223e33bec2e1e4d5cdb95beaf",
-		"9aa76cc825619df36c85af3005712a467d9340c713219c964c9f01c2c82dc946",
-		"fd80514e5614967b4cca7558149bccdf61bddb5704b6811c8a213a7bcd0b7f84",
-		"5cdf320a86a9471abd33d9df78cc221a85f2f5b2b5100d16e59b15af942dba4b",
-		"c5fa357d72e48a8fcda20c2776a6ffbc5897c10b46ae784b9117c5d3c135a1ca",
-		"f971ae87a6f2af6f522e71514a95114b237a579c7bde80acea57e2d761b2bf3f",
-		"674d7b3ae0b446ccaeff19e638b0b6cd5bbfcb2e842389cff695c00c92fefa7c",
-		"a464fdbb6df9135eb30041b08366db80c4f1e357964f3fa481eaa3db8ce7b28b",
-		"8b77b9f6d35d600dcb190fcb2531539dc14e688083b3002ebca3f0c02c4ebbec",
-		"d9a454d924aafd5827cf6f0a482c0bfa2eb8f0928cfb3ee04eeed67f08bffd2a",
-		"28cd7938b5dea363aec9f33899fe54a562e2bcd90e50e78108ab3cf319ba66f9",
-		"31b272bfb5c1d36360c64dc134b3081b25ea543685f548bb41249b1a74dab96a",
-		"5c309b44c5a3c7885c251b9c718d70ce28ebcd3a9831d36971e535f498cc520c",
-		"9f61532b3d4feef8ac3eec8e5fef0c3e824336d46f8cd45fa36b53b6ab230f2a",
-		"4ca4a2096049c8be81de7bc322173afffe80e80b6567c006832cfa21379aff65",
-		"8d6b3d3f3989493a34d394c797eecec26bc2ea121f9459568cf8e6306c9c14f4",
-		"e742762cccf620a4e753a28b36daeba1bd62e56fa38ef2fdebaa323361c48a40",
-		"627a9f3d49ef2c5c1b02ee20cc66543a1b0c90d9a57d7ae58b30ecc1a7fbc086",
-		"39758d9d259a2c1fd9136371213c8bd36191561ac2772ebe0123e7e16ca7abba",
-		"35482b55d7db47bbc8769b1f37771dd8a54f743108c4058a01d916c9b184b3d1",
-		"c1f4cedf145198362434f0aad61cca366d1c05f46dfe2529a0dec7455f6c01d1",
-		"893dc043be05e80b31f9ce5ccb900b8246eb1ac89939f8ea9d4fc5618e3d1a76",
-		"9631ab0a12c0aa0fd3a865a047ab260dc7e60639d38a4fb5ac23b0d57bca136a",
-		"33b3119143679f365a94e809fdf60662c867b6de1b9486b3630d52f4ae2eafc5",
-		"29f12fd694904a064634289c301484f6983d2badac666bed5c4da24a11dfc621",
-		"9822fd3cebf39019e6712a54c58e181ae3bddc444c2eb70bbd48af8c19219b31",
-		"429802ce6b913b8cbd386254692e6ebcdac083ba293e67af0b5b09ce9bef0438",
-		"7c06995fb775dcb9cdf85d58e2c406d784189afb348f1cad9cf3a5221ad93b2c",
-		"bd7836ff96452ae1dd95e79e073d89fc554a80986c6cb5ef06d685a488c4f60c",
-		"c73f497d9eb6f810c13c3d38b1ea0e56d042c95f307e6b2427d972d58825b4dd",
-		"44898ab2d5d32a51b21190131598f953f25174056875c48032ba74b6646e7cfc",
-		"f7acef56d17173d4551fbcb465e8852db4d9c17cd7856d0781d4ad02039e3b85",
-		"d1827e2b1d13e4601c95a85a52b10d1944436980326f8704e070cf6e26271277",
-		"bada64318bda0e044366a0eb9e90626dfb532efad9367296168e8a9f6a2310ee",
-		"d0106e520d55954dc2e4cdf32204218c208fce7223e33bec2e1e4d5cdb95beaf",
-		"9aa76cc825619df36c85af3005712a467d9340c713219c964c9f01c2c82dc946",
-		"fd80514e5614967b4cca7558149bccdf61bddb5704b6811c8a213a7bcd0b7f84",
-		"5cdf320a86a9471abd33d9df78cc221a85f2f5b2b5100d16e59b15af942dba4b",
-		"c5fa357d72e48a8fcda20c2776a6ffbc5897c10b46ae784b9117c5d3c135a1ca",
-		"f971ae87a6f2af6f522e71514a95114b237a579c7bde80acea57e2d761b2bf3f",
-		"674d7b3ae0b446ccaeff19e638b0b6cd5bbfcb2e842389cff695c00c92fefa7c",
-		"a464fdbb6df9135eb30041b08366db80c4f1e357964f3fa481eaa3db8ce7b28b"
+		"fecdd262967ece918830fb13602f817ae8dbdc929976c515e775b618cf6f78e7",
+		"f83fdae449b3f59ed243660b2519d1e9e50ee93b83f0d1f1a538a6f84920908c",
+		"8f7affd2b3ce61dcea4f0c5875fba5da328f1ea0ba55963529c69863cb8ec650",
+		"c6b85c26130a349eb7a6b4a1b5d28623253d6afe5c774d81aa03161b61a334b6",
+		"d5145aa49e7ec81b600662b58a3785d92da4866275dee8838cb06bf9c7e97c57",
+		"05f1a1ab76e2cac05b4d565ce0419c509081eea2db74d03309ee1c3be6afc109",
+		"e91b551f4758504a99cfbfe4110af24e3664dad19538a5022cca10d6408dc118",
+		"19bd2902ce10bafbd92a02ab85a7f992dcd0bcacfa9c72350603b05fc895a1a5",
+		"3953287ecd3a7a47d3855dd3c414d6d025e8461def261bb6dd8a18e05f3476e9",
+		"d6c43184e1f202c9e3626a476f873ac90554cb5648dc0d2dd3735ddcd4a82b06",
+		"5d4baa9a367d48e0eee1c8882be095195b4863245e3977c8c8c1269515bdccf9",
+		"9662c8887e239eab3fd078dbb36cccc035706cae2b1c682ef6cc6abd07ded59c",
+		"b234b6159e4458c23ee7f7952e2f1acd311725c25287320eb82dfed11ed53ef3",
+		"ff7bc4953009eeb20c084988884c481b787f39db9d2a3082d7206a9a298fbc94",
+		"1d2ec494fb230dc896e13eb2d83b6ba10feac4644d1b0350f09d392c916aff24",
+		"68584fa19a71ab9973f3926f3f5333caa7698ec3499cd489fdff681f3477dcaa",
+		"b573da5b2786981fca4f8b1dac693c42db2d7bbce6ddee21410a191934bb15bd",
+		"547c57cd5f9a851d345b605c095476d0c413c048532a0892b5764918fb3c7e9b",
+		"5f456c57627e9ffdefd40f95155454b7a054c1c58b599d19b8b3ac3abd7173a4",
+		"1c1ab2a0dca49b0a53fadbc1edddfc6db164281a733741b5547270f9f1a03fc8",
+		"85be107b16e52bbe63bd338caef3134528eebe460e7b33c3f6b52c9d0edca35f",
+		"3075939287d01004a1fa2a3a296ca6175ae2deff139ae0cf305707d0bb41ba66",
+		"0d01488dc28e3886a386e02c52c6f5a4954373a8b04927ce9450c648e946c420",
+		"af102e839aa55bfb68c473b508fe463adc673d0d1072222644ea0a9ee06518f4",
+		"c00e703a87549d2c57c128a7c48e1bb5fbcb6a47dc54544f8711eab12d865750",
+		"dc102b510180f3d8a483ba2f16a0c55dc7cd5e902534df9b06725e8f8df6f2ea",
+		"74ac4233397aed46ab67d38e907524c917f5b53ef065bda0d32213ff7368fa95",
+		"93d890e7c9498c448223e76501a4a5ad55a9f23e694511ac35b0c0c03fa60ebe",
+		"8a97bc1e4da02b11798d86f46eacc89ffdc5f4c97fd208fc802e7d80367ec00c",
+		"87fc5599b8d55841f0bf1a0d00565d9fc5472c3883b8fc3872baeff17af4a51e",
+		"11afae21a916b060d8b02b0e055a0239275a2cb11ce8b62ba95a7c4c10892db7",
+		"84881f2181693c2acfb93b6d08fc8f3ffd3b55b2c0114da568c4f28ab03d2e9c",
+		"c10ebbfe04e43bb52e296f66759cc450446b0b84a8c6fd8f41e7cdfb8d606593",
+		"ed692364207924cfe5821684698016b2bd84413e9326b4e6941e1b342302f952",
+		"fecdd262967ece918830fb13602f817ae8dbdc929976c515e775b618cf6f78e7",
+		"f83fdae449b3f59ed243660b2519d1e9e50ee93b83f0d1f1a538a6f84920908c",
+		"8f7affd2b3ce61dcea4f0c5875fba5da328f1ea0ba55963529c69863cb8ec650",
+		"c6b85c26130a349eb7a6b4a1b5d28623253d6afe5c774d81aa03161b61a334b6",
+		"d5145aa49e7ec81b600662b58a3785d92da4866275dee8838cb06bf9c7e97c57",
+		"19bd2902ce10bafbd92a02ab85a7f992dcd0bcacfa9c72350603b05fc895a1a5",
+		"e91b551f4758504a99cfbfe4110af24e3664dad19538a5022cca10d6408dc118",
+		"05f1a1ab76e2cac05b4d565ce0419c509081eea2db74d03309ee1c3be6afc109",
+		"3953287ecd3a7a47d3855dd3c414d6d025e8461def261bb6dd8a18e05f3476e9",
+		"d6c43184e1f202c9e3626a476f873ac90554cb5648dc0d2dd3735ddcd4a82b06",
+		"5d4baa9a367d48e0eee1c8882be095195b4863245e3977c8c8c1269515bdccf9",
+		"9662c8887e239eab3fd078dbb36cccc035706cae2b1c682ef6cc6abd07ded59c",
+		"68584fa19a71ab9973f3926f3f5333caa7698ec3499cd489fdff681f3477dcaa",
+		"ff7bc4953009eeb20c084988884c481b787f39db9d2a3082d7206a9a298fbc94",
+		"b234b6159e4458c23ee7f7952e2f1acd311725c25287320eb82dfed11ed53ef3",
+		"1d2ec494fb230dc896e13eb2d83b6ba10feac4644d1b0350f09d392c916aff24",
+		"b573da5b2786981fca4f8b1dac693c42db2d7bbce6ddee21410a191934bb15bd",
+		"547c57cd5f9a851d345b605c095476d0c413c048532a0892b5764918fb3c7e9b",
+		"5f456c57627e9ffdefd40f95155454b7a054c1c58b599d19b8b3ac3abd7173a4",
+		"1c1ab2a0dca49b0a53fadbc1edddfc6db164281a733741b5547270f9f1a03fc8",
+		"3075939287d01004a1fa2a3a296ca6175ae2deff139ae0cf305707d0bb41ba66",
+		"0d01488dc28e3886a386e02c52c6f5a4954373a8b04927ce9450c648e946c420",
+		"af102e839aa55bfb68c473b508fe463adc673d0d1072222644ea0a9ee06518f4",
+		"85be107b16e52bbe63bd338caef3134528eebe460e7b33c3f6b52c9d0edca35f",
+		"c00e703a87549d2c57c128a7c48e1bb5fbcb6a47dc54544f8711eab12d865750",
+		"dc102b510180f3d8a483ba2f16a0c55dc7cd5e902534df9b06725e8f8df6f2ea",
+		"74ac4233397aed46ab67d38e907524c917f5b53ef065bda0d32213ff7368fa95",
+		"93d890e7c9498c448223e76501a4a5ad55a9f23e694511ac35b0c0c03fa60ebe",
+		"8a97bc1e4da02b11798d86f46eacc89ffdc5f4c97fd208fc802e7d80367ec00c",
+		"11afae21a916b060d8b02b0e055a0239275a2cb11ce8b62ba95a7c4c10892db7",
+		"84881f2181693c2acfb93b6d08fc8f3ffd3b55b2c0114da568c4f28ab03d2e9c",
+		"87fc5599b8d55841f0bf1a0d00565d9fc5472c3883b8fc3872baeff17af4a51e",
+		"c10ebbfe04e43bb52e296f66759cc450446b0b84a8c6fd8f41e7cdfb8d606593",
+		"ed692364207924cfe5821684698016b2bd84413e9326b4e6941e1b342302f952",
+		"fecdd262967ece918830fb13602f817ae8dbdc929976c515e775b618cf6f78e7",
+		"f83fdae449b3f59ed243660b2519d1e9e50ee93b83f0d1f1a538a6f84920908c",
+		"8f7affd2b3ce61dcea4f0c5875fba5da328f1ea0ba55963529c69863cb8ec650",
+		"c6b85c26130a349eb7a6b4a1b5d28623253d6afe5c774d81aa03161b61a334b6",
+		"05f1a1ab76e2cac05b4d565ce0419c509081eea2db74d03309ee1c3be6afc109",
+		"d5145aa49e7ec81b600662b58a3785d92da4866275dee8838cb06bf9c7e97c57",
+		"19bd2902ce10bafbd92a02ab85a7f992dcd0bcacfa9c72350603b05fc895a1a5",
+		"e91b551f4758504a99cfbfe4110af24e3664dad19538a5022cca10d6408dc118",
+		"3953287ecd3a7a47d3855dd3c414d6d025e8461def261bb6dd8a18e05f3476e9",
+		"d6c43184e1f202c9e3626a476f873ac90554cb5648dc0d2dd3735ddcd4a82b06",
+		"5d4baa9a367d48e0eee1c8882be095195b4863245e3977c8c8c1269515bdccf9",
+		"9662c8887e239eab3fd078dbb36cccc035706cae2b1c682ef6cc6abd07ded59c",
+		"ff7bc4953009eeb20c084988884c481b787f39db9d2a3082d7206a9a298fbc94",
+		"68584fa19a71ab9973f3926f3f5333caa7698ec3499cd489fdff681f3477dcaa",
+		"1d2ec494fb230dc896e13eb2d83b6ba10feac4644d1b0350f09d392c916aff24",
+		"b234b6159e4458c23ee7f7952e2f1acd311725c25287320eb82dfed11ed53ef3",
+		"b573da5b2786981fca4f8b1dac693c42db2d7bbce6ddee21410a191934bb15bd",
+		"547c57cd5f9a851d345b605c095476d0c413c048532a0892b5764918fb3c7e9b",
+		"5f456c57627e9ffdefd40f95155454b7a054c1c58b599d19b8b3ac3abd7173a4",
+		"1c1ab2a0dca49b0a53fadbc1edddfc6db164281a733741b5547270f9f1a03fc8",
+		"3075939287d01004a1fa2a3a296ca6175ae2deff139ae0cf305707d0bb41ba66",
+		"0d01488dc28e3886a386e02c52c6f5a4954373a8b04927ce9450c648e946c420",
+		"af102e839aa55bfb68c473b508fe463adc673d0d1072222644ea0a9ee06518f4",
+		"85be107b16e52bbe63bd338caef3134528eebe460e7b33c3f6b52c9d0edca35f",
+		"c00e703a87549d2c57c128a7c48e1bb5fbcb6a47dc54544f8711eab12d865750",
+		"dc102b510180f3d8a483ba2f16a0c55dc7cd5e902534df9b06725e8f8df6f2ea",
+		"74ac4233397aed46ab67d38e907524c917f5b53ef065bda0d32213ff7368fa95",
+		"93d890e7c9498c448223e76501a4a5ad55a9f23e694511ac35b0c0c03fa60ebe",
+		"11afae21a916b060d8b02b0e055a0239275a2cb11ce8b62ba95a7c4c10892db7",
+		"8a97bc1e4da02b11798d86f46eacc89ffdc5f4c97fd208fc802e7d80367ec00c",
+		"87fc5599b8d55841f0bf1a0d00565d9fc5472c3883b8fc3872baeff17af4a51e",
+		"84881f2181693c2acfb93b6d08fc8f3ffd3b55b2c0114da568c4f28ab03d2e9c",
+		"c10ebbfe04e43bb52e296f66759cc450446b0b84a8c6fd8f41e7cdfb8d606593",
+		"ed692364207924cfe5821684698016b2bd84413e9326b4e6941e1b342302f952"
 	],
-	"passed": 105,
+	"passed": 97,
 	"total": 114,
 	"results": [
 		{
 			"repeat": 1,
 			"case": "official-demo-dropdown",
-			"additions": [],
+			"additions": ["needs reproduction"],
 			"removals": [],
 			"checks": [
 				{
 					"label": "needs reproduction",
 					"action": "selected",
 					"expected": false,
-					"actual": false,
-					"passed": true,
-					"score": 0.42
+					"actual": true,
+					"passed": false,
+					"score": 0.65
 				},
 				{
 					"label": "bug",
@@ -133,26 +133,26 @@
 					"expected": false,
 					"actual": false,
 					"passed": true,
-					"score": 0.18
+					"score": 0.24
 				}
 			],
 			"scores": {
-				"awaiting submitter": 0.13,
-				"bug": 0.18,
-				"chore": 0.05,
+				"awaiting submitter": 0.18,
+				"bug": 0.24,
+				"chore": 0.04,
 				"cli": 0.06,
-				"contributions welcome": 0.06,
+				"contributions welcome": 0.07,
 				"dependencies": 0.04,
-				"docs": 0.06,
+				"docs": 0.05,
 				"feature": 0.05,
 				"has workaround": 0.06,
-				"needs reproduction": 0.42,
-				"parity": 0.06,
-				"slop": 0.14,
-				"triage": 0.53,
-				"duplicate": 0.06
+				"needs reproduction": 0.65,
+				"parity": 0.09,
+				"slop": 0.15,
+				"triage": 0.6,
+				"duplicate": 0.09
 			},
-			"selected": []
+			"selected": ["needs reproduction", "triage"]
 		},
 		{
 			"repeat": 1,
@@ -166,7 +166,7 @@
 					"expected": false,
 					"actual": false,
 					"passed": true,
-					"score": 0.42
+					"score": 0.56
 				},
 				{
 					"label": "bug",
@@ -174,24 +174,24 @@
 					"expected": false,
 					"actual": false,
 					"passed": true,
-					"score": 0.16
+					"score": 0.28
 				}
 			],
 			"scores": {
-				"awaiting submitter": 0.09,
-				"bug": 0.16,
+				"awaiting submitter": 0.13,
+				"bug": 0.28,
 				"chore": 0.05,
-				"cli": 0.04,
-				"contributions welcome": 0.1,
+				"cli": 0.05,
+				"contributions welcome": 0.09,
 				"dependencies": 0.04,
-				"docs": 0.06,
+				"docs": 0.04,
 				"feature": 0.06,
-				"has workaround": 0.07,
-				"needs reproduction": 0.42,
+				"has workaround": 0.06,
+				"needs reproduction": 0.56,
 				"parity": 0.06,
-				"slop": 0.14,
-				"triage": 0.7,
-				"duplicate": 0.05
+				"slop": 0.12,
+				"triage": 0.74,
+				"duplicate": 0.08
 			},
 			"selected": ["triage"]
 		},
@@ -207,7 +207,7 @@
 					"expected": false,
 					"actual": false,
 					"passed": true,
-					"score": 0.11
+					"score": 0.18
 				},
 				{
 					"label": "bug",
@@ -215,461 +215,35 @@
 					"expected": false,
 					"actual": false,
 					"passed": true,
-					"score": 0.2
+					"score": 0.32
 				}
 			],
 			"scores": {
-				"awaiting submitter": 0.16,
-				"bug": 0.2,
+				"awaiting submitter": 0.21,
+				"bug": 0.32,
 				"chore": 0.05,
 				"cli": 0.06,
-				"contributions welcome": 0.13,
-				"dependencies": 0.05,
-				"docs": 0.05,
+				"contributions welcome": 0.11,
+				"dependencies": 0.04,
+				"docs": 0.04,
 				"feature": 0.07,
-				"has workaround": 0.28,
-				"needs reproduction": 0.62,
-				"parity": 0.39,
-				"slop": 0.12,
-				"triage": 0.16,
-				"duplicate": 0.11
+				"has workaround": 0.55,
+				"needs reproduction": 0.84,
+				"parity": 0.28,
+				"slop": 0.11,
+				"triage": 0.66,
+				"duplicate": 0.18
 			},
-			"selected": ["needs reproduction"]
+			"selected": ["needs reproduction", "triage"]
 		},
 		{
 			"repeat": 1,
 			"case": "unconfirmed-dependency-bug",
-			"additions": ["cli", "has workaround", "needs reproduction"],
+			"additions": ["cli", "has workaround"],
 			"removals": [],
 			"checks": [
 				{
 					"label": "bug",
-					"action": "selected",
-					"expected": false,
-					"actual": false,
-					"passed": true,
-					"score": 0.2
-				},
-				{
-					"label": "cli",
-					"action": "selected",
-					"expected": true,
-					"actual": true,
-					"passed": true,
-					"score": 0.92
-				},
-				{
-					"label": "feature",
-					"action": "selected",
-					"expected": false,
-					"actual": false,
-					"passed": true,
-					"score": 0.1
-				}
-			],
-			"scores": {
-				"awaiting submitter": 0.08,
-				"bug": 0.2,
-				"chore": 0.08,
-				"cli": 0.92,
-				"contributions welcome": 0.09,
-				"dependencies": 0.29,
-				"docs": 0.04,
-				"feature": 0.1,
-				"has workaround": 0.83,
-				"needs reproduction": 0.74,
-				"parity": 0.05,
-				"slop": 0.33,
-				"triage": 0.35,
-				"duplicate": 0.05
-			},
-			"selected": ["cli", "has workaround", "needs reproduction"]
-		},
-		{
-			"repeat": 1,
-			"case": "human-removal-dependency-tracker",
-			"additions": [],
-			"removals": [],
-			"checks": [
-				{
-					"label": "duplicate",
-					"action": "add",
-					"expected": false,
-					"actual": false,
-					"passed": true,
-					"score": 0.1
-				},
-				{
-					"label": "cli",
-					"action": "add",
-					"expected": false,
-					"actual": false,
-					"passed": true,
-					"score": 0.58
-				},
-				{
-					"label": "dependencies",
-					"action": "add",
-					"expected": false,
-					"actual": false,
-					"passed": true,
-					"score": 0.39
-				},
-				{
-					"label": "feature",
-					"action": "add",
-					"expected": false,
-					"actual": false,
-					"passed": true,
-					"score": 0.13
-				}
-			],
-			"scores": {
-				"awaiting submitter": 0.07,
-				"bug": 0.12,
-				"chore": 0.16,
-				"cli": 0.58,
-				"contributions welcome": 0.07,
-				"dependencies": 0.39,
-				"docs": 0.05,
-				"feature": 0.13,
-				"has workaround": 0.69,
-				"needs reproduction": 0.41,
-				"parity": 0.04,
-				"slop": 0.34,
-				"triage": 0.27,
-				"duplicate": 0.1
-			},
-			"selected": ["has workaround"]
-		},
-		{
-			"repeat": 1,
-			"case": "human-rejection-radix-parity",
-			"additions": [],
-			"removals": [],
-			"checks": [
-				{
-					"label": "parity",
-					"action": "add",
-					"expected": false,
-					"actual": false,
-					"passed": true,
-					"score": 0.53
-				}
-			],
-			"scores": {
-				"awaiting submitter": 0.13,
-				"bug": 0.17,
-				"chore": 0.06,
-				"cli": 0.05,
-				"contributions welcome": 0.06,
-				"dependencies": 0.06,
-				"docs": 0.05,
-				"feature": 0.13,
-				"has workaround": 0.27,
-				"needs reproduction": 0.08,
-				"parity": 0.53,
-				"slop": 0.11,
-				"triage": 0.17,
-				"duplicate": 0.04
-			},
-			"selected": []
-		},
-		{
-			"repeat": 1,
-			"case": "human-removal-contribution-invitation",
-			"additions": [],
-			"removals": [],
-			"checks": [
-				{
-					"label": "contributions welcome",
-					"action": "add",
-					"expected": false,
-					"actual": false,
-					"passed": true,
-					"score": 0.48
-				},
-				{
-					"label": "docs",
-					"action": "selected",
-					"expected": true,
-					"actual": true,
-					"passed": true,
-					"score": 0.95
-				}
-			],
-			"scores": {
-				"awaiting submitter": 0.08,
-				"bug": 0.05,
-				"chore": 0.24,
-				"cli": 0.05,
-				"contributions welcome": 0.48,
-				"dependencies": 0.05,
-				"docs": 0.95,
-				"feature": 0.09,
-				"has workaround": 0.05,
-				"needs reproduction": 0.08,
-				"parity": 0.08,
-				"slop": 0.25,
-				"triage": 0.2,
-				"duplicate": 0.13
-			},
-			"selected": ["docs"]
-		},
-		{
-			"repeat": 1,
-			"case": "requested-replacement-pr",
-			"additions": [],
-			"removals": [],
-			"checks": [
-				{
-					"label": "duplicate",
-					"action": "selected",
-					"expected": false,
-					"actual": false,
-					"passed": true,
-					"score": 0.57
-				}
-			],
-			"scores": {
-				"awaiting submitter": 0.11,
-				"bug": 0.43,
-				"chore": 0.3,
-				"cli": 0.06,
-				"contributions welcome": 0.13,
-				"dependencies": 0.06,
-				"docs": 0.35,
-				"feature": 0.07,
-				"has workaround": 0.1,
-				"needs reproduction": 0.1,
-				"parity": 0.04,
-				"slop": 0.22,
-				"triage": 0.32,
-				"duplicate": 0.57
-			},
-			"selected": []
-		},
-		{
-			"repeat": 1,
-			"case": "fix-for-existing-issue",
-			"additions": ["docs"],
-			"removals": ["duplicate"],
-			"checks": [
-				{
-					"label": "duplicate",
-					"action": "selected",
-					"expected": false,
-					"actual": false,
-					"passed": true,
-					"score": 0.1
-				},
-				{
-					"label": "bug",
-					"action": "selected",
-					"expected": true,
-					"actual": false,
-					"passed": false,
-					"score": 0.54
-				}
-			],
-			"scores": {
-				"awaiting submitter": 0.07,
-				"bug": 0.54,
-				"chore": 0.35,
-				"cli": 0.07,
-				"contributions welcome": 0.16,
-				"dependencies": 0.07,
-				"docs": 0.62,
-				"feature": 0.09,
-				"has workaround": 0.12,
-				"needs reproduction": 0.1,
-				"parity": 0.35,
-				"slop": 0.1,
-				"triage": 0.14,
-				"duplicate": 0.1
-			},
-			"selected": ["docs"]
-		},
-		{
-			"repeat": 1,
-			"case": "outstanding-reproduction-request",
-			"additions": ["awaiting submitter", "needs reproduction"],
-			"removals": [],
-			"checks": [
-				{
-					"label": "awaiting submitter",
-					"action": "selected",
-					"expected": true,
-					"actual": true,
-					"passed": true,
-					"score": 0.9
-				},
-				{
-					"label": "needs reproduction",
-					"action": "selected",
-					"expected": true,
-					"actual": true,
-					"passed": true,
-					"score": 0.74
-				}
-			],
-			"scores": {
-				"awaiting submitter": 0.9,
-				"bug": 0.14,
-				"chore": 0.29,
-				"cli": 0.06,
-				"contributions welcome": 0.08,
-				"dependencies": 0.06,
-				"docs": 0.49,
-				"feature": 0.07,
-				"has workaround": 0.09,
-				"needs reproduction": 0.74,
-				"parity": 0.06,
-				"slop": 0.69,
-				"triage": 0.54,
-				"duplicate": 0.04
-			},
-			"selected": ["awaiting submitter", "needs reproduction", "slop"]
-		},
-		{
-			"repeat": 1,
-			"case": "resolved-reproduction-request",
-			"additions": [],
-			"removals": ["needs reproduction"],
-			"checks": [
-				{
-					"label": "awaiting submitter",
-					"action": "remove",
-					"expected": true,
-					"actual": false,
-					"passed": false,
-					"score": 0.55
-				},
-				{
-					"label": "needs reproduction",
-					"action": "remove",
-					"expected": true,
-					"actual": true,
-					"passed": true,
-					"score": 0.22
-				}
-			],
-			"scores": {
-				"awaiting submitter": 0.55,
-				"bug": 0.37,
-				"chore": 0.29,
-				"cli": 0.06,
-				"contributions welcome": 0.13,
-				"dependencies": 0.05,
-				"docs": 0.46,
-				"feature": 0.06,
-				"has workaround": 0.08,
-				"needs reproduction": 0.22,
-				"parity": 0.05,
-				"slop": 0.63,
-				"triage": 0.51,
-				"duplicate": 0.04
-			},
-			"selected": ["slop"]
-		},
-		{
-			"repeat": 1,
-			"case": "changelog-scope-clarification",
-			"additions": [],
-			"removals": ["awaiting submitter", "duplicate"],
-			"checks": [
-				{
-					"label": "duplicate",
-					"action": "remove",
-					"expected": true,
-					"actual": true,
-					"passed": true,
-					"score": 0.16
-				},
-				{
-					"label": "docs",
-					"action": "selected",
-					"expected": true,
-					"actual": true,
-					"passed": true,
-					"score": 0.96
-				},
-				{
-					"label": "awaiting submitter",
-					"action": "selected",
-					"expected": false,
-					"actual": false,
-					"passed": true,
-					"score": 0.23
-				}
-			],
-			"scores": {
-				"awaiting submitter": 0.23,
-				"bug": 0.03,
-				"chore": 0.74,
-				"cli": 0.05,
-				"contributions welcome": 0.12,
-				"dependencies": 0.05,
-				"docs": 0.96,
-				"feature": 0.08,
-				"has workaround": 0.04,
-				"needs reproduction": 0.06,
-				"parity": 0.81,
-				"slop": 0.12,
-				"triage": 0.26,
-				"duplicate": 0.16
-			},
-			"selected": ["chore", "docs", "parity"]
-		},
-		{
-			"repeat": 1,
-			"case": "internal-docs-build-not-public-cli",
-			"additions": ["dependencies"],
-			"removals": [],
-			"checks": [
-				{
-					"label": "cli",
-					"action": "selected",
-					"expected": false,
-					"actual": false,
-					"passed": true,
-					"score": 0.06
-				},
-				{
-					"label": "dependencies",
-					"action": "selected",
-					"expected": true,
-					"actual": true,
-					"passed": true,
-					"score": 0.72
-				}
-			],
-			"scores": {
-				"awaiting submitter": 0.15,
-				"bug": 0.04,
-				"chore": 0.85,
-				"cli": 0.06,
-				"contributions welcome": 0.07,
-				"dependencies": 0.72,
-				"docs": 0.56,
-				"feature": 0.11,
-				"has workaround": 0.05,
-				"needs reproduction": 0.05,
-				"parity": 0.05,
-				"slop": 0.21,
-				"triage": 0.28,
-				"duplicate": 0.03
-			},
-			"selected": ["chore", "dependencies"]
-		},
-		{
-			"repeat": 1,
-			"case": "implemented-docs-not-contribution-invitation",
-			"additions": ["docs"],
-			"removals": [],
-			"checks": [
-				{
-					"label": "contributions welcome",
 					"action": "selected",
 					"expected": false,
 					"actual": false,
@@ -677,345 +251,42 @@
 					"score": 0.5
 				},
 				{
-					"label": "awaiting submitter",
-					"action": "selected",
-					"expected": false,
-					"actual": false,
-					"passed": true,
-					"score": 0.47
-				},
-				{
-					"label": "docs",
-					"action": "selected",
-					"expected": true,
-					"actual": true,
-					"passed": true,
-					"score": 0.96
-				}
-			],
-			"scores": {
-				"awaiting submitter": 0.47,
-				"bug": 0.13,
-				"chore": 0.28,
-				"cli": 0.26,
-				"contributions welcome": 0.5,
-				"dependencies": 0.05,
-				"docs": 0.96,
-				"feature": 0.08,
-				"has workaround": 0.06,
-				"needs reproduction": 0.08,
-				"parity": 0.14,
-				"slop": 0.32,
-				"triage": 0.46,
-				"duplicate": 0.04
-			},
-			"selected": ["docs"]
-		},
-		{
-			"repeat": 1,
-			"case": "confirmed-animation-defect",
-			"additions": ["bug"],
-			"removals": ["feature"],
-			"checks": [
-				{
-					"label": "bug",
-					"action": "selected",
-					"expected": true,
-					"actual": true,
-					"passed": true,
-					"score": 0.7
-				},
-				{
-					"label": "has workaround",
-					"action": "selected",
-					"expected": true,
-					"actual": true,
-					"passed": true,
-					"score": 0.9
-				},
-				{
-					"label": "feature",
-					"action": "selected",
-					"expected": false,
-					"actual": false,
-					"passed": true,
-					"score": 0.14
-				}
-			],
-			"scores": {
-				"awaiting submitter": 0.18,
-				"bug": 0.7,
-				"chore": 0.06,
-				"cli": 0.05,
-				"contributions welcome": 0.16,
-				"dependencies": 0.12,
-				"docs": 0.04,
-				"feature": 0.14,
-				"has workaround": 0.9,
-				"needs reproduction": 0.5,
-				"parity": 0.06,
-				"slop": 0.25,
-				"triage": 0.22,
-				"duplicate": 0.05
-			},
-			"selected": ["bug", "has workaround"]
-		},
-		{
-			"repeat": 1,
-			"case": "new-toast-feature",
-			"additions": ["docs"],
-			"removals": [],
-			"checks": [
-				{
-					"label": "feature",
-					"action": "selected",
-					"expected": true,
-					"actual": true,
-					"passed": true,
-					"score": 0.83
-				},
-				{
-					"label": "parity",
-					"action": "selected",
-					"expected": true,
-					"actual": true,
-					"passed": true,
-					"score": 0.85
-				},
-				{
 					"label": "cli",
 					"action": "selected",
-					"expected": false,
-					"actual": true,
-					"passed": false,
-					"score": 0.64
-				}
-			],
-			"scores": {
-				"awaiting submitter": 0.16,
-				"bug": 0.03,
-				"chore": 0.2,
-				"cli": 0.64,
-				"contributions welcome": 0.04,
-				"dependencies": 0.46,
-				"docs": 0.78,
-				"feature": 0.83,
-				"has workaround": 0.05,
-				"needs reproduction": 0.08,
-				"parity": 0.85,
-				"slop": 0.23,
-				"triage": 0.3,
-				"duplicate": 0.04
-			},
-			"selected": ["cli", "docs", "feature", "parity"]
-		},
-		{
-			"repeat": 1,
-			"case": "synthetic-explicit-duplicate",
-			"additions": ["bug", "duplicate"],
-			"removals": [],
-			"checks": [
-				{
-					"label": "duplicate",
-					"action": "selected",
 					"expected": true,
 					"actual": true,
 					"passed": true,
-					"score": 0.86
-				}
-			],
-			"scores": {
-				"awaiting submitter": 0.05,
-				"bug": 0.88,
-				"chore": 0.05,
-				"cli": 0.05,
-				"contributions welcome": 0.09,
-				"dependencies": 0.05,
-				"docs": 0.04,
-				"feature": 0.06,
-				"has workaround": 0.07,
-				"needs reproduction": 0.22,
-				"parity": 0.09,
-				"slop": 0.07,
-				"triage": 0.12,
-				"duplicate": 0.86
-			},
-			"selected": ["bug", "duplicate"]
-		},
-		{
-			"repeat": 2,
-			"case": "official-demo-dropdown",
-			"additions": [],
-			"removals": [],
-			"checks": [
-				{
-					"label": "needs reproduction",
-					"action": "selected",
-					"expected": false,
-					"actual": false,
-					"passed": true,
-					"score": 0.36
+					"score": 0.93
 				},
 				{
-					"label": "bug",
+					"label": "feature",
 					"action": "selected",
 					"expected": false,
 					"actual": false,
 					"passed": true,
-					"score": 0.17
+					"score": 0.11
 				}
 			],
 			"scores": {
 				"awaiting submitter": 0.11,
-				"bug": 0.17,
-				"chore": 0.05,
-				"cli": 0.06,
-				"contributions welcome": 0.06,
-				"dependencies": 0.04,
-				"docs": 0.05,
-				"feature": 0.06,
-				"has workaround": 0.06,
-				"needs reproduction": 0.36,
-				"parity": 0.07,
-				"slop": 0.15,
-				"triage": 0.41,
-				"duplicate": 0.06
-			},
-			"selected": []
-		},
-		{
-			"repeat": 2,
-			"case": "official-demo-firefox",
-			"additions": [],
-			"removals": [],
-			"checks": [
-				{
-					"label": "needs reproduction",
-					"action": "selected",
-					"expected": false,
-					"actual": false,
-					"passed": true,
-					"score": 0.46
-				},
-				{
-					"label": "bug",
-					"action": "selected",
-					"expected": false,
-					"actual": false,
-					"passed": true,
-					"score": 0.18
-				}
-			],
-			"scores": {
-				"awaiting submitter": 0.1,
-				"bug": 0.18,
-				"chore": 0.05,
-				"cli": 0.05,
-				"contributions welcome": 0.1,
-				"dependencies": 0.04,
-				"docs": 0.05,
-				"feature": 0.06,
-				"has workaround": 0.06,
-				"needs reproduction": 0.46,
-				"parity": 0.06,
-				"slop": 0.14,
-				"triage": 0.53,
-				"duplicate": 0.05
-			},
-			"selected": []
-		},
-		{
-			"repeat": 2,
-			"case": "upstream-cause-firefox",
-			"additions": [],
-			"removals": [],
-			"checks": [
-				{
-					"label": "duplicate",
-					"action": "selected",
-					"expected": false,
-					"actual": false,
-					"passed": true,
-					"score": 0.12
-				},
-				{
-					"label": "bug",
-					"action": "selected",
-					"expected": false,
-					"actual": false,
-					"passed": true,
-					"score": 0.18
-				}
-			],
-			"scores": {
-				"awaiting submitter": 0.18,
-				"bug": 0.18,
-				"chore": 0.06,
-				"cli": 0.05,
-				"contributions welcome": 0.11,
-				"dependencies": 0.05,
-				"docs": 0.06,
-				"feature": 0.12,
-				"has workaround": 0.31,
-				"needs reproduction": 0.69,
-				"parity": 0.3,
-				"slop": 0.14,
-				"triage": 0.25,
-				"duplicate": 0.12
-			},
-			"selected": ["needs reproduction"]
-		},
-		{
-			"repeat": 2,
-			"case": "unconfirmed-dependency-bug",
-			"additions": ["cli", "has workaround", "needs reproduction"],
-			"removals": [],
-			"checks": [
-				{
-					"label": "bug",
-					"action": "selected",
-					"expected": false,
-					"actual": false,
-					"passed": true,
-					"score": 0.21
-				},
-				{
-					"label": "cli",
-					"action": "selected",
-					"expected": true,
-					"actual": true,
-					"passed": true,
-					"score": 0.92
-				},
-				{
-					"label": "feature",
-					"action": "selected",
-					"expected": false,
-					"actual": false,
-					"passed": true,
-					"score": 0.08
-				}
-			],
-			"scores": {
-				"awaiting submitter": 0.08,
-				"bug": 0.21,
+				"bug": 0.5,
 				"chore": 0.07,
-				"cli": 0.92,
-				"contributions welcome": 0.11,
+				"cli": 0.93,
+				"contributions welcome": 0.1,
 				"dependencies": 0.33,
 				"docs": 0.04,
-				"feature": 0.08,
-				"has workaround": 0.84,
-				"needs reproduction": 0.73,
+				"feature": 0.11,
+				"has workaround": 0.85,
+				"needs reproduction": 0.55,
 				"parity": 0.05,
-				"slop": 0.35,
-				"triage": 0.35,
-				"duplicate": 0.05
+				"slop": 0.31,
+				"triage": 0.66,
+				"duplicate": 0.08
 			},
-			"selected": ["cli", "has workaround", "needs reproduction"]
+			"selected": ["cli", "has workaround", "triage"]
 		},
 		{
-			"repeat": 2,
+			"repeat": 1,
 			"case": "human-removal-dependency-tracker",
 			"additions": [],
 			"removals": [],
@@ -1026,7 +297,7 @@
 					"expected": false,
 					"actual": false,
 					"passed": true,
-					"score": 0.08
+					"score": 0.45
 				},
 				{
 					"label": "cli",
@@ -1034,7 +305,7 @@
 					"expected": false,
 					"actual": false,
 					"passed": true,
-					"score": 0.6
+					"score": 0.67
 				},
 				{
 					"label": "dependencies",
@@ -1042,7 +313,7 @@
 					"expected": false,
 					"actual": false,
 					"passed": true,
-					"score": 0.36
+					"score": 0.33
 				},
 				{
 					"label": "feature",
@@ -1050,29 +321,29 @@
 					"expected": false,
 					"actual": false,
 					"passed": true,
-					"score": 0.12
+					"score": 0.11
 				}
 			],
 			"scores": {
-				"awaiting submitter": 0.07,
-				"bug": 0.12,
-				"chore": 0.17,
-				"cli": 0.6,
+				"awaiting submitter": 0.08,
+				"bug": 0.18,
+				"chore": 0.11,
+				"cli": 0.67,
 				"contributions welcome": 0.07,
-				"dependencies": 0.36,
+				"dependencies": 0.33,
 				"docs": 0.04,
-				"feature": 0.12,
-				"has workaround": 0.72,
-				"needs reproduction": 0.46,
+				"feature": 0.11,
+				"has workaround": 0.76,
+				"needs reproduction": 0.32,
 				"parity": 0.05,
-				"slop": 0.29,
-				"triage": 0.25,
-				"duplicate": 0.08
+				"slop": 0.32,
+				"triage": 0.12,
+				"duplicate": 0.45
 			},
 			"selected": ["has workaround"]
 		},
 		{
-			"repeat": 2,
+			"repeat": 1,
 			"case": "human-rejection-radix-parity",
 			"additions": [],
 			"removals": [],
@@ -1083,29 +354,29 @@
 					"expected": false,
 					"actual": false,
 					"passed": true,
-					"score": 0.48
+					"score": 0.57
 				}
 			],
 			"scores": {
-				"awaiting submitter": 0.13,
-				"bug": 0.18,
-				"chore": 0.06,
-				"cli": 0.05,
+				"awaiting submitter": 0.16,
+				"bug": 0.29,
+				"chore": 0.07,
+				"cli": 0.06,
 				"contributions welcome": 0.06,
 				"dependencies": 0.05,
-				"docs": 0.04,
-				"feature": 0.13,
-				"has workaround": 0.25,
-				"needs reproduction": 0.08,
-				"parity": 0.48,
-				"slop": 0.12,
-				"triage": 0.17,
-				"duplicate": 0.05
+				"docs": 0.05,
+				"feature": 0.23,
+				"has workaround": 0.33,
+				"needs reproduction": 0.1,
+				"parity": 0.57,
+				"slop": 0.15,
+				"triage": 0.53,
+				"duplicate": 0.07
 			},
 			"selected": []
 		},
 		{
-			"repeat": 2,
+			"repeat": 1,
 			"case": "human-removal-contribution-invitation",
 			"additions": [],
 			"removals": [],
@@ -1116,7 +387,7 @@
 					"expected": false,
 					"actual": false,
 					"passed": true,
-					"score": 0.53
+					"score": 0.37
 				},
 				{
 					"label": "docs",
@@ -1124,29 +395,29 @@
 					"expected": true,
 					"actual": true,
 					"passed": true,
-					"score": 0.95
+					"score": 0.94
 				}
 			],
 			"scores": {
 				"awaiting submitter": 0.09,
-				"bug": 0.05,
-				"chore": 0.25,
-				"cli": 0.05,
-				"contributions welcome": 0.53,
-				"dependencies": 0.06,
-				"docs": 0.95,
-				"feature": 0.11,
+				"bug": 0.07,
+				"chore": 0.19,
+				"cli": 0.07,
+				"contributions welcome": 0.37,
+				"dependencies": 0.05,
+				"docs": 0.94,
+				"feature": 0.12,
 				"has workaround": 0.05,
-				"needs reproduction": 0.09,
-				"parity": 0.07,
-				"slop": 0.22,
-				"triage": 0.17,
-				"duplicate": 0.15
+				"needs reproduction": 0.1,
+				"parity": 0.08,
+				"slop": 0.19,
+				"triage": 0.26,
+				"duplicate": 0.49
 			},
 			"selected": ["docs"]
 		},
 		{
-			"repeat": 2,
+			"repeat": 1,
 			"case": "requested-replacement-pr",
 			"additions": ["duplicate"],
 			"removals": [],
@@ -1157,29 +428,29 @@
 					"expected": false,
 					"actual": true,
 					"passed": false,
-					"score": 0.6
+					"score": 0.84
 				}
 			],
 			"scores": {
-				"awaiting submitter": 0.08,
-				"bug": 0.4,
+				"awaiting submitter": 0.21,
+				"bug": 0.58,
 				"chore": 0.29,
-				"cli": 0.06,
-				"contributions welcome": 0.17,
-				"dependencies": 0.06,
-				"docs": 0.43,
-				"feature": 0.07,
-				"has workaround": 0.1,
-				"needs reproduction": 0.12,
+				"cli": 0.05,
+				"contributions welcome": 0.24,
+				"dependencies": 0.07,
+				"docs": 0.34,
+				"feature": 0.08,
+				"has workaround": 0.11,
+				"needs reproduction": 0.09,
 				"parity": 0.05,
-				"slop": 0.2,
-				"triage": 0.26,
-				"duplicate": 0.6
+				"slop": 0.24,
+				"triage": 0.32,
+				"duplicate": 0.84
 			},
 			"selected": ["duplicate"]
 		},
 		{
-			"repeat": 2,
+			"repeat": 1,
 			"case": "fix-for-existing-issue",
 			"additions": ["docs"],
 			"removals": ["duplicate"],
@@ -1190,7 +461,7 @@
 					"expected": false,
 					"actual": false,
 					"passed": true,
-					"score": 0.11
+					"score": 0.3
 				},
 				{
 					"label": "bug",
@@ -1198,29 +469,29 @@
 					"expected": true,
 					"actual": true,
 					"passed": true,
-					"score": 0.62
+					"score": 0.65
 				}
 			],
 			"scores": {
-				"awaiting submitter": 0.06,
-				"bug": 0.62,
-				"chore": 0.37,
-				"cli": 0.07,
-				"contributions welcome": 0.19,
-				"dependencies": 0.07,
-				"docs": 0.64,
-				"feature": 0.09,
-				"has workaround": 0.11,
-				"needs reproduction": 0.1,
-				"parity": 0.29,
-				"slop": 0.09,
+				"awaiting submitter": 0.07,
+				"bug": 0.65,
+				"chore": 0.31,
+				"cli": 0.06,
+				"contributions welcome": 0.32,
+				"dependencies": 0.08,
+				"docs": 0.65,
+				"feature": 0.08,
+				"has workaround": 0.17,
+				"needs reproduction": 0.09,
+				"parity": 0.39,
+				"slop": 0.08,
 				"triage": 0.16,
-				"duplicate": 0.11
+				"duplicate": 0.3
 			},
 			"selected": ["bug", "docs"]
 		},
 		{
-			"repeat": 2,
+			"repeat": 1,
 			"case": "outstanding-reproduction-request",
 			"additions": ["awaiting submitter", "needs reproduction"],
 			"removals": [],
@@ -1231,7 +502,7 @@
 					"expected": true,
 					"actual": true,
 					"passed": true,
-					"score": 0.9
+					"score": 0.84
 				},
 				{
 					"label": "needs reproduction",
@@ -1239,29 +510,29 @@
 					"expected": true,
 					"actual": true,
 					"passed": true,
-					"score": 0.74
+					"score": 0.65
 				}
 			],
 			"scores": {
-				"awaiting submitter": 0.9,
-				"bug": 0.15,
-				"chore": 0.31,
+				"awaiting submitter": 0.84,
+				"bug": 0.4,
+				"chore": 0.29,
 				"cli": 0.06,
-				"contributions welcome": 0.09,
-				"dependencies": 0.05,
-				"docs": 0.54,
-				"feature": 0.07,
-				"has workaround": 0.08,
-				"needs reproduction": 0.74,
-				"parity": 0.06,
-				"slop": 0.66,
-				"triage": 0.56,
-				"duplicate": 0.04
+				"contributions welcome": 0.24,
+				"dependencies": 0.06,
+				"docs": 0.42,
+				"feature": 0.1,
+				"has workaround": 0.09,
+				"needs reproduction": 0.65,
+				"parity": 0.09,
+				"slop": 0.73,
+				"triage": 0.42,
+				"duplicate": 0.07
 			},
 			"selected": ["awaiting submitter", "needs reproduction", "slop"]
 		},
 		{
-			"repeat": 2,
+			"repeat": 1,
 			"case": "resolved-reproduction-request",
 			"additions": [],
 			"removals": ["needs reproduction"],
@@ -1272,7 +543,7 @@
 					"expected": true,
 					"actual": false,
 					"passed": false,
-					"score": 0.47
+					"score": 0.62
 				},
 				{
 					"label": "needs reproduction",
@@ -1280,32 +551,32 @@
 					"expected": true,
 					"actual": true,
 					"passed": true,
-					"score": 0.2
+					"score": 0.35
 				}
 			],
 			"scores": {
-				"awaiting submitter": 0.47,
-				"bug": 0.36,
-				"chore": 0.28,
-				"cli": 0.06,
-				"contributions welcome": 0.1,
-				"dependencies": 0.06,
-				"docs": 0.44,
-				"feature": 0.07,
-				"has workaround": 0.08,
-				"needs reproduction": 0.2,
-				"parity": 0.05,
-				"slop": 0.64,
-				"triage": 0.44,
-				"duplicate": 0.04
+				"awaiting submitter": 0.62,
+				"bug": 0.33,
+				"chore": 0.25,
+				"cli": 0.05,
+				"contributions welcome": 0.18,
+				"dependencies": 0.05,
+				"docs": 0.23,
+				"feature": 0.08,
+				"has workaround": 0.09,
+				"needs reproduction": 0.35,
+				"parity": 0.06,
+				"slop": 0.66,
+				"triage": 0.52,
+				"duplicate": 0.06
 			},
-			"selected": ["slop"]
+			"selected": ["awaiting submitter", "slop"]
 		},
 		{
-			"repeat": 2,
+			"repeat": 1,
 			"case": "changelog-scope-clarification",
 			"additions": [],
-			"removals": ["awaiting submitter", "duplicate"],
+			"removals": ["duplicate"],
 			"checks": [
 				{
 					"label": "duplicate",
@@ -1313,7 +584,7 @@
 					"expected": true,
 					"actual": true,
 					"passed": true,
-					"score": 0.14
+					"score": 0.37
 				},
 				{
 					"label": "docs",
@@ -1329,31 +600,31 @@
 					"expected": false,
 					"actual": false,
 					"passed": true,
-					"score": 0.26
+					"score": 0.51
 				}
 			],
 			"scores": {
-				"awaiting submitter": 0.26,
-				"bug": 0.03,
+				"awaiting submitter": 0.51,
+				"bug": 0.04,
 				"chore": 0.75,
-				"cli": 0.06,
-				"contributions welcome": 0.13,
-				"dependencies": 0.05,
+				"cli": 0.05,
+				"contributions welcome": 0.23,
+				"dependencies": 0.06,
 				"docs": 0.96,
-				"feature": 0.08,
-				"has workaround": 0.04,
+				"feature": 0.09,
+				"has workaround": 0.05,
 				"needs reproduction": 0.06,
-				"parity": 0.8,
-				"slop": 0.14,
-				"triage": 0.2,
-				"duplicate": 0.14
+				"parity": 0.79,
+				"slop": 0.21,
+				"triage": 0.33,
+				"duplicate": 0.37
 			},
 			"selected": ["chore", "docs", "parity"]
 		},
 		{
-			"repeat": 2,
+			"repeat": 1,
 			"case": "internal-docs-build-not-public-cli",
-			"additions": ["dependencies", "docs"],
+			"additions": ["dependencies"],
 			"removals": [],
 			"checks": [
 				{
@@ -1370,48 +641,48 @@
 					"expected": true,
 					"actual": true,
 					"passed": true,
-					"score": 0.63
+					"score": 0.76
 				}
 			],
 			"scores": {
-				"awaiting submitter": 0.16,
-				"bug": 0.03,
-				"chore": 0.88,
+				"awaiting submitter": 0.2,
+				"bug": 0.05,
+				"chore": 0.89,
 				"cli": 0.07,
-				"contributions welcome": 0.07,
-				"dependencies": 0.63,
-				"docs": 0.6,
-				"feature": 0.15,
+				"contributions welcome": 0.09,
+				"dependencies": 0.76,
+				"docs": 0.28,
+				"feature": 0.14,
 				"has workaround": 0.04,
-				"needs reproduction": 0.06,
-				"parity": 0.05,
-				"slop": 0.23,
-				"triage": 0.23,
-				"duplicate": 0.03
+				"needs reproduction": 0.05,
+				"parity": 0.06,
+				"slop": 0.22,
+				"triage": 0.25,
+				"duplicate": 0.06
 			},
-			"selected": ["chore", "dependencies", "docs"]
+			"selected": ["chore", "dependencies"]
 		},
 		{
-			"repeat": 2,
+			"repeat": 1,
 			"case": "implemented-docs-not-contribution-invitation",
-			"additions": ["docs"],
+			"additions": ["awaiting submitter", "contributions welcome", "docs"],
 			"removals": [],
 			"checks": [
 				{
 					"label": "contributions welcome",
 					"action": "selected",
 					"expected": false,
-					"actual": false,
-					"passed": true,
-					"score": 0.49
+					"actual": true,
+					"passed": false,
+					"score": 0.6
 				},
 				{
 					"label": "awaiting submitter",
 					"action": "selected",
 					"expected": false,
-					"actual": false,
-					"passed": true,
-					"score": 0.47
+					"actual": true,
+					"passed": false,
+					"score": 0.61
 				},
 				{
 					"label": "docs",
@@ -1419,29 +690,29 @@
 					"expected": true,
 					"actual": true,
 					"passed": true,
-					"score": 0.96
+					"score": 0.97
 				}
 			],
 			"scores": {
-				"awaiting submitter": 0.47,
-				"bug": 0.13,
-				"chore": 0.31,
-				"cli": 0.28,
-				"contributions welcome": 0.49,
+				"awaiting submitter": 0.61,
+				"bug": 0.22,
+				"chore": 0.3,
+				"cli": 0.12,
+				"contributions welcome": 0.6,
 				"dependencies": 0.05,
-				"docs": 0.96,
-				"feature": 0.08,
-				"has workaround": 0.05,
-				"needs reproduction": 0.1,
-				"parity": 0.14,
-				"slop": 0.34,
-				"triage": 0.39,
-				"duplicate": 0.03
+				"docs": 0.97,
+				"feature": 0.07,
+				"has workaround": 0.06,
+				"needs reproduction": 0.07,
+				"parity": 0.27,
+				"slop": 0.52,
+				"triage": 0.41,
+				"duplicate": 0.05
 			},
-			"selected": ["docs"]
+			"selected": ["awaiting submitter", "contributions welcome", "docs"]
 		},
 		{
-			"repeat": 2,
+			"repeat": 1,
 			"case": "confirmed-animation-defect",
 			"additions": ["bug"],
 			"removals": ["feature"],
@@ -1452,7 +723,7 @@
 					"expected": true,
 					"actual": true,
 					"passed": true,
-					"score": 0.71
+					"score": 0.68
 				},
 				{
 					"label": "has workaround",
@@ -1468,24 +739,753 @@
 					"expected": false,
 					"actual": false,
 					"passed": true,
+					"score": 0.17
+				}
+			],
+			"scores": {
+				"awaiting submitter": 0.37,
+				"bug": 0.68,
+				"chore": 0.06,
+				"cli": 0.05,
+				"contributions welcome": 0.21,
+				"dependencies": 0.08,
+				"docs": 0.04,
+				"feature": 0.17,
+				"has workaround": 0.88,
+				"needs reproduction": 0.5,
+				"parity": 0.07,
+				"slop": 0.31,
+				"triage": 0.41,
+				"duplicate": 0.08
+			},
+			"selected": ["bug", "has workaround"]
+		},
+		{
+			"repeat": 1,
+			"case": "new-toast-feature",
+			"additions": ["docs"],
+			"removals": [],
+			"checks": [
+				{
+					"label": "feature",
+					"action": "selected",
+					"expected": true,
+					"actual": true,
+					"passed": true,
+					"score": 0.91
+				},
+				{
+					"label": "parity",
+					"action": "selected",
+					"expected": true,
+					"actual": true,
+					"passed": true,
+					"score": 0.81
+				},
+				{
+					"label": "cli",
+					"action": "selected",
+					"expected": false,
+					"actual": true,
+					"passed": false,
+					"score": 0.87
+				}
+			],
+			"scores": {
+				"awaiting submitter": 0.26,
+				"bug": 0.04,
+				"chore": 0.19,
+				"cli": 0.87,
+				"contributions welcome": 0.04,
+				"dependencies": 0.54,
+				"docs": 0.83,
+				"feature": 0.91,
+				"has workaround": 0.04,
+				"needs reproduction": 0.05,
+				"parity": 0.81,
+				"slop": 0.26,
+				"triage": 0.21,
+				"duplicate": 0.06
+			},
+			"selected": ["cli", "docs", "feature", "parity"]
+		},
+		{
+			"repeat": 1,
+			"case": "synthetic-explicit-duplicate",
+			"additions": ["bug", "duplicate"],
+			"removals": [],
+			"checks": [
+				{
+					"label": "duplicate",
+					"action": "selected",
+					"expected": true,
+					"actual": true,
+					"passed": true,
+					"score": 0.9
+				}
+			],
+			"scores": {
+				"awaiting submitter": 0.07,
+				"bug": 0.82,
+				"chore": 0.05,
+				"cli": 0.06,
+				"contributions welcome": 0.09,
+				"dependencies": 0.04,
+				"docs": 0.04,
+				"feature": 0.05,
+				"has workaround": 0.08,
+				"needs reproduction": 0.28,
+				"parity": 0.29,
+				"slop": 0.07,
+				"triage": 0.13,
+				"duplicate": 0.9
+			},
+			"selected": ["bug", "duplicate"]
+		},
+		{
+			"repeat": 2,
+			"case": "official-demo-dropdown",
+			"additions": ["needs reproduction"],
+			"removals": [],
+			"checks": [
+				{
+					"label": "needs reproduction",
+					"action": "selected",
+					"expected": false,
+					"actual": true,
+					"passed": false,
+					"score": 0.62
+				},
+				{
+					"label": "bug",
+					"action": "selected",
+					"expected": false,
+					"actual": false,
+					"passed": true,
+					"score": 0.24
+				}
+			],
+			"scores": {
+				"awaiting submitter": 0.17,
+				"bug": 0.24,
+				"chore": 0.04,
+				"cli": 0.06,
+				"contributions welcome": 0.07,
+				"dependencies": 0.04,
+				"docs": 0.04,
+				"feature": 0.05,
+				"has workaround": 0.06,
+				"needs reproduction": 0.62,
+				"parity": 0.08,
+				"slop": 0.15,
+				"triage": 0.7,
+				"duplicate": 0.1
+			},
+			"selected": ["needs reproduction", "triage"]
+		},
+		{
+			"repeat": 2,
+			"case": "official-demo-firefox",
+			"additions": [],
+			"removals": [],
+			"checks": [
+				{
+					"label": "needs reproduction",
+					"action": "selected",
+					"expected": false,
+					"actual": false,
+					"passed": true,
+					"score": 0.58
+				},
+				{
+					"label": "bug",
+					"action": "selected",
+					"expected": false,
+					"actual": false,
+					"passed": true,
+					"score": 0.26
+				}
+			],
+			"scores": {
+				"awaiting submitter": 0.12,
+				"bug": 0.26,
+				"chore": 0.04,
+				"cli": 0.05,
+				"contributions welcome": 0.09,
+				"dependencies": 0.04,
+				"docs": 0.04,
+				"feature": 0.05,
+				"has workaround": 0.06,
+				"needs reproduction": 0.58,
+				"parity": 0.06,
+				"slop": 0.12,
+				"triage": 0.72,
+				"duplicate": 0.08
+			},
+			"selected": ["triage"]
+		},
+		{
+			"repeat": 2,
+			"case": "upstream-cause-firefox",
+			"additions": [],
+			"removals": [],
+			"checks": [
+				{
+					"label": "duplicate",
+					"action": "selected",
+					"expected": false,
+					"actual": false,
+					"passed": true,
+					"score": 0.17
+				},
+				{
+					"label": "bug",
+					"action": "selected",
+					"expected": false,
+					"actual": false,
+					"passed": true,
+					"score": 0.33
+				}
+			],
+			"scores": {
+				"awaiting submitter": 0.22,
+				"bug": 0.33,
+				"chore": 0.05,
+				"cli": 0.07,
+				"contributions welcome": 0.11,
+				"dependencies": 0.04,
+				"docs": 0.04,
+				"feature": 0.07,
+				"has workaround": 0.55,
+				"needs reproduction": 0.83,
+				"parity": 0.25,
+				"slop": 0.12,
+				"triage": 0.65,
+				"duplicate": 0.17
+			},
+			"selected": ["needs reproduction", "triage"]
+		},
+		{
+			"repeat": 2,
+			"case": "unconfirmed-dependency-bug",
+			"additions": ["cli", "has workaround"],
+			"removals": [],
+			"checks": [
+				{
+					"label": "bug",
+					"action": "selected",
+					"expected": false,
+					"actual": false,
+					"passed": true,
+					"score": 0.44
+				},
+				{
+					"label": "cli",
+					"action": "selected",
+					"expected": true,
+					"actual": true,
+					"passed": true,
+					"score": 0.94
+				},
+				{
+					"label": "feature",
+					"action": "selected",
+					"expected": false,
+					"actual": false,
+					"passed": true,
+					"score": 0.08
+				}
+			],
+			"scores": {
+				"awaiting submitter": 0.1,
+				"bug": 0.44,
+				"chore": 0.07,
+				"cli": 0.94,
+				"contributions welcome": 0.11,
+				"dependencies": 0.39,
+				"docs": 0.04,
+				"feature": 0.08,
+				"has workaround": 0.84,
+				"needs reproduction": 0.58,
+				"parity": 0.05,
+				"slop": 0.28,
+				"triage": 0.68,
+				"duplicate": 0.08
+			},
+			"selected": ["cli", "has workaround", "triage"]
+		},
+		{
+			"repeat": 2,
+			"case": "human-removal-dependency-tracker",
+			"additions": [],
+			"removals": [],
+			"checks": [
+				{
+					"label": "duplicate",
+					"action": "add",
+					"expected": false,
+					"actual": false,
+					"passed": true,
+					"score": 0.49
+				},
+				{
+					"label": "cli",
+					"action": "add",
+					"expected": false,
+					"actual": false,
+					"passed": true,
+					"score": 0.68
+				},
+				{
+					"label": "dependencies",
+					"action": "add",
+					"expected": false,
+					"actual": false,
+					"passed": true,
+					"score": 0.36
+				},
+				{
+					"label": "feature",
+					"action": "add",
+					"expected": false,
+					"actual": false,
+					"passed": true,
 					"score": 0.11
 				}
 			],
 			"scores": {
-				"awaiting submitter": 0.16,
-				"bug": 0.71,
-				"chore": 0.06,
-				"cli": 0.04,
-				"contributions welcome": 0.15,
-				"dependencies": 0.11,
+				"awaiting submitter": 0.08,
+				"bug": 0.16,
+				"chore": 0.14,
+				"cli": 0.68,
+				"contributions welcome": 0.07,
+				"dependencies": 0.36,
 				"docs": 0.04,
 				"feature": 0.11,
-				"has workaround": 0.88,
-				"needs reproduction": 0.5,
+				"has workaround": 0.74,
+				"needs reproduction": 0.33,
+				"parity": 0.05,
+				"slop": 0.3,
+				"triage": 0.12,
+				"duplicate": 0.49
+			},
+			"selected": ["has workaround"]
+		},
+		{
+			"repeat": 2,
+			"case": "human-rejection-radix-parity",
+			"additions": [],
+			"removals": [],
+			"checks": [
+				{
+					"label": "parity",
+					"action": "add",
+					"expected": false,
+					"actual": false,
+					"passed": true,
+					"score": 0.51
+				}
+			],
+			"scores": {
+				"awaiting submitter": 0.16,
+				"bug": 0.27,
+				"chore": 0.07,
+				"cli": 0.05,
+				"contributions welcome": 0.06,
+				"dependencies": 0.05,
+				"docs": 0.04,
+				"feature": 0.12,
+				"has workaround": 0.3,
+				"needs reproduction": 0.1,
+				"parity": 0.51,
+				"slop": 0.13,
+				"triage": 0.52,
+				"duplicate": 0.07
+			},
+			"selected": []
+		},
+		{
+			"repeat": 2,
+			"case": "human-removal-contribution-invitation",
+			"additions": [],
+			"removals": [],
+			"checks": [
+				{
+					"label": "contributions welcome",
+					"action": "add",
+					"expected": false,
+					"actual": false,
+					"passed": true,
+					"score": 0.43
+				},
+				{
+					"label": "docs",
+					"action": "selected",
+					"expected": true,
+					"actual": true,
+					"passed": true,
+					"score": 0.95
+				}
+			],
+			"scores": {
+				"awaiting submitter": 0.1,
+				"bug": 0.07,
+				"chore": 0.2,
+				"cli": 0.06,
+				"contributions welcome": 0.43,
+				"dependencies": 0.05,
+				"docs": 0.95,
+				"feature": 0.11,
+				"has workaround": 0.06,
+				"needs reproduction": 0.09,
 				"parity": 0.06,
-				"slop": 0.28,
-				"triage": 0.22,
+				"slop": 0.16,
+				"triage": 0.21,
+				"duplicate": 0.45
+			},
+			"selected": ["docs"]
+		},
+		{
+			"repeat": 2,
+			"case": "requested-replacement-pr",
+			"additions": ["duplicate"],
+			"removals": [],
+			"checks": [
+				{
+					"label": "duplicate",
+					"action": "selected",
+					"expected": false,
+					"actual": true,
+					"passed": false,
+					"score": 0.81
+				}
+			],
+			"scores": {
+				"awaiting submitter": 0.16,
+				"bug": 0.52,
+				"chore": 0.29,
+				"cli": 0.05,
+				"contributions welcome": 0.28,
+				"dependencies": 0.06,
+				"docs": 0.28,
+				"feature": 0.08,
+				"has workaround": 0.09,
+				"needs reproduction": 0.07,
+				"parity": 0.05,
+				"slop": 0.24,
+				"triage": 0.42,
+				"duplicate": 0.81
+			},
+			"selected": ["duplicate"]
+		},
+		{
+			"repeat": 2,
+			"case": "fix-for-existing-issue",
+			"additions": ["docs"],
+			"removals": ["duplicate"],
+			"checks": [
+				{
+					"label": "duplicate",
+					"action": "selected",
+					"expected": false,
+					"actual": false,
+					"passed": true,
+					"score": 0.28
+				},
+				{
+					"label": "bug",
+					"action": "selected",
+					"expected": true,
+					"actual": true,
+					"passed": true,
+					"score": 0.65
+				}
+			],
+			"scores": {
+				"awaiting submitter": 0.07,
+				"bug": 0.65,
+				"chore": 0.35,
+				"cli": 0.06,
+				"contributions welcome": 0.29,
+				"dependencies": 0.08,
+				"docs": 0.63,
+				"feature": 0.09,
+				"has workaround": 0.19,
+				"needs reproduction": 0.09,
+				"parity": 0.31,
+				"slop": 0.07,
+				"triage": 0.16,
+				"duplicate": 0.28
+			},
+			"selected": ["bug", "docs"]
+		},
+		{
+			"repeat": 2,
+			"case": "outstanding-reproduction-request",
+			"additions": ["awaiting submitter", "needs reproduction"],
+			"removals": [],
+			"checks": [
+				{
+					"label": "awaiting submitter",
+					"action": "selected",
+					"expected": true,
+					"actual": true,
+					"passed": true,
+					"score": 0.85
+				},
+				{
+					"label": "needs reproduction",
+					"action": "selected",
+					"expected": true,
+					"actual": true,
+					"passed": true,
+					"score": 0.68
+				}
+			],
+			"scores": {
+				"awaiting submitter": 0.85,
+				"bug": 0.34,
+				"chore": 0.29,
+				"cli": 0.05,
+				"contributions welcome": 0.2,
+				"dependencies": 0.07,
+				"docs": 0.39,
+				"feature": 0.1,
+				"has workaround": 0.09,
+				"needs reproduction": 0.68,
+				"parity": 0.08,
+				"slop": 0.68,
+				"triage": 0.48,
+				"duplicate": 0.07
+			},
+			"selected": ["awaiting submitter", "needs reproduction", "slop"]
+		},
+		{
+			"repeat": 2,
+			"case": "resolved-reproduction-request",
+			"additions": [],
+			"removals": ["needs reproduction"],
+			"checks": [
+				{
+					"label": "awaiting submitter",
+					"action": "remove",
+					"expected": true,
+					"actual": false,
+					"passed": false,
+					"score": 0.62
+				},
+				{
+					"label": "needs reproduction",
+					"action": "remove",
+					"expected": true,
+					"actual": true,
+					"passed": true,
+					"score": 0.35
+				}
+			],
+			"scores": {
+				"awaiting submitter": 0.62,
+				"bug": 0.35,
+				"chore": 0.28,
+				"cli": 0.05,
+				"contributions welcome": 0.17,
+				"dependencies": 0.05,
+				"docs": 0.23,
+				"feature": 0.09,
+				"has workaround": 0.09,
+				"needs reproduction": 0.35,
+				"parity": 0.06,
+				"slop": 0.72,
+				"triage": 0.5,
+				"duplicate": 0.06
+			},
+			"selected": ["awaiting submitter", "slop"]
+		},
+		{
+			"repeat": 2,
+			"case": "changelog-scope-clarification",
+			"additions": [],
+			"removals": ["duplicate"],
+			"checks": [
+				{
+					"label": "duplicate",
+					"action": "remove",
+					"expected": true,
+					"actual": true,
+					"passed": true,
+					"score": 0.37
+				},
+				{
+					"label": "docs",
+					"action": "selected",
+					"expected": true,
+					"actual": true,
+					"passed": true,
+					"score": 0.97
+				},
+				{
+					"label": "awaiting submitter",
+					"action": "selected",
+					"expected": false,
+					"actual": false,
+					"passed": true,
+					"score": 0.47
+				}
+			],
+			"scores": {
+				"awaiting submitter": 0.47,
+				"bug": 0.04,
+				"chore": 0.72,
+				"cli": 0.05,
+				"contributions welcome": 0.24,
+				"dependencies": 0.06,
+				"docs": 0.97,
+				"feature": 0.09,
+				"has workaround": 0.05,
+				"needs reproduction": 0.06,
+				"parity": 0.79,
+				"slop": 0.2,
+				"triage": 0.27,
+				"duplicate": 0.37
+			},
+			"selected": ["chore", "docs", "parity"]
+		},
+		{
+			"repeat": 2,
+			"case": "internal-docs-build-not-public-cli",
+			"additions": ["dependencies"],
+			"removals": [],
+			"checks": [
+				{
+					"label": "cli",
+					"action": "selected",
+					"expected": false,
+					"actual": false,
+					"passed": true,
+					"score": 0.06
+				},
+				{
+					"label": "dependencies",
+					"action": "selected",
+					"expected": true,
+					"actual": true,
+					"passed": true,
+					"score": 0.76
+				}
+			],
+			"scores": {
+				"awaiting submitter": 0.23,
+				"bug": 0.05,
+				"chore": 0.88,
+				"cli": 0.06,
+				"contributions welcome": 0.08,
+				"dependencies": 0.76,
+				"docs": 0.38,
+				"feature": 0.15,
+				"has workaround": 0.04,
+				"needs reproduction": 0.04,
+				"parity": 0.06,
+				"slop": 0.22,
+				"triage": 0.26,
 				"duplicate": 0.05
+			},
+			"selected": ["chore", "dependencies"]
+		},
+		{
+			"repeat": 2,
+			"case": "implemented-docs-not-contribution-invitation",
+			"additions": ["awaiting submitter", "docs"],
+			"removals": [],
+			"checks": [
+				{
+					"label": "contributions welcome",
+					"action": "selected",
+					"expected": false,
+					"actual": false,
+					"passed": true,
+					"score": 0.58
+				},
+				{
+					"label": "awaiting submitter",
+					"action": "selected",
+					"expected": false,
+					"actual": true,
+					"passed": false,
+					"score": 0.6
+				},
+				{
+					"label": "docs",
+					"action": "selected",
+					"expected": true,
+					"actual": true,
+					"passed": true,
+					"score": 0.97
+				}
+			],
+			"scores": {
+				"awaiting submitter": 0.6,
+				"bug": 0.2,
+				"chore": 0.31,
+				"cli": 0.13,
+				"contributions welcome": 0.58,
+				"dependencies": 0.05,
+				"docs": 0.97,
+				"feature": 0.08,
+				"has workaround": 0.06,
+				"needs reproduction": 0.08,
+				"parity": 0.27,
+				"slop": 0.49,
+				"triage": 0.41,
+				"duplicate": 0.06
+			},
+			"selected": ["awaiting submitter", "docs"]
+		},
+		{
+			"repeat": 2,
+			"case": "confirmed-animation-defect",
+			"additions": ["bug"],
+			"removals": ["feature"],
+			"checks": [
+				{
+					"label": "bug",
+					"action": "selected",
+					"expected": true,
+					"actual": true,
+					"passed": true,
+					"score": 0.69
+				},
+				{
+					"label": "has workaround",
+					"action": "selected",
+					"expected": true,
+					"actual": true,
+					"passed": true,
+					"score": 0.86
+				},
+				{
+					"label": "feature",
+					"action": "selected",
+					"expected": false,
+					"actual": false,
+					"passed": true,
+					"score": 0.12
+				}
+			],
+			"scores": {
+				"awaiting submitter": 0.37,
+				"bug": 0.69,
+				"chore": 0.06,
+				"cli": 0.05,
+				"contributions welcome": 0.2,
+				"dependencies": 0.08,
+				"docs": 0.04,
+				"feature": 0.12,
+				"has workaround": 0.86,
+				"needs reproduction": 0.58,
+				"parity": 0.05,
+				"slop": 0.3,
+				"triage": 0.38,
+				"duplicate": 0.08
 			},
 			"selected": ["bug", "has workaround"]
 		},
@@ -1501,7 +1501,7 @@
 					"expected": true,
 					"actual": true,
 					"passed": true,
-					"score": 0.89
+					"score": 0.92
 				},
 				{
 					"label": "parity",
@@ -1509,7 +1509,7 @@
 					"expected": true,
 					"actual": true,
 					"passed": true,
-					"score": 0.86
+					"score": 0.77
 				},
 				{
 					"label": "cli",
@@ -1517,24 +1517,24 @@
 					"expected": false,
 					"actual": true,
 					"passed": false,
-					"score": 0.67
+					"score": 0.84
 				}
 			],
 			"scores": {
-				"awaiting submitter": 0.25,
+				"awaiting submitter": 0.37,
 				"bug": 0.04,
-				"chore": 0.21,
-				"cli": 0.67,
-				"contributions welcome": 0.04,
-				"dependencies": 0.52,
-				"docs": 0.77,
-				"feature": 0.89,
+				"chore": 0.18,
+				"cli": 0.84,
+				"contributions welcome": 0.03,
+				"dependencies": 0.58,
+				"docs": 0.81,
+				"feature": 0.92,
 				"has workaround": 0.04,
-				"needs reproduction": 0.08,
-				"parity": 0.86,
-				"slop": 0.23,
-				"triage": 0.3,
-				"duplicate": 0.04
+				"needs reproduction": 0.06,
+				"parity": 0.77,
+				"slop": 0.24,
+				"triage": 0.29,
+				"duplicate": 0.05
 			},
 			"selected": ["cli", "docs", "feature", "parity"]
 		},
@@ -1550,40 +1550,40 @@
 					"expected": true,
 					"actual": true,
 					"passed": true,
-					"score": 0.88
+					"score": 0.91
 				}
 			],
 			"scores": {
-				"awaiting submitter": 0.05,
-				"bug": 0.9,
+				"awaiting submitter": 0.08,
+				"bug": 0.81,
 				"chore": 0.05,
-				"cli": 0.04,
-				"contributions welcome": 0.09,
+				"cli": 0.06,
+				"contributions welcome": 0.12,
 				"dependencies": 0.04,
 				"docs": 0.05,
-				"feature": 0.06,
-				"has workaround": 0.07,
-				"needs reproduction": 0.22,
-				"parity": 0.16,
-				"slop": 0.06,
-				"triage": 0.11,
-				"duplicate": 0.88
+				"feature": 0.05,
+				"has workaround": 0.09,
+				"needs reproduction": 0.29,
+				"parity": 0.36,
+				"slop": 0.07,
+				"triage": 0.13,
+				"duplicate": 0.91
 			},
 			"selected": ["bug", "duplicate"]
 		},
 		{
 			"repeat": 3,
 			"case": "official-demo-dropdown",
-			"additions": [],
+			"additions": ["needs reproduction"],
 			"removals": [],
 			"checks": [
 				{
 					"label": "needs reproduction",
 					"action": "selected",
 					"expected": false,
-					"actual": false,
-					"passed": true,
-					"score": 0.44
+					"actual": true,
+					"passed": false,
+					"score": 0.7
 				},
 				{
 					"label": "bug",
@@ -1591,40 +1591,40 @@
 					"expected": false,
 					"actual": false,
 					"passed": true,
-					"score": 0.18
+					"score": 0.24
 				}
 			],
 			"scores": {
-				"awaiting submitter": 0.12,
-				"bug": 0.18,
-				"chore": 0.05,
+				"awaiting submitter": 0.18,
+				"bug": 0.24,
+				"chore": 0.04,
 				"cli": 0.06,
-				"contributions welcome": 0.07,
-				"dependencies": 0.05,
-				"docs": 0.06,
+				"contributions welcome": 0.06,
+				"dependencies": 0.04,
+				"docs": 0.04,
 				"feature": 0.06,
 				"has workaround": 0.06,
-				"needs reproduction": 0.44,
-				"parity": 0.06,
-				"slop": 0.14,
-				"triage": 0.37,
-				"duplicate": 0.05
+				"needs reproduction": 0.7,
+				"parity": 0.08,
+				"slop": 0.15,
+				"triage": 0.65,
+				"duplicate": 0.1
 			},
-			"selected": []
+			"selected": ["needs reproduction", "triage"]
 		},
 		{
 			"repeat": 3,
 			"case": "official-demo-firefox",
-			"additions": [],
+			"additions": ["needs reproduction"],
 			"removals": [],
 			"checks": [
 				{
 					"label": "needs reproduction",
 					"action": "selected",
 					"expected": false,
-					"actual": false,
-					"passed": true,
-					"score": 0.47
+					"actual": true,
+					"passed": false,
+					"score": 0.61
 				},
 				{
 					"label": "bug",
@@ -1632,26 +1632,26 @@
 					"expected": false,
 					"actual": false,
 					"passed": true,
-					"score": 0.17
+					"score": 0.27
 				}
 			],
 			"scores": {
-				"awaiting submitter": 0.1,
-				"bug": 0.17,
+				"awaiting submitter": 0.13,
+				"bug": 0.27,
 				"chore": 0.05,
 				"cli": 0.05,
-				"contributions welcome": 0.11,
+				"contributions welcome": 0.09,
 				"dependencies": 0.04,
-				"docs": 0.06,
+				"docs": 0.04,
 				"feature": 0.06,
 				"has workaround": 0.07,
-				"needs reproduction": 0.47,
-				"parity": 0.06,
-				"slop": 0.13,
-				"triage": 0.63,
-				"duplicate": 0.05
+				"needs reproduction": 0.61,
+				"parity": 0.07,
+				"slop": 0.14,
+				"triage": 0.75,
+				"duplicate": 0.08
 			},
-			"selected": ["triage"]
+			"selected": ["needs reproduction", "triage"]
 		},
 		{
 			"repeat": 3,
@@ -1665,7 +1665,7 @@
 					"expected": false,
 					"actual": false,
 					"passed": true,
-					"score": 0.11
+					"score": 0.19
 				},
 				{
 					"label": "bug",
@@ -1673,31 +1673,31 @@
 					"expected": false,
 					"actual": false,
 					"passed": true,
-					"score": 0.19
+					"score": 0.32
 				}
 			],
 			"scores": {
-				"awaiting submitter": 0.15,
-				"bug": 0.19,
+				"awaiting submitter": 0.23,
+				"bug": 0.32,
 				"chore": 0.05,
-				"cli": 0.05,
-				"contributions welcome": 0.11,
-				"dependencies": 0.06,
-				"docs": 0.05,
+				"cli": 0.07,
+				"contributions welcome": 0.1,
+				"dependencies": 0.05,
+				"docs": 0.04,
 				"feature": 0.07,
-				"has workaround": 0.32,
-				"needs reproduction": 0.66,
-				"parity": 0.29,
-				"slop": 0.14,
-				"triage": 0.16,
-				"duplicate": 0.11
+				"has workaround": 0.42,
+				"needs reproduction": 0.82,
+				"parity": 0.22,
+				"slop": 0.11,
+				"triage": 0.7,
+				"duplicate": 0.19
 			},
-			"selected": ["needs reproduction"]
+			"selected": ["needs reproduction", "triage"]
 		},
 		{
 			"repeat": 3,
 			"case": "unconfirmed-dependency-bug",
-			"additions": ["cli", "has workaround", "needs reproduction"],
+			"additions": ["cli", "has workaround"],
 			"removals": [],
 			"checks": [
 				{
@@ -1706,7 +1706,7 @@
 					"expected": false,
 					"actual": false,
 					"passed": true,
-					"score": 0.23
+					"score": 0.48
 				},
 				{
 					"label": "cli",
@@ -1722,26 +1722,26 @@
 					"expected": false,
 					"actual": false,
 					"passed": true,
-					"score": 0.08
+					"score": 0.23
 				}
 			],
 			"scores": {
-				"awaiting submitter": 0.07,
-				"bug": 0.23,
+				"awaiting submitter": 0.09,
+				"bug": 0.48,
 				"chore": 0.07,
 				"cli": 0.93,
 				"contributions welcome": 0.1,
-				"dependencies": 0.3,
+				"dependencies": 0.29,
 				"docs": 0.04,
-				"feature": 0.08,
-				"has workaround": 0.82,
-				"needs reproduction": 0.75,
+				"feature": 0.23,
+				"has workaround": 0.85,
+				"needs reproduction": 0.55,
 				"parity": 0.05,
-				"slop": 0.31,
-				"triage": 0.31,
-				"duplicate": 0.05
+				"slop": 0.29,
+				"triage": 0.7,
+				"duplicate": 0.08
 			},
-			"selected": ["cli", "has workaround", "needs reproduction"]
+			"selected": ["cli", "has workaround", "triage"]
 		},
 		{
 			"repeat": 3,
@@ -1755,7 +1755,7 @@
 					"expected": false,
 					"actual": false,
 					"passed": true,
-					"score": 0.11
+					"score": 0.46
 				},
 				{
 					"label": "cli",
@@ -1763,7 +1763,7 @@
 					"expected": false,
 					"actual": false,
 					"passed": true,
-					"score": 0.65
+					"score": 0.66
 				},
 				{
 					"label": "dependencies",
@@ -1771,7 +1771,7 @@
 					"expected": false,
 					"actual": false,
 					"passed": true,
-					"score": 0.45
+					"score": 0.37
 				},
 				{
 					"label": "feature",
@@ -1783,20 +1783,20 @@
 				}
 			],
 			"scores": {
-				"awaiting submitter": 0.09,
-				"bug": 0.13,
-				"chore": 0.17,
-				"cli": 0.65,
+				"awaiting submitter": 0.08,
+				"bug": 0.15,
+				"chore": 0.13,
+				"cli": 0.66,
 				"contributions welcome": 0.07,
-				"dependencies": 0.45,
+				"dependencies": 0.37,
 				"docs": 0.04,
 				"feature": 0.12,
-				"has workaround": 0.74,
-				"needs reproduction": 0.46,
+				"has workaround": 0.76,
+				"needs reproduction": 0.29,
 				"parity": 0.04,
-				"slop": 0.36,
-				"triage": 0.28,
-				"duplicate": 0.11
+				"slop": 0.3,
+				"triage": 0.12,
+				"duplicate": 0.46
 			},
 			"selected": ["has workaround"]
 		},
@@ -1812,24 +1812,24 @@
 					"expected": false,
 					"actual": false,
 					"passed": true,
-					"score": 0.52
+					"score": 0.56
 				}
 			],
 			"scores": {
-				"awaiting submitter": 0.12,
-				"bug": 0.18,
-				"chore": 0.06,
-				"cli": 0.05,
-				"contributions welcome": 0.06,
+				"awaiting submitter": 0.15,
+				"bug": 0.26,
+				"chore": 0.07,
+				"cli": 0.06,
+				"contributions welcome": 0.05,
 				"dependencies": 0.06,
 				"docs": 0.04,
-				"feature": 0.21,
-				"has workaround": 0.27,
-				"needs reproduction": 0.09,
-				"parity": 0.52,
-				"slop": 0.11,
-				"triage": 0.17,
-				"duplicate": 0.04
+				"feature": 0.09,
+				"has workaround": 0.35,
+				"needs reproduction": 0.11,
+				"parity": 0.56,
+				"slop": 0.14,
+				"triage": 0.5,
+				"duplicate": 0.08
 			},
 			"selected": []
 		},
@@ -1845,7 +1845,7 @@
 					"expected": false,
 					"actual": false,
 					"passed": true,
-					"score": 0.51
+					"score": 0.41
 				},
 				{
 					"label": "docs",
@@ -1853,59 +1853,59 @@
 					"expected": true,
 					"actual": true,
 					"passed": true,
-					"score": 0.95
+					"score": 0.94
 				}
 			],
 			"scores": {
-				"awaiting submitter": 0.08,
-				"bug": 0.05,
-				"chore": 0.24,
-				"cli": 0.05,
-				"contributions welcome": 0.51,
+				"awaiting submitter": 0.1,
+				"bug": 0.07,
+				"chore": 0.23,
+				"cli": 0.06,
+				"contributions welcome": 0.41,
 				"dependencies": 0.05,
-				"docs": 0.95,
-				"feature": 0.07,
+				"docs": 0.94,
+				"feature": 0.1,
 				"has workaround": 0.05,
-				"needs reproduction": 0.08,
-				"parity": 0.11,
-				"slop": 0.22,
-				"triage": 0.16,
-				"duplicate": 0.12
+				"needs reproduction": 0.09,
+				"parity": 0.07,
+				"slop": 0.19,
+				"triage": 0.21,
+				"duplicate": 0.47
 			},
 			"selected": ["docs"]
 		},
 		{
 			"repeat": 3,
 			"case": "requested-replacement-pr",
-			"additions": [],
+			"additions": ["duplicate"],
 			"removals": [],
 			"checks": [
 				{
 					"label": "duplicate",
 					"action": "selected",
 					"expected": false,
-					"actual": false,
-					"passed": true,
-					"score": 0.54
+					"actual": true,
+					"passed": false,
+					"score": 0.81
 				}
 			],
 			"scores": {
-				"awaiting submitter": 0.07,
-				"bug": 0.4,
-				"chore": 0.28,
-				"cli": 0.06,
-				"contributions welcome": 0.14,
+				"awaiting submitter": 0.17,
+				"bug": 0.57,
+				"chore": 0.3,
+				"cli": 0.05,
+				"contributions welcome": 0.23,
 				"dependencies": 0.06,
-				"docs": 0.39,
-				"feature": 0.07,
-				"has workaround": 0.1,
-				"needs reproduction": 0.12,
+				"docs": 0.35,
+				"feature": 0.08,
+				"has workaround": 0.11,
+				"needs reproduction": 0.09,
 				"parity": 0.05,
-				"slop": 0.21,
-				"triage": 0.35,
-				"duplicate": 0.54
+				"slop": 0.25,
+				"triage": 0.38,
+				"duplicate": 0.81
 			},
-			"selected": []
+			"selected": ["duplicate"]
 		},
 		{
 			"repeat": 3,
@@ -1919,7 +1919,7 @@
 					"expected": false,
 					"actual": false,
 					"passed": true,
-					"score": 0.1
+					"score": 0.29
 				},
 				{
 					"label": "bug",
@@ -1931,20 +1931,20 @@
 				}
 			],
 			"scores": {
-				"awaiting submitter": 0.06,
+				"awaiting submitter": 0.07,
 				"bug": 0.6,
-				"chore": 0.36,
-				"cli": 0.07,
-				"contributions welcome": 0.22,
-				"dependencies": 0.08,
-				"docs": 0.61,
-				"feature": 0.1,
-				"has workaround": 0.12,
+				"chore": 0.33,
+				"cli": 0.06,
+				"contributions welcome": 0.38,
+				"dependencies": 0.06,
+				"docs": 0.64,
+				"feature": 0.08,
+				"has workaround": 0.19,
 				"needs reproduction": 0.1,
-				"parity": 0.34,
-				"slop": 0.1,
+				"parity": 0.32,
+				"slop": 0.08,
 				"triage": 0.19,
-				"duplicate": 0.1
+				"duplicate": 0.29
 			},
 			"selected": ["bug", "docs"]
 		},
@@ -1960,7 +1960,7 @@
 					"expected": true,
 					"actual": true,
 					"passed": true,
-					"score": 0.9
+					"score": 0.85
 				},
 				{
 					"label": "needs reproduction",
@@ -1968,24 +1968,24 @@
 					"expected": true,
 					"actual": true,
 					"passed": true,
-					"score": 0.71
+					"score": 0.62
 				}
 			],
 			"scores": {
-				"awaiting submitter": 0.9,
-				"bug": 0.14,
-				"chore": 0.31,
-				"cli": 0.06,
-				"contributions welcome": 0.12,
+				"awaiting submitter": 0.85,
+				"bug": 0.34,
+				"chore": 0.28,
+				"cli": 0.05,
+				"contributions welcome": 0.23,
 				"dependencies": 0.05,
-				"docs": 0.54,
-				"feature": 0.08,
+				"docs": 0.4,
+				"feature": 0.09,
 				"has workaround": 0.09,
-				"needs reproduction": 0.71,
-				"parity": 0.06,
-				"slop": 0.68,
-				"triage": 0.48,
-				"duplicate": 0.04
+				"needs reproduction": 0.62,
+				"parity": 0.07,
+				"slop": 0.69,
+				"triage": 0.44,
+				"duplicate": 0.07
 			},
 			"selected": ["awaiting submitter", "needs reproduction", "slop"]
 		},
@@ -2001,7 +2001,7 @@
 					"expected": true,
 					"actual": false,
 					"passed": false,
-					"score": 0.45
+					"score": 0.6
 				},
 				{
 					"label": "needs reproduction",
@@ -2009,32 +2009,32 @@
 					"expected": true,
 					"actual": true,
 					"passed": true,
-					"score": 0.22
+					"score": 0.32
 				}
 			],
 			"scores": {
-				"awaiting submitter": 0.45,
-				"bug": 0.34,
-				"chore": 0.25,
-				"cli": 0.06,
-				"contributions welcome": 0.1,
+				"awaiting submitter": 0.6,
+				"bug": 0.35,
+				"chore": 0.27,
+				"cli": 0.05,
+				"contributions welcome": 0.19,
 				"dependencies": 0.05,
-				"docs": 0.57,
-				"feature": 0.06,
+				"docs": 0.27,
+				"feature": 0.08,
 				"has workaround": 0.08,
-				"needs reproduction": 0.22,
-				"parity": 0.05,
-				"slop": 0.61,
-				"triage": 0.47,
-				"duplicate": 0.04
+				"needs reproduction": 0.32,
+				"parity": 0.06,
+				"slop": 0.71,
+				"triage": 0.51,
+				"duplicate": 0.06
 			},
-			"selected": ["slop"]
+			"selected": ["awaiting submitter", "slop"]
 		},
 		{
 			"repeat": 3,
 			"case": "changelog-scope-clarification",
 			"additions": [],
-			"removals": ["awaiting submitter", "duplicate"],
+			"removals": ["duplicate"],
 			"checks": [
 				{
 					"label": "duplicate",
@@ -2042,7 +2042,7 @@
 					"expected": true,
 					"actual": true,
 					"passed": true,
-					"score": 0.15
+					"score": 0.39
 				},
 				{
 					"label": "docs",
@@ -2058,24 +2058,24 @@
 					"expected": false,
 					"actual": false,
 					"passed": true,
-					"score": 0.27
+					"score": 0.46
 				}
 			],
 			"scores": {
-				"awaiting submitter": 0.27,
-				"bug": 0.03,
-				"chore": 0.76,
+				"awaiting submitter": 0.46,
+				"bug": 0.04,
+				"chore": 0.75,
 				"cli": 0.05,
-				"contributions welcome": 0.12,
+				"contributions welcome": 0.23,
 				"dependencies": 0.06,
 				"docs": 0.96,
-				"feature": 0.08,
-				"has workaround": 0.04,
-				"needs reproduction": 0.06,
+				"feature": 0.1,
+				"has workaround": 0.05,
+				"needs reproduction": 0.05,
 				"parity": 0.81,
-				"slop": 0.12,
-				"triage": 0.23,
-				"duplicate": 0.15
+				"slop": 0.18,
+				"triage": 0.29,
+				"duplicate": 0.39
 			},
 			"selected": ["chore", "docs", "parity"]
 		},
@@ -2099,40 +2099,40 @@
 					"expected": true,
 					"actual": true,
 					"passed": true,
-					"score": 0.68
+					"score": 0.71
 				}
 			],
 			"scores": {
-				"awaiting submitter": 0.19,
-				"bug": 0.04,
-				"chore": 0.86,
+				"awaiting submitter": 0.21,
+				"bug": 0.05,
+				"chore": 0.89,
 				"cli": 0.06,
-				"contributions welcome": 0.07,
-				"dependencies": 0.68,
-				"docs": 0.55,
-				"feature": 0.11,
+				"contributions welcome": 0.09,
+				"dependencies": 0.71,
+				"docs": 0.25,
+				"feature": 0.13,
 				"has workaround": 0.04,
-				"needs reproduction": 0.05,
-				"parity": 0.05,
-				"slop": 0.25,
-				"triage": 0.28,
-				"duplicate": 0.04
+				"needs reproduction": 0.04,
+				"parity": 0.06,
+				"slop": 0.23,
+				"triage": 0.27,
+				"duplicate": 0.05
 			},
 			"selected": ["chore", "dependencies"]
 		},
 		{
 			"repeat": 3,
 			"case": "implemented-docs-not-contribution-invitation",
-			"additions": ["docs"],
+			"additions": ["contributions welcome", "docs"],
 			"removals": [],
 			"checks": [
 				{
 					"label": "contributions welcome",
 					"action": "selected",
 					"expected": false,
-					"actual": false,
-					"passed": true,
-					"score": 0.46
+					"actual": true,
+					"passed": false,
+					"score": 0.64
 				},
 				{
 					"label": "awaiting submitter",
@@ -2140,7 +2140,7 @@
 					"expected": false,
 					"actual": false,
 					"passed": true,
-					"score": 0.52
+					"score": 0.58
 				},
 				{
 					"label": "docs",
@@ -2148,32 +2148,32 @@
 					"expected": true,
 					"actual": true,
 					"passed": true,
-					"score": 0.96
+					"score": 0.97
 				}
 			],
 			"scores": {
-				"awaiting submitter": 0.52,
-				"bug": 0.12,
-				"chore": 0.32,
-				"cli": 0.28,
-				"contributions welcome": 0.46,
+				"awaiting submitter": 0.58,
+				"bug": 0.21,
+				"chore": 0.29,
+				"cli": 0.21,
+				"contributions welcome": 0.64,
 				"dependencies": 0.05,
-				"docs": 0.96,
-				"feature": 0.08,
+				"docs": 0.97,
+				"feature": 0.07,
 				"has workaround": 0.06,
-				"needs reproduction": 0.08,
-				"parity": 0.13,
-				"slop": 0.32,
-				"triage": 0.35,
-				"duplicate": 0.04
+				"needs reproduction": 0.06,
+				"parity": 0.37,
+				"slop": 0.51,
+				"triage": 0.26,
+				"duplicate": 0.06
 			},
-			"selected": ["docs"]
+			"selected": ["contributions welcome", "docs"]
 		},
 		{
 			"repeat": 3,
 			"case": "confirmed-animation-defect",
 			"additions": ["bug"],
-			"removals": ["feature"],
+			"removals": [],
 			"checks": [
 				{
 					"label": "bug",
@@ -2181,7 +2181,7 @@
 					"expected": true,
 					"actual": true,
 					"passed": true,
-					"score": 0.74
+					"score": 0.71
 				},
 				{
 					"label": "has workaround",
@@ -2189,7 +2189,7 @@
 					"expected": true,
 					"actual": true,
 					"passed": true,
-					"score": 0.89
+					"score": 0.87
 				},
 				{
 					"label": "feature",
@@ -2197,40 +2197,40 @@
 					"expected": false,
 					"actual": false,
 					"passed": true,
-					"score": 0.14
+					"score": 0.42
 				}
 			],
 			"scores": {
-				"awaiting submitter": 0.17,
-				"bug": 0.74,
-				"chore": 0.06,
-				"cli": 0.05,
-				"contributions welcome": 0.15,
-				"dependencies": 0.1,
-				"docs": 0.04,
-				"feature": 0.14,
-				"has workaround": 0.89,
-				"needs reproduction": 0.47,
-				"parity": 0.06,
-				"slop": 0.25,
-				"triage": 0.24,
-				"duplicate": 0.04
+				"awaiting submitter": 0.39,
+				"bug": 0.71,
+				"chore": 0.07,
+				"cli": 0.06,
+				"contributions welcome": 0.21,
+				"dependencies": 0.08,
+				"docs": 0.03,
+				"feature": 0.42,
+				"has workaround": 0.87,
+				"needs reproduction": 0.64,
+				"parity": 0.07,
+				"slop": 0.3,
+				"triage": 0.31,
+				"duplicate": 0.08
 			},
-			"selected": ["bug", "has workaround"]
+			"selected": ["bug", "has workaround", "needs reproduction"]
 		},
 		{
 			"repeat": 3,
 			"case": "new-toast-feature",
 			"additions": ["docs"],
-			"removals": ["feature"],
+			"removals": [],
 			"checks": [
 				{
 					"label": "feature",
 					"action": "selected",
 					"expected": true,
-					"actual": false,
-					"passed": false,
-					"score": 0.33
+					"actual": true,
+					"passed": true,
+					"score": 0.91
 				},
 				{
 					"label": "parity",
@@ -2238,7 +2238,7 @@
 					"expected": true,
 					"actual": true,
 					"passed": true,
-					"score": 0.86
+					"score": 0.83
 				},
 				{
 					"label": "cli",
@@ -2246,26 +2246,26 @@
 					"expected": false,
 					"actual": true,
 					"passed": false,
-					"score": 0.64
+					"score": 0.86
 				}
 			],
 			"scores": {
-				"awaiting submitter": 0.22,
-				"bug": 0.03,
-				"chore": 0.21,
-				"cli": 0.64,
+				"awaiting submitter": 0.29,
+				"bug": 0.04,
+				"chore": 0.19,
+				"cli": 0.86,
 				"contributions welcome": 0.04,
-				"dependencies": 0.54,
-				"docs": 0.79,
-				"feature": 0.33,
-				"has workaround": 0.05,
-				"needs reproduction": 0.09,
-				"parity": 0.86,
+				"dependencies": 0.46,
+				"docs": 0.84,
+				"feature": 0.91,
+				"has workaround": 0.04,
+				"needs reproduction": 0.06,
+				"parity": 0.83,
 				"slop": 0.24,
-				"triage": 0.29,
-				"duplicate": 0.04
+				"triage": 0.3,
+				"duplicate": 0.06
 			},
-			"selected": ["cli", "docs", "parity"]
+			"selected": ["cli", "docs", "feature", "parity"]
 		},
 		{
 			"repeat": 3,
@@ -2279,24 +2279,24 @@
 					"expected": true,
 					"actual": true,
 					"passed": true,
-					"score": 0.84
+					"score": 0.89
 				}
 			],
 			"scores": {
-				"awaiting submitter": 0.05,
-				"bug": 0.9,
+				"awaiting submitter": 0.07,
+				"bug": 0.83,
 				"chore": 0.05,
-				"cli": 0.04,
+				"cli": 0.06,
 				"contributions welcome": 0.1,
 				"dependencies": 0.04,
 				"docs": 0.04,
 				"feature": 0.06,
-				"has workaround": 0.07,
-				"needs reproduction": 0.18,
-				"parity": 0.1,
+				"has workaround": 0.09,
+				"needs reproduction": 0.29,
+				"parity": 0.41,
 				"slop": 0.07,
-				"triage": 0.09,
-				"duplicate": 0.84
+				"triage": 0.13,
+				"duplicate": 0.89
 			},
 			"selected": ["bug", "duplicate"]
 		}
