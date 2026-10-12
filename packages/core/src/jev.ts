@@ -49,7 +49,6 @@ export function itemState(item: LabelItem) {
 		author: item.author ?? null,
 		authorRole: item.authorRole ?? null,
 		comments: item.comments ?? [],
-		currentLabels: item.currentLabels,
 		...(item.files ? { files: item.files, filesOmitted: item.filesOmitted ?? false } : {}),
 		...(item.reviewThreads
 			? {
