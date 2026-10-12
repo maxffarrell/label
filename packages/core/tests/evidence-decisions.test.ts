@@ -21,6 +21,7 @@ const labels = [
 describe('generic removal conditions', () => {
 	it('requires affirmative removal evidence even when application is disabled', () => {
 		const request = buildRequest([item], labels);
+		expect(request.state.items[0]).not.toHaveProperty('currentLabels');
 		expect(Object.keys(request.questions)).toContain('item_0_label_0_remove');
 		const negative = collectDecisions(
 			[item],
