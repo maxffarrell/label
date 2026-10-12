@@ -962,7 +962,7 @@ export async function listChangedFiles(
 		}
 		pathChars += f.filename.length;
 		const patch =
-			f.patch && patchChars < 4000
+			f.patch && !f.patch.split('\n').some((line) => line.length > 1000) && patchChars < 4000
 				? f.patch.slice(0, Math.min(500, 4000 - patchChars))
 				: undefined;
 		patchChars += patch?.length ?? 0;

@@ -279,7 +279,7 @@ export function labelsToApply(decision: LabelDecision): string[] {
 		.map((label) => label.name);
 }
 
-/** Remove only when noul is below `1 - threshold` so near-threshold scores do not flap. */
+/** Explicit removal rules require affirmative evidence; legacy removals retain the low-score buffer. */
 export function labelsToRemove(decision: LabelDecision): string[] {
 	const existing = new Set(decision.item.currentLabels.map((name) => name.toLowerCase()));
 	return decision.labels
