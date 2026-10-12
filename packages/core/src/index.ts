@@ -43,6 +43,7 @@ export {
 	getIssue,
 	githubToken,
 	itemIsPullRequest,
+	listChangedFiles,
 	listIssues,
 	listItemConversation,
 	listRepoLabels,

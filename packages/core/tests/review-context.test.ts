@@ -262,6 +262,16 @@ it.each([
 								},
 							}
 				);
+			if (url.includes('/files?'))
+				return Response.json([
+					{
+						filename: 'src/public.ts',
+						status: 'modified',
+						additions: 2,
+						deletions: 1,
+						patch: '@@\n+export const option = true;',
+					},
+				]);
 			if (url.endsWith('/issues/1'))
 				return Response.json({ number: 1, title: 'A change', pull_request: {} });
 			if (url.includes('/labels'))
@@ -272,7 +282,10 @@ it.each([
 			asked = true;
 			expect(state).toMatchObject({
 				items: [
-					{ reviewThreads: [{ id: 't', comments: [{ body: 'Please add coverage.' }] }] },
+					{
+						reviewThreads: [{ id: 't', comments: [{ body: 'Please add coverage.' }] }],
+						files: [{ filename: 'src/public.ts', additions: 2 }],
+					},
 				],
 			});
 			return { answers: { item_0_label_0: { noul: 0.8 } } };

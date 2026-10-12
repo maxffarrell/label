@@ -18,6 +18,7 @@ export type LabelJudgment = {
 	apply: boolean;
 	canApply: boolean;
 	canRemove: boolean;
+	removeNoul?: number;
 };
 
 export type LabelDecision = {
@@ -48,6 +49,8 @@ export function itemState(item: LabelItem) {
 		author: item.author ?? null,
 		authorRole: item.authorRole ?? null,
 		comments: item.comments ?? [],
+		currentLabels: item.currentLabels,
+		...(item.files ? { files: item.files, filesOmitted: item.filesOmitted ?? false } : {}),
 		...(item.reviewThreads
 			? {
 					reviewThreads: item.reviewThreads,
@@ -87,7 +90,7 @@ export function buildRequest(
 			questions[questionId(itemIndex, labelIndex)] = noul(
 				{
 					question: `Should the GitHub label at \`${labelPath}\` be applied to \`${itemPath}\`?`,
-					judge_from: `\`${itemPath}.title\`, \`${itemPath}.body\`, \`${itemPath}.authorRole\`, and \`${itemPath}.comments\` (discussion; each comment's \`role\` is the author's GitHub author_association: OWNER, MEMBER, COLLABORATOR, CONTRIBUTOR, FIRST_TIME_CONTRIBUTOR, FIRST_TIMER, MANNEQUIN, or NONE). \`${itemPath}.type\` is issue or pull_request. Use review states, bot identity, timestamps, replies, and reviewThreads (resolution/outdated state and omission counts) when present as evidence under the configured policy. Missing or omitted context is unknown. Honor \`prompt\` when present.`,
+					judge_from: `\`${itemPath}.title\`, \`${itemPath}.body\`, \`${itemPath}.authorRole\`, and \`${itemPath}.comments\` (discussion; each comment's \`role\` is the author's GitHub author_association: OWNER, MEMBER, COLLABORATOR, CONTRIBUTOR, FIRST_TIME_CONTRIBUTOR, FIRST_TIMER, MANNEQUIN, or NONE). \`${itemPath}.type\` is issue or pull_request. Use review states, bot identity, timestamps, replies, and reviewThreads (resolution/outdated state and omission counts) when present as evidence under the configured policy. Use files (paths, change counts and bounded patches) when present; omitted files/patches are unknown. Missing or omitted context is unknown. Honor \`prompt\` when present.`,
 					label: `Use \`${labelPath}.name\` and \`${labelPath}.description\` as the meaning of the label. If \`${labelPath}.apply_when\` is present, require a match. If \`${labelPath}.remove_when\` is present, do not apply when it matches; remove the label if it is already on the item. If \`${labelPath}.examples\` is present, treat them as typical matches.`,
 				},
 				{
@@ -95,6 +98,25 @@ export function buildRequest(
 					false: 'The item does not match this label.',
 				}
 			);
+			if (
+				labels[labelIndex]!.removeWhen &&
+				labels[labelIndex]!.canRemove !== false &&
+				items[itemIndex]!.currentLabels.some(
+					(name) => name.toLowerCase() === labels[labelIndex]!.name.toLowerCase()
+				)
+			) {
+				questions[`${questionId(itemIndex, labelIndex)}_remove`] = noul(
+					{
+						question: `Does the configured removal condition at \`${labelPath}.remove_when\` match \`${itemPath}\`?`,
+						judge_from: `Use all evidence in \`${itemPath}\` and the repository prompt. Missing or omitted evidence is unknown.`,
+						label: `Require affirmative evidence for remove_when. Failure to establish apply_when is not evidence that remove_when matches.`,
+					},
+					{
+						true: 'The removal condition is established.',
+						false: 'The removal condition is not established.',
+					}
+				);
+			}
 		}
 	}
 
@@ -137,7 +159,7 @@ export function buildContextRequest(
 			questions[questionId(itemIndex, labelIndex)] = noul(
 				{
 					question: `Should the GitHub label at \`${labelPath}\` be applied to \`${itemPath}\`?`,
-					judge_from: `\`${itemPath}.title\`, \`${itemPath}.body\`, \`${itemPath}.authorRole\`, \`${itemPath}.comments\` (each comment's \`role\` is the author's GitHub author_association: OWNER, MEMBER, COLLABORATOR, CONTRIBUTOR, FIRST_TIME_CONTRIBUTOR, FIRST_TIMER, MANNEQUIN, or NONE), and \`${itemPath}.candidates\` (other issues or pull requests that may already cover this report). \`${itemPath}.type\` is issue or pull_request. Use review states, bot identity, timestamps, replies, and reviewThreads (resolution/outdated state and omission counts) when present as evidence under the configured policy. Missing or omitted context is unknown. Honor \`prompt\` when present.`,
+					judge_from: `\`${itemPath}.title\`, \`${itemPath}.body\`, \`${itemPath}.authorRole\`, \`${itemPath}.comments\` (each comment's \`role\` is the author's GitHub author_association: OWNER, MEMBER, COLLABORATOR, CONTRIBUTOR, FIRST_TIME_CONTRIBUTOR, FIRST_TIMER, MANNEQUIN, or NONE), and \`${itemPath}.candidates\` (other issues or pull requests that may already cover this report). \`${itemPath}.type\` is issue or pull_request. Use review states, bot identity, timestamps, replies, and reviewThreads (resolution/outdated state and omission counts) when present as evidence under the configured policy. Use files (paths, change counts and bounded patches) when present; omitted files/patches are unknown. Missing or omitted context is unknown. Honor \`prompt\` when present.`,
 					label: `Use \`${labelPath}.name\` and \`${labelPath}.description\` as the meaning of the label. If \`${labelPath}.apply_when\` is present, require a match. If \`${labelPath}.remove_when\` is present, do not apply when it matches; remove the label if it is already on the item. If \`${labelPath}.examples\` is present, treat them as typical matches. Apply when comments already identify a matching existing item, or when a candidate is the same report (or otherwise matches the label). If \`${itemPath}.candidates\` is empty, rely on the item and its comments only.`,
 				},
 				{
@@ -145,6 +167,25 @@ export function buildContextRequest(
 					false: 'The item does not match this label.',
 				}
 			);
+			if (
+				labels[labelIndex]!.removeWhen &&
+				labels[labelIndex]!.canRemove !== false &&
+				items[itemIndex]!.item.currentLabels.some(
+					(name) => name.toLowerCase() === labels[labelIndex]!.name.toLowerCase()
+				)
+			) {
+				questions[`${questionId(itemIndex, labelIndex)}_remove`] = noul(
+					{
+						question: `Does the configured removal condition at \`${labelPath}.remove_when\` match \`${itemPath}\`?`,
+						judge_from: `Use all evidence in \`${itemPath}\` and the repository prompt. Missing or omitted evidence is unknown.`,
+						label: `Require affirmative evidence for remove_when. Failure to establish apply_when is not evidence that remove_when matches.`,
+					},
+					{
+						true: 'The removal condition is established.',
+						false: 'The removal condition is not established.',
+					}
+				);
+			}
 		}
 	}
 
@@ -210,6 +251,12 @@ export function collectDecisions(
 				apply: noulValue >= labelThreshold,
 				canApply: label.canApply !== false,
 				canRemove: label.canRemove !== false,
+				...(label.removeWhen
+					? {
+							removeNoul:
+								answers[`${questionId(itemIndex, labelIndex)}_remove`]?.noul ?? 0,
+						}
+					: {}),
 			};
 		});
 
@@ -236,8 +283,9 @@ export function labelsToRemove(decision: LabelDecision): string[] {
 			(label) =>
 				existing.has(label.name.toLowerCase()) &&
 				label.canRemove &&
-				!label.apply &&
-				label.noul < 1 - label.threshold
+				(label.removeNoul !== undefined
+					? label.removeNoul >= label.threshold
+					: !label.apply && label.noul < 1 - label.threshold)
 		)
 		.map((label) => label.name);
 }

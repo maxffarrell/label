@@ -51,6 +51,15 @@ export type ReviewThread = {
 	commentsOmitted: number;
 };
 
+export type ChangedFile = {
+	filename: string;
+	status: string;
+	additions: number;
+	deletions: number;
+	patch?: string;
+	patchOmitted: boolean;
+};
+
 export type LabelItem = {
 	type: 'issue' | 'pull_request';
 	number: number;
@@ -64,6 +73,8 @@ export type LabelItem = {
 	comments: ItemComment[];
 	reviewThreads?: ReviewThread[];
 	reviewThreadsOmitted?: boolean;
+	files?: ChangedFile[];
+	filesOmitted?: boolean;
 };
 
 export const MAX_CONVERSATION_COMMENTS = 25;
@@ -178,6 +189,19 @@ const gitHubWebhookSchema = z
 		conversation: z.array(conversationCommentSchema).optional(),
 		review_threads: z.array(reviewThreadSchema).optional(),
 		review_threads_omitted: z.boolean().optional(),
+		files: z
+			.array(
+				z.object({
+					filename: z.string(),
+					status: z.string(),
+					additions: z.number(),
+					deletions: z.number(),
+					patch: z.string().optional(),
+					patchOmitted: z.boolean(),
+				})
+			)
+			.optional(),
+		files_omitted: z.boolean().optional(),
 	})
 	.passthrough();
 
@@ -348,6 +372,9 @@ export function parseGitHubPayload(
 				? 'pull_request'
 				: 'issue';
 		return ok({
+			...(webhook.data.files
+				? { files: webhook.data.files, filesOmitted: webhook.data.files_omitted ?? false }
+				: {}),
 			...toLabelItem(
 				rawItem,
 				type,
@@ -891,4 +918,62 @@ export async function listReviewThreads(
 			};
 		}),
 	});
+}
+
+/** Bounded, repository-independent evidence; omitted diffs are not evidence of no change. */
+export async function listChangedFiles(
+	repo: GitHubRepo,
+	number: number,
+	options: GitHubClientOptions = {}
+): Promise<
+	Result<{ files: ChangedFile[]; omitted: boolean }, GitHubApiError | MissingGitHubTokenError>
+> {
+	const tokenResult = requireToken(options.token);
+	if (tokenResult.isErr()) return err(tokenResult.error);
+	const raw: Array<{
+		filename: string;
+		status: string;
+		additions: number;
+		deletions: number;
+		patch?: string;
+	}> = [];
+	let omitted = false;
+	for (let page = 1; page <= 10; page++) {
+		const r = await githubJson<typeof raw>(
+			`/repos/${repo.owner}/${repo.name}/pulls/${number}/files?per_page=100&page=${page}`,
+			{ token: tokenResult.value, fetch: options.fetch }
+		);
+		if (r.isErr()) return err(r.error);
+		raw.push(...r.value);
+		if (r.value.length < 100) break;
+		if (page === 10) omitted = true;
+	}
+	// Short paths first keeps root metadata visible without knowing any repository layout.
+	raw.sort(
+		(a, b) => a.filename.length - b.filename.length || a.filename.localeCompare(b.filename)
+	);
+	let pathChars = 0,
+		patchChars = 0;
+	const files: ChangedFile[] = [];
+	for (const f of raw) {
+		if (pathChars + f.filename.length > 30000) {
+			omitted = true;
+			continue;
+		}
+		pathChars += f.filename.length;
+		const patch =
+			f.patch && patchChars < 10000
+				? f.patch.slice(0, Math.min(500, 10000 - patchChars))
+				: undefined;
+		patchChars += patch?.length ?? 0;
+		files.push({
+			filename: f.filename,
+			status: f.status,
+			additions: f.additions,
+			deletions: f.deletions,
+			...(patch ? { patch } : {}),
+			patchOmitted: !f.patch || patch?.length !== f.patch.length,
+		});
+	}
+	return ok({ files, omitted });
 }

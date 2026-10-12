@@ -11,6 +11,7 @@ import {
 	type IssueSelection,
 	type ItemKind,
 	type LabelItem,
+	listChangedFiles,
 	listIssues,
 	listItemConversation,
 	listRepoLabels,
@@ -306,10 +307,16 @@ async function toPayloadWithConversation(
 			? await listReviewThreads(repo, parsed.value.number, github)
 			: ok(undefined);
 	if (threads.isErr()) return err(threads.error);
+	const files =
+		parsed.value.type === 'pull_request'
+			? await listChangedFiles(repo, parsed.value.number, github)
+			: ok(undefined);
+	if (files.isErr()) return err(files.error);
 	return ok({
 		issue,
 		repository: { full_name: repoName },
 		conversation: conversation.value,
+		...(files.value ? { files: files.value.files, files_omitted: files.value.omitted } : {}),
 		...(threads.value
 			? {
 					review_threads: threads.value.threads,
