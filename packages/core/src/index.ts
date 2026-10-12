@@ -26,8 +26,8 @@ export {
 	selectGitHubRemote,
 } from './git';
 export type {
-	ChangedFile,
 	AuthorRole,
+	ChangedFile,
 	GitHubRepo,
 	IssueSelection,
 	ItemComment,

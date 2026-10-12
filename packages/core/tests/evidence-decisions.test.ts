@@ -46,6 +46,16 @@ describe('generic removal conditions', () => {
 		).toEqual(['status']);
 	});
 });
+it('preserves an existing label when application and explicit removal answers conflict', () => {
+	const both = collectDecisions(
+		[item],
+		[{ name: 'status', description: null, removeWhen: 'The request was withdrawn.' }],
+		{ item_0_label_0: { noul: 0.9 }, item_0_label_0_remove: { noul: 0.9 } },
+		0.6
+	)[0]!;
+	expect(labelsToRemove(both)).toEqual([]);
+});
+
 describe('bounded changed-file evidence', () => {
 	it('paginates, bounds patches and preserves paths and omission metadata through the parser and prompt', async () => {
 		let calls = 0;
@@ -70,7 +80,7 @@ describe('bounded changed-file evidence', () => {
 		expect(calls).toBe(2);
 		expect(r.value.files).toHaveLength(100);
 		expect(r.value.files.reduce((n, f) => n + (f.patch?.length ?? 0), 0)).toBeLessThanOrEqual(
-			10000
+			4000
 		);
 		expect(r.value.files.every((f) => f.patchOmitted)).toBe(true);
 		const parsed = parseGitHubPayload({

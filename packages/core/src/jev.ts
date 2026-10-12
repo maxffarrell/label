@@ -71,6 +71,10 @@ export function labelState(label: LabelDefinition) {
 	};
 }
 
+function policyMeaning(label: LabelDefinition): string {
+	return `Label: ${label.name}. Meaning: ${label.description ?? 'No description provided.'}. ${label.applyWhen ? `Apply only when: ${label.applyWhen}` : ''} ${label.removeWhen ? `Do not apply when the removal condition is established: ${label.removeWhen}` : ''} ${label.examples?.length ? `Typical matches: ${JSON.stringify(label.examples)}.` : ''} Evaluate this label independently of other labels. Use supplied evidence, not unsupported assumptions.`;
+}
+
 export function buildRequest(
 	items: LabelItem[],
 	labels: LabelDefinition[],
@@ -91,7 +95,7 @@ export function buildRequest(
 				{
 					question: `Should the GitHub label at \`${labelPath}\` be applied to \`${itemPath}\`?`,
 					judge_from: `\`${itemPath}.title\`, \`${itemPath}.body\`, \`${itemPath}.authorRole\`, and \`${itemPath}.comments\` (discussion; each comment's \`role\` is the author's GitHub author_association: OWNER, MEMBER, COLLABORATOR, CONTRIBUTOR, FIRST_TIME_CONTRIBUTOR, FIRST_TIMER, MANNEQUIN, or NONE). \`${itemPath}.type\` is issue or pull_request. Use review states, bot identity, timestamps, replies, and reviewThreads (resolution/outdated state and omission counts) when present as evidence under the configured policy. Use files (paths, change counts and bounded patches) when present; omitted files/patches are unknown. Missing or omitted context is unknown. Honor \`prompt\` when present.`,
-					label: `Use \`${labelPath}.name\` and \`${labelPath}.description\` as the meaning of the label. If \`${labelPath}.apply_when\` is present, require a match. If \`${labelPath}.remove_when\` is present, do not apply when it matches; remove the label if it is already on the item. If \`${labelPath}.examples\` is present, treat them as typical matches.`,
+					label: policyMeaning(labels[labelIndex]!),
 				},
 				{
 					true: 'The item matches this label and the label should be applied.',
@@ -108,8 +112,8 @@ export function buildRequest(
 				questions[`${questionId(itemIndex, labelIndex)}_remove`] = noul(
 					{
 						question: `Does the configured removal condition at \`${labelPath}.remove_when\` match \`${itemPath}\`?`,
-						judge_from: `Use all evidence in \`${itemPath}\` and the repository prompt. Missing or omitted evidence is unknown.`,
-						label: `Require affirmative evidence for remove_when. Failure to establish apply_when is not evidence that remove_when matches.`,
+						judge_from: `Use all evidence in \`${itemPath}\`, \`${labelPath}\` and the repository prompt. Missing or omitted evidence is unknown.`,
+						label: `Remove only when this explicit condition matches: ${labels[labelIndex]!.removeWhen}. Interpret its alternatives as written. Failure to establish the application condition alone is insufficient.`,
 					},
 					{
 						true: 'The removal condition is established.',
@@ -160,7 +164,7 @@ export function buildContextRequest(
 				{
 					question: `Should the GitHub label at \`${labelPath}\` be applied to \`${itemPath}\`?`,
 					judge_from: `\`${itemPath}.title\`, \`${itemPath}.body\`, \`${itemPath}.authorRole\`, \`${itemPath}.comments\` (each comment's \`role\` is the author's GitHub author_association: OWNER, MEMBER, COLLABORATOR, CONTRIBUTOR, FIRST_TIME_CONTRIBUTOR, FIRST_TIMER, MANNEQUIN, or NONE), and \`${itemPath}.candidates\` (other issues or pull requests that may already cover this report). \`${itemPath}.type\` is issue or pull_request. Use review states, bot identity, timestamps, replies, and reviewThreads (resolution/outdated state and omission counts) when present as evidence under the configured policy. Use files (paths, change counts and bounded patches) when present; omitted files/patches are unknown. Missing or omitted context is unknown. Honor \`prompt\` when present.`,
-					label: `Use \`${labelPath}.name\` and \`${labelPath}.description\` as the meaning of the label. If \`${labelPath}.apply_when\` is present, require a match. If \`${labelPath}.remove_when\` is present, do not apply when it matches; remove the label if it is already on the item. If \`${labelPath}.examples\` is present, treat them as typical matches. Apply when comments already identify a matching existing item, or when a candidate is the same report (or otherwise matches the label). If \`${itemPath}.candidates\` is empty, rely on the item and its comments only.`,
+					label: policyMeaning(labels[labelIndex]!),
 				},
 				{
 					true: 'The item matches this label and the label should be applied.',
@@ -177,8 +181,8 @@ export function buildContextRequest(
 				questions[`${questionId(itemIndex, labelIndex)}_remove`] = noul(
 					{
 						question: `Does the configured removal condition at \`${labelPath}.remove_when\` match \`${itemPath}\`?`,
-						judge_from: `Use all evidence in \`${itemPath}\` and the repository prompt. Missing or omitted evidence is unknown.`,
-						label: `Require affirmative evidence for remove_when. Failure to establish apply_when is not evidence that remove_when matches.`,
+						judge_from: `Use all evidence in \`${itemPath}\`, \`${labelPath}\` and the repository prompt. Missing or omitted evidence is unknown.`,
+						label: `Remove only when this explicit condition matches: ${labels[labelIndex]!.removeWhen}. Interpret its alternatives as written. Failure to establish the application condition alone is insufficient.`,
 					},
 					{
 						true: 'The removal condition is established.',
@@ -284,7 +288,7 @@ export function labelsToRemove(decision: LabelDecision): string[] {
 				existing.has(label.name.toLowerCase()) &&
 				label.canRemove &&
 				(label.removeNoul !== undefined
-					? label.removeNoul >= label.threshold
+					? label.removeNoul >= label.threshold && (!label.apply || !label.canApply)
 					: !label.apply && label.noul < 1 - label.threshold)
 		)
 		.map((label) => label.name);
