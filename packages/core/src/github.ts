@@ -956,14 +956,14 @@ export async function listChangedFiles(
 		patchChars = 0;
 	const files: ChangedFile[] = [];
 	for (const f of raw) {
-		if (pathChars + f.filename.length > 30000) {
+		if (files.length >= 100 || pathChars + f.filename.length > 8000) {
 			omitted = true;
 			continue;
 		}
 		pathChars += f.filename.length;
 		const patch =
-			f.patch && patchChars < 10000
-				? f.patch.slice(0, Math.min(500, 10000 - patchChars))
+			f.patch && patchChars < 4000
+				? f.patch.slice(0, Math.min(500, 4000 - patchChars))
 				: undefined;
 		patchChars += patch?.length ?? 0;
 		files.push({
