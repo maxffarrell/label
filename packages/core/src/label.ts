@@ -195,11 +195,8 @@ export async function labelIssues(
 				if (removed.isErr()) return err(removed.error);
 				decision.item.humanRemovedLabels = removed.value;
 				const vetoed = new Set(removed.value.map((name) => name.toLowerCase()));
-				for (const label of decision.labels) {
-					if (vetoed.has(label.name.toLowerCase())) label.apply = false;
-				}
 				decision.chosen = decision.labels
-					.filter((label) => label.apply)
+					.filter((label) => label.apply && !vetoed.has(label.name.toLowerCase()))
 					.map((label) => label.name);
 				return addIssueLabels(repo, decision.item.number, labelsToApply(decision), github);
 			})

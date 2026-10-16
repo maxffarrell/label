@@ -33,6 +33,23 @@ describe('human removal veto', () => {
 			])
 		).toEqual(['bug']);
 	});
+	it('preserves classification when a bot has restored a human-removed label', () => {
+		const parsed = parseGitHubPayload({
+			issue: { number: 1, title: 'Bug', labels: ['bug'] },
+			human_removed_labels: ['bug'],
+		});
+		if (parsed.isErr()) throw parsed.error;
+		const [decision] = collectDecisions(
+			[parsed.value],
+			[{ name: 'bug', description: null }],
+			{ item_0_label_0: { noul: 0.99 } },
+			0.6
+		);
+		expect(decision!.labels[0]!.apply).toBe(true);
+		expect(decision!.chosen).toEqual([]);
+		expect(labelsToApply(decision!)).toEqual([]);
+		expect(labelsToRemove(decision!)).toEqual([]);
+	});
 	it('loads label history across pages', async () => {
 		const reads: string[] = [];
 		const r = await listHumanRemovedLabels({ owner: 'o', name: 'r' }, 1, {
@@ -77,10 +94,10 @@ describe('human removal veto', () => {
 			0.6
 		);
 		expect(d!.chosen).toEqual([]);
+		expect(d!.labels[0]!.apply).toBe(true); // Preserve the model judgment for removal decisions.
 		expect(labelsToApply(d!)).toEqual([]);
 		expect(labelsToRemove(d!)).toEqual(['docs']);
-		// Direct consumers cannot bypass the veto by supplying an apply:true judgment.
-		d!.labels[0]!.apply = true;
+		// The addition guard enforces the veto without rewriting classification.
 		expect(labelsToApply(d!)).toEqual([]);
 	});
 });
@@ -152,7 +169,10 @@ describe('addition integration', () => {
 		expect(r.isOk()).toBe(true);
 		expect(eventReads).toBe(2);
 		expect(writes).toEqual([]);
-		if (r.isOk()) expect(r.value.decisions[0]!.chosen).toEqual([]);
+		if (r.isOk()) {
+			expect(r.value.decisions[0]!.chosen).toEqual([]);
+			expect(r.value.decisions[0]!.labels[0]!.apply).toBe(true);
+		}
 	});
 	it.each([
 		'initial',

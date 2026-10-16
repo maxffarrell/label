@@ -202,7 +202,7 @@ export function collectDecisions(
 				color: label.color,
 				noul: noulValue,
 				threshold: labelThreshold,
-				apply: noulValue >= labelThreshold && !removedByHuman.has(label.name.toLowerCase()),
+				apply: noulValue >= labelThreshold,
 				canApply: label.canApply !== false,
 				canRemove: label.canRemove !== false,
 			};
@@ -211,7 +211,11 @@ export function collectDecisions(
 		return {
 			item,
 			labels: judgments,
-			chosen: judgments.filter((judgment) => judgment.apply).map((judgment) => judgment.name),
+			chosen: judgments
+				.filter(
+					(judgment) => judgment.apply && !removedByHuman.has(judgment.name.toLowerCase())
+				)
+				.map((judgment) => judgment.name),
 		};
 	});
 }

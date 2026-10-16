@@ -62,6 +62,7 @@ only_configured: true # only apply labels that are configured in this file
 
 The GitHub CLI reads label-event history and does not reapply a label whose latest
 human action was removal, even if Jev gives it a high score or a bot later adds it.
+The veto filters additions and suggested choices without changing the model judgment or removal rules.
 A later human addition lifts that veto. GitHub actors of type `User` count as human,
 including automation using a personal token. App/bot actors do not lift the veto.
 
