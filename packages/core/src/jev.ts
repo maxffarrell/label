@@ -18,7 +18,7 @@ export type LabelJudgment = {
 	apply: boolean;
 	canApply: boolean;
 	canRemove: boolean;
-	removeNoul?: number;
+	removeNoul?: number | null;
 };
 
 export type LabelDecision = {
@@ -257,7 +257,8 @@ export function collectDecisions(
 				...(label.removeWhen
 					? {
 							removeNoul:
-								answers[`${questionId(itemIndex, labelIndex)}_remove`]?.noul ?? 0,
+								answers[`${questionId(itemIndex, labelIndex)}_remove`]?.noul ??
+								null,
 						}
 					: {}),
 			};
@@ -287,7 +288,9 @@ export function labelsToRemove(decision: LabelDecision): string[] {
 				existing.has(label.name.toLowerCase()) &&
 				label.canRemove &&
 				(label.removeNoul !== undefined
-					? label.removeNoul >= label.threshold && (!label.apply || !label.canApply)
+					? label.removeNoul !== null &&
+						label.removeNoul >= label.threshold &&
+						(!label.apply || !label.canApply)
 					: !label.apply && label.noul < 1 - label.threshold)
 		)
 		.map((label) => label.name);

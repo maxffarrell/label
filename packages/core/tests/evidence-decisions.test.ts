@@ -38,6 +38,14 @@ describe('generic removal conditions', () => {
 		)[0]!;
 		expect(labelsToRemove(positive)).toEqual(['status']);
 	});
+	it.each([
+		0, 0.6, 1,
+	])('preserves explicit-removal labels without an answer at threshold %s', (threshold) => {
+		const decision = collectDecisions([item], labels, {}, threshold)[0]!;
+		expect(decision.labels[0]!.removeNoul).toBeNull();
+		expect(labelsToRemove(decision)).toEqual([]);
+	});
+
 	it('fails closed for a missing removal answer and preserves legacy labels without a removal condition', () => {
 		expect(labelsToRemove(collectDecisions([item], labels, {}, 0.6)[0]!)).toEqual([]);
 		expect(
