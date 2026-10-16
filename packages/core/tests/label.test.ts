@@ -16,7 +16,7 @@ const labels = [
 ];
 
 function emptyConversation(url: string): Response | undefined {
-	if (url.includes('/comments') || url.includes('/reviews')) {
+	if (url.includes('/comments') || url.includes('/reviews') || url.includes('/events')) {
 		return Response.json([]);
 	}
 }
@@ -712,6 +712,7 @@ describe('labelIssues', () => {
 			token: 'test-token',
 			fetch: async (input) => {
 				const url = String(input);
+				if (url.includes('/events')) return Response.json([]);
 				if (url.endsWith('/graphql'))
 					return Response.json({
 						data: {
