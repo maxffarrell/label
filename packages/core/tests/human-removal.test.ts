@@ -119,6 +119,16 @@ async function run(options: {
 		dryRun: options.dryRun,
 		fetch: async (input, init) => {
 			const url = String(input);
+			if (url.endsWith('/graphql'))
+				return Response.json({
+					data: {
+						repository: {
+							pullRequest: {
+								reviewThreads: { pageInfo: { hasPreviousPage: false }, nodes: [] },
+							},
+						},
+					},
+				});
 			if (init?.method === 'POST') {
 				writes.push(JSON.parse(String(init.body)));
 				return Response.json({});
